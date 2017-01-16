@@ -1,0 +1,475 @@
+\documentclass[12pt]{article}
+% Load packages
+\usepackage{url}  % Formatting web addresses  
+\usepackage{ifthen}  % Conditional 
+\usepackage{multicol}   %Columns
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+\usepackage{setspace}
+%\usepackage{longtable}
+\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\usepackage[square,sort,comma,numbers]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{comment}
+\usepackage{lineno}
+
+\urlstyle{rm}
+
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+%\usepackage{geometry}
+\usepackage{fullpage}
+
+%\bibliographystyle{plain}
+\bibliographystyle{plos2009}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\large\bfseries}}	
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+% Begin ...
+\begin{document}
+\begin{titlepage}
+{\par\centering\textbf{\Large An Effective Model of the Core Retinoic Acid induced HL-60 Differentiation Circuit}}
+\vspace{0.05in}
+{\par \centering \large{Ryan Tasseff$^{1}$, 
+Holly A. Jensen$^{1}$, 
+Johanna Congleton$^{2}$, Andrew Yen$^{2}$ and Jeffrey D. Varner$^{1,*}$}}
+\vspace{0.10in}
+{\par \centering \large{$^{1}$~School of Chemical and Biomolecular Engineering}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \large{$^{2}$~Department of Biomedical Sciences}}
+{\par \centering \large{Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \textbf{Running Title:}~Effective HL60 differentiation circuit}
+\vspace{0.1in}
+{\par \centering \textbf{To be submitted:}~\emph{Processes}}
+\vspace{0.5in}
+{\par \centering $^{*}$Corresponding author:}
+{\par \centering Jeffrey D. Varner,}
+{\par \centering Associate Professor, School of Chemical and Biomolecular Engineering,}
+{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853} 
+{\par \centering Email: jdv27@cornell.edu} 
+{\par \centering Phone: (607) 255 - 4258}
+{\par \centering Fax: (607) 255 - 9166}
+\end{titlepage}
+\date{}
+\thispagestyle{empty}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Abstract}
+The complexity of human differentiation networks makes analysis of their architecture and function challenging.  
+Analysis of model systems, such as the lineage-uncommitted human myeloblastic leukemia cell line HL-60, 
+could inform the analysis of more complex programs. 
+HL-60 cells undergo myeloid differentiation along with G1/G0-arrest when exposed to All-Trans Retinoic Acid (ATRA). 
+One of the defining features of this program is slowly induced, persistent MAPK activation.
+The molecular mechanisms of ATRA-induced commitment, arrest and functional differentiation are only partially understood.
+In this study, we explored the ATRA-inducible c-Raf, also known as Raf1 (Raf), 
+interactome to determine the functional and regulatory architecture responsible for persistent MAPK activation in HL-60 cells. 
+To better understand the role of Raf in the ATRA-induced differentiation program, 
+we constructed an ensemble of mechanistic, mathematical models of the transcriptional and post-translational events driving ATRA-induced MAPK activation. 
+Bifurcation analysis of this model predicted bistability in ppERK levels as a function of ATRA forcing. 
+A functional consequence of this was the ability to lock the MAPK cascade into a self-sustaining activated state, even after ATRA removal.
+These simulations were then qualitatively validated with ATRA washout experiments. 
+Taken together, this study provided further details on sustained MAPK activation, mechanistic insight into cellular memory,
+and proof-of-concept that a
+combination of experimental and computational methods is an effective strategy for dissecting complex intracellular signaling programs.
+
+
+{\noindent \textbf{Keywords:}~Cell free metabolism, Mathematical modeling}
+
+\pagebreak
+
+\setcounter{page}{1}
+
+\linenumbers
+
+\section*{Introduction}
+
+Understanding differentiation, 
+the process by which precursor cells become more specialized cell types, 
+is an important challenge facing biology. 
+If differentiation programs could be rationally manipulated, 
+advanced therapies could be developed to treat a spectrum of cancers, spinal cord injuries and neurodegenerative disorders. 
+However, to rationally reprogram differentiation networks, 
+we must first understand their connectivity and regulation \cite{Young2011}. 
+Lessons learned in model systems, such as the lineage-uncommitted human myeloblastic cell line HL-60,
+could inform our analysis of more complex programs. 
+HL-60 has been a durable experimental model since the 1970's to study differentiation \cite{Breitman1980}.
+Depending upon the stimulus, HL-60 cells undergo G1/G0-arrest and myeloid or monocytic differentiation. 
+All-Trans Retinoic Acid (ATRA) induces G1/G0-arrest and myeloid differentiation in HL-60 cells, 
+whereas 1,25-dihydroxy vitamin D3 induces arrest with monocytic differentiation.
+Commitment to cell cycle arrest and terminal differentiation requires approximately 48 hr of treatment,
+during which HL-60 cells undergo approximately two division cycles.  
+Interestingly, cells treated with ATRA for time periods shorter than the commitment phase retain a limited inheritable memory, 
+which reduces the time required to reach commitment during subsequent ATRA exposure \cite{YEN1984}.
+
+Sustained Mitogen-Activated Protein Kinase (MAPK) cascade
+activation is a defining feature of ATRA-induced differentiation in HL-60 cells. 
+ATRA drives slow yet sustained MEK-dependent activation of the Raf/MEK/ERK pathway, 
+leading to arrest and functional differentiation \cite{Yen1998}.
+MEK inhibition results in the loss of both ERK and Raf phosphorylation, 
+as well as the failure to arrest and terminally differentiate \cite{Yen1998,Hong2001}.
+At the transcriptional level, 
+ATRA (and its metabolic products) are ligands for the hormone activated nuclear transcription factors Retinoic Acid Receptor (RAR) and Retinoid X Receptor (RXR) \cite{Mangelsdorf1990}.
+Activation of both RAR and RXR is necessary for ATRA-induced Raf phosphorylation and MAPK activation,
+suggesting that the initiation of MAPK signaling is partially transcriptionally regulated \cite{Hong2001}.
+ATRA, through activation of a transcription factor complex including RAR and RXR, induces the expression of many proteins.
+BLR1 also known as CXCR5, is a putative heterotrimeric Gq protein-coupled receptor 
+that is necessary for MAPK activation, growth arrest and functional differentiation \cite{YEN1990,LIPP1994,WANG2004}.
+BLR1 was identified as an early ATRA (or D3)-inducible gene in HL-60 cells using differential display \cite{YEN1990}. 
+Studies of the BLR1 promoter identified a 5' 17bp GT box approximately 1 kb upstream of the transcriptional start that conferred ATRA responsiveness \cite{WANG2004}.
+Additionally, members of the BLR1 transcriptional activator complex, e.g. NFATc3 and CREB, 
+can be phosphorylated by ERK, JNK or p38 MAPK family members \cite{Yang2002}.
+This suggests positive feedback between BLR1 expression and MAPK activation. 
+BLR1 overexpression enhanced Raf phosphorylation and accelerated terminal differentiation, 
+while BLR1 knock-out HL-60 cells failed to activate Raf or differentiate in the presence of ATRA \cite{Wang2008}.
+Interestingly, both the knockdown or inhibition of Raf, also reduced BLR1 expression and functional differentiation \cite{Wang2008}.
+A recent computational study of ATRA-induced differentiation in HL-60 cells suggested that the BLR1-MAPK positive feedback circuit was sufficient to explain ATRA-induced sustained MAPK activation and the expression of differentiation markers \cite{Tasseff2011}. 
+Model analysis also suggested that Raf was the most distinct of the MAPK proteins.
+
+A critical question is what other components of the MAPK positive feedback circuit are required to drive ATRA-induced functional differentiation of HL-60 cells. 
+Wang and Yen showed that ectopic expression of the constitutively active CR3 domain of Raf1 restored ATRA-induced G0 arrest and differentiation in BLR1 knock-out cells \cite{Wang2008}. 
+However, ectopic expression of Raf1 CR3 alone, in the absence of ATRA, failed to induce arrest or differentiation.
+Thus, additional ATRA-inducible components must exist, 
+which independently promote arrest and differentiation in the absence of BLR1.
+In this study, we explored this hypothesis using a combination of experimental and computational tools. 
+First, we explored the ATRA-inducible Raf interactome 
+by surveying a panel of 19 possible binding partners using immunoprecipitation (IP), 
+with and without ATRA and the Raf inhibitor GW5074.  
+Initially, we expected increased ATRA-dependent association between Raf and kinases linked to BLR1 activity; 
+however, this was not supported by data.
+Instead, we found that the interaction between the guanine nucleotide exchange factor Vav1 and Raf was both ATRA-inducible and simultaneously sensitive to Raf inhibition. 
+Next, we considered how MAPK activation and differentiation were affected by the inhibition of Raf kinase activity in the presence and absence of ATRA.
+We showed that Raf activity was directly proportional to ERK phosphorylation and to functional differentiation processes such as the generation of reactive oxygen species (ROS). 
+Moreover, interactions between Raf and kinase partners such as Akt or CK2, or the scaffolding protein 14-3-3 were largely insensitive to ATRA treatment. 
+These studies established the working hypothesis that Vav1 (or potentially other ATRA-inducible proteins) acted as limiting members of a constitutively assembled trigger complex that propelled sustained MAPK activation, arrest and differentiation.   
+We tested this hypothesis by constructing a mechanistic mathematical model of the Raf-Vav1 circuit, 
+based on the IP and Western blot data presented in this study, 
+and from previous literature. 
+The proposed model architecture was consistent with the ATRA-induced sustained MAPK activation observed experimentally. 
+Additionally, we found the Raf-Vav1 circuit possessed interesting dynamic features such as bistability, 
+that could explain ATRA-induction memory effects.
+
+\clearpage
+
+\section*{Results}
+
+\subsection*{Mathematical modeling of ATRA-induced MAPK activation in HL-60 cells.}
+We constructed a mechanistic mathematical model of a putative Raf-Vav1 activation circuit (Fig. \ref{F:network}).  
+The immunoprecipitation and kinase inhibitor studies suggested that Raf kinase activity was required for ATRA-induced ERK phosphorylation and ROS response. 
+Furthermore, the phosphorylation, expression, and Vav1 binding of Raf itself decreased in response to Raf inhibition. 
+These results suggested a possible positive feedback loop between Raf kinase activity and increased Raf expression, 
+possibly through ppERK-dependent transcription factors such as Sp1 and STAT1 \cite{Kim2009,Zhang2004}.
+Both Sp1 and STAT1 have putative binding domains in the Raf promoter (TRANSFAC).
+However, this loop is not ATRA-responsive, without an ATRA-inducible trigger, which we hypothesize is Vav1.
+The Vav1 gene contains an upstream canonical Retinoic Acid Response Element (RARE) sequence motif (TRANSFAC) which could allow
+Vav1 expression to be at least partially regulated by ATRA. 
+By contrast, the Src promoter does not have a discernible canonical putative RARE.
+(Tables \ref{T:params}, \ref{T:species} and \ref{T:rxns} respectively).
+The levels of ATRA and GW5074 were introduced as user defined parameters depending on the experiment being simulated.
+In general Dilution due to growth was 
+More details on the model architecture including additional references can be found in Materials and Methods.
+
+To address parametric uncertainty, 
+an ensemble of models was estimated using the eight datasets taken from this study (38 total data points),
+and the previous study of Wang and Yen \cite{Wang2008}.
+Here ensemble refers to the use of different parametric sets for the same system of reactions.
+Cross-validation (data randomly split into 80\% training and 20\% validation) demonstrated that, 
+on average, the model identification scheme (described in Materials and Methods) decreased both training 
+and prediction error (Fig. \ref{F:parameters}) over successive iterations of the parameter selection procedure. 
+This is suggestive of the predictive ability of the model and also demonstrated that the nominal parameter set, 
+the set with the lowest training error, did not result in over-fitting. 
+Subsequently, we considered an ensemble of likely parameter sets (N = 99) with relative mean squared training errors within 20\% of the nominal set. 
+The model ensemble recapitulated both time-series data (including sustained MAPK activation) and the GW5074 results (Fig. \ref{F:Train}).
+
+\subsection*{Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers.}
+We considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
+For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{F:MAPKGWWB}A.
+ATRA treatment alone statistically significantly increased the G1/G0 percentage over the untreated control, 
+while GW5074 alone had a negligible effect on the cell cycle distribution (Fig. \ref{F:GWdiff}A).
+Secondly, ATRA treatment alone increased both Raf phosphorylation at S621/S259 and Raf expression 24 hr post-treatment,
+while ATRA-induced phosphorylation of ERK was blocked by GW5074, consistent with the loss of Raf kinase activity (Fig. \ref{F:MAPKGWWB}B).
+Lastly, both the phosphorylation and expression of Raf was inhibited by GW5074.
+This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and possible ERK action on Raf transcription factors.
+Surprisingly, the combination of GW5074 and ATRA statistically significantly increased the G1/G0 population (82 $\pm$ 1\%)
+compared with ATRA alone (61 $\pm$ 0.5\%).
+Increased G1/G0 arrest following the combined treatment with GW5074 and ATRA was unexpected, 
+as the combination of ATRA and the MEK inhibitor (PD98059) has been shown previously to decrease ATRA-induced growth arrest \cite{Yen1998}.
+However, growth arrest is not the sole indication of functional differentiation.
+Expression of the cell surface marker CD11b has also been shown to coincide with HL-60 cells myeloid differentiation \cite{Hickstein1989}.  
+We measured CD11b expression, for the various treatment groups, using immuno-fluorescence flow cytometry 48 hr post-treatment.
+As with G1/G0 arrest, ATRA alone increased CD11b expression over the untreated control, 
+while GW5074 further enhanced ATRA-induced CD11b expression (Fig. \ref{F:GWdiff}B).
+GW5074 alone had no statistically significant effect on CD11b expression, 
+compared with the untreated control.
+
+The inducible reactive oxygen species (ROS) response was used as a functional marker of differentiated neutrophils \cite{Congleton2011}.
+We measured the ROS response induced by the phorbol ester 12-O-tetradecanoylphorbol-13-acetate (TPA) using flow cytometry.
+Untreated cells showed no discernible TPA response, 
+with only 7.0 $\pm$ 3.0\% ROS induction (Fig. \ref{F:GWdiff}C).
+Cells treated with ATRA had a significantly increased TPA response, 53 $\pm$ 7\% ROS induction 48 hr post-treatment.
+Treatment with both ATRA and GW5074 statistically significantly reduced ROS induction (22 $\pm$ 0.6\%) compared to ATRA alone. 
+Interestingly, Western blot analysis did not detect a GW5074 effect on ATRA-induced expression of p47phox, 
+a required upstream component of the ROS response  (Fig. \ref{F:GWdiff}C, bottom).
+Thus, the inhibitory effect of GW5074 on inducible ROS might occur downstream of p47phox expression.
+However, the ROS producing complex is MAPK dependent, 
+therefore it is also possible that GW5074 inhibited ROS production by interfering 
+with MAPK activation (in which case the p47phox marker might not accurately reflect phenotypic conversion and differentiation).
+
+\clearpage
+
+\section*{Discussion}
+In this study, we explored the functional and regulatory architecture responsible for ATRA-induced MAPK activation in HL-60 cells.
+Retinoic acid is an embryonic morphogen, a cancer chemotherapeutic agent, as well as potent regulator of cell differentiation and proliferation. 
+Using a human lineage-uncommitted myelo-monocytic precursor cell, 
+it has been shown that ATRA-induced phenotypic conversion and G0 arrest depend on eliciting a hyperactive prolonged signal along the Raf/MEK/ERK axis \cite{Yen1998}. 
+In particular, signaling involves two positive loops, which incorporates the BLR1 receptor and Raf kinase, putatively activated by S621 phosphorylation, 
+that is seminal to sustaining the signal needed for differentiation \cite{Wang2008}. 
+In genetically engineered BLR1 KO cells crippled for signaling and consequentially ability to differentiate, ectopic expression of Raf activity restores the cell's ability to differentiate. 
+While the canonical paradigm of MAPK signaling is a transient signal that is mitogenic, a prolonged signal elicits cell differentiation and G0 arrest. 
+Interest thus becomes focused on whether there is a Raf partner that is responsible for the prolonged signal in ATRA-treated cells. 
+Surveying known MAPK regulatory molecules using Western blotting and IP we found that ATRA increased the expression of Vav1 as well as its immunoprecipitation with Raf phosphorylated at S621. 
+A parsimonious effective mathematical model showed that a Raf-Siganlsome-mediated positive feedback loop accounted for sustained MAPK signaling and aspects of phenotypic conversion and G0 arrest. 
+The significant finding was thus that ATRA-regulated Vav1 expression and partnering with Raf could drive sustained signaling and phenotypic shift. The model also predicted the observed hysteresis effect of ATRA where the cell retains a memory of transient ATRA exposure, betrayed by activated signaling and by accelerated differentiation upon re-exposure to ATRA.
+
+\clearpage
+
+\section*{Materials and Methods}
+
+\subsection*{Cell Culture and Treatment.}
+Human myeloblastic leukemia cells (HL-60 cells) were grown in a humidified atmosphere of 5\% CO$_2$ at 37$^{o}$C and maintained in RPMI 1640 from Gibco (Carlsbad, CA) 
+supplemented with 5\% fetal bovine serum from Hyclone (Logan, UT) and 1x antibiotic/antimicotic (Sigma, St. Louis, MO).
+Cells were cultured in constant exponential growth as described previously \cite{Brooks1996}. 
+Experimental cultures were initiated at $0.1\times10^6$ cells/mL 24 hr prior to 1$\mu$M ATRA treatment;
+if indicated, cells were also treated with GW5074 (2$\mu$M) 18 hr before ATRA treatment.   
+For cell culture washout experiments HL-60 cells were treated with ATRA for 24 hr, 
+washed 3x with prewarmed serum supplemented culture medium to remove ATRA exposure, 
+and reseeded in ATRA-free media as described. 
+Western blot analysis was performed at incremental time points after removal of ATRA.
+
+\subsection*{Chemicals.}
+All-Trans Retinoic Acid from Sigma-Aldrich (St. Louis, MO) was dissolved in 100\% ethanol with a stock concentration of 5mM, 
+and used at a final concentration of 1$\mu$M.
+The Raf inhibitor GW5074 from Sigma-Aldrich (St. Louis, MO) was dissolved in DMSO with a stock concentration of 10mM, 
+and used at a final concentration of 2$\mu$M.
+HL-60 cells were treated with 2$\mu$M GW5074 with or without ATRA (1$\mu$M) at 0 hr.  
+This GW5074 dosage had a negligible effect on the cell cycle distribution, compared to ATRA treatment alone (Fig. \ref{F:MAPKGWWB}A). 
+
+\subsection*{CD11b expression studies by flow cytometry.}
+Approximately $1.0\times10^6$ HL-60 cells were harvested  by centrifugation. 
+Cells were resuspended in 200$\mu$L PBS containing 5$\mu$L of allophycocyanin (APC)–conjugated anti-CD11b antibody from BD Biosciences (San Jose, CA). 
+Following incubation for 1hr at 37$^{o}$C, cells were analyzed by flow cytometry (LSRII flow cytometer, BD Biosciences; San Jose, CA) using 633nm red laser excitation. 
+The threshold on experimental groups was set to exclude 95\% of control, the untreated sample. 
+
+\subsection*{Measurement of inducible oxidative metabolism.}
+Approximately $0.5\times10^6$ Cells were harvested by centrifugation.
+Cells were resuspended in 200$\mu$L 37$^{o}$C PBS containing 10$\mu$mol/L 
+5-(and-6)-chloromethyl-2,7-dichlorodihydro-fluorescein diacetate acetyl ester (DCF; Invitrogen Carlsbad, CA) 
+and 0.4$\mu$g/mL 12-O-tetradecanoylphorbol-13-acetate (TPA; Sigma-Aldrich St. Louis, MO)
+with incubation for 20 min in a humidified atmosphere of 5\% CO$_2$ at 37$^{o}$C. 
+Flow cytometric analysis was done as described previously \cite{Reiterer2007}.
+To determine TPA inducible ROS, the threshold on experimental groups was set to exclude 95\% of control,
+samples not treated with TPA.  
+
+\subsection*{Cell cycle analysis.}
+Approximately $1.0\times10^6$ cells were collected by centrifugation.
+Cells were resuspended in 500$\mu$L hypotonic staining solution containing 50$\mu$g/mL propidium iodine, 
+1$\mu$L/mL Triton X-100, and 1 mg/mL sodium citrate. 
+Cells were incubated at room temperature for 1 hr and analyzed by flow cytometry (BD LSRII) using 488-nm excitation.
+
+\subsection*{Immunoprecipitation and Western blot.}
+Approximately $1.2 \times 10^7$ cells were lysed using 400$\mu$L of M-Per lysis buffer from Thermo Scientific (Waltham, MA). 
+Lysates were cleared by centrifugation at 16,950 $\times$ g in a micro-centrifuge for 20 min at 4$^{o}$C.  
+Lysates were pre-cleared using 100$\mu$L protein A/G Plus agarose beads from Santa Cruz Biotechnology (Santa Cruz, CA) by 
+inverting overnight at 4$^{o}$C.  Beads were cleared by centrifugation and total protein concentration
+was determined by a BCA assay (Thermo Scientific, Waltham, MA).  Immunoprecipitations were setup by bringing 
+lysate to a concentration of 1.0g/L in a total volume of 300$\mu$L (M-Per buffer was used for dilution).     
+The anti-Raf antibody was added at 3 $\mu$L.
+A negative control with no bait protein was also used to exclude the direct interaction of proteins with the A/G beads.   
+After 1 hr of inversion at 4$^{o}$C, 20$\mu$L of agarose beads was added and samples were left 
+to invert overnight at 4$^{o}$C.  
+Samples were then washed three times with M-Per buffer by centrifugation.
+Finally proteins were eluted from agarose beads using a laemmli loading buffer.
+Eluted proteins were resolved by SDS-PAGE and Western blotting.  Total 
+lysate samples were normalized by total protein concentration (20$\mu$g per sample)
+and resolved by SDS-PAGE and Western blotting.  Secondary HRP bound antibody was used for visualization.
+All antibodies were purchased from Cell Signaling (Boston, MA) with the exception of anti-p621 Raf which was purchased from Biosource/Invitrogen  (Carlsbad, CA), and
+anti-pS338 Raf which was purchased from Santa Cruz Biotechnology (Santa Cruz, CA); anti-retinoblastoma from Zymed (South San Francisco, CA); and anti-CK2 from BD Biosciences (San Jose, CA).
+     
+\subsection*{Formulation and solution of the model equations.}
+We used ordinary differential equations (ODEs) to model the time evolution of the circuit components:
+\begin{equation}
+	\frac{dx_{i}}{dt}  = \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) - \left(\mu + k_{d,i}\right)x_{i}\qquad{i=1,2,\hdots,\mathcal{M}}\\
+\end{equation}where $\mathcal{R}$ denotes the number of reactions, $\mathcal{M}$ denotes the number of circuit components, $k_{d,i}$ denotes a first-order non-specific degradation constant
+for species i, and $\mu$ denotes the specific growth rate of HL-60 cells.
+The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$. If 
+$\sigma_{ij}>0$, metabolite $i$ is produced by reaction $j$. Conversely, if $\sigma_{ij}>0$, metabolite $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates
+metabolite $i$ is not connected with reaction $j$. 
+The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of reaction $j$. 
+Typically, reaction $j$ is a non-linear function of network state, as well as unknown kinetic parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$).
+The system material balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$.
+
+Each reaction rate was written as the product of two terms, a kinetic term ($\bar{r}_{j}$) and a regulatory term ($v_{j}$):
+\begin{equation}\label{eqn:rate-factor}
+	r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right) = \bar{r}_{j}v_{j}
+\end{equation}We used multiple saturation kinetics to model the reaction term $\bar{r}_{j}$:
+\begin{equation}\label{eqn:rate-bar}
+	\bar{r}_{j} = k_{j}^{max}\epsilon_{i}\left(\prod_{s\in{m_{j}^{-}}}\frac{x_{s}}{K_{js} + x_{s}}\right)
+\end{equation}where $k_{j}^{max}$ denotes the maximum rate for reaction $j$, $\epsilon_{i}$ denotes the scaled enzyme activity which catalyzes reaction $j$, and
+$K_{js}$ denotes the saturation constant for species $s$ in reaction $j$. 
+The product in Eqn. \eqref{eqn:rate-bar} was carried out over the set of \textit{reactants} for reaction $j$ (denoted as $m_{j}^{-}$).
+
+The control term $v_{j}$ depended upon the combination of factors which influenced the abundance or activity of $x_{i}$.
+For each species, we used a rule based approach to select from competing control factors (Fig. \ref{fig-control-schematic}). 
+We modeled species activation as:
+\begin{equation}
+	v_{j} = \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
+\end{equation}where $0\leq f_{ij}\left(x\right)\leq 1$ was a regulatory transfer function that calculated the influence of species $x_{i}$ on rate process $j$. 
+Conversely, we modeled the inhibition (or repression) of rate process $j$ as:
+\begin{equation}
+	v_{j} = 1 - \max\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right)
+\end{equation}Lastly, if rate process $j$ was subject to had both $m$ activating and $n$ inhibitory factors, we modeled the control term as:
+\begin{equation}
+	v_{j} = \min\left(u_{j},d_{j}\right)
+\end{equation}where:
+\begin{eqnarray}
+	u_{j} &=& \max_{j^{+}}\left(f_{1j}\left(x\right),\hdots,f_{mj}\left(x\right)\right) \\
+	d_{j} &=& 1 - \max_{j^{-}}\left(f_{1j}\left(x\right),\hdots,f_{nj}\left(x\right)\right)
+\end{eqnarray}The quantities $j^{+}$ and $j^{-}$ denoted the sets of activating, and inhibitory factors for process $j$. 
+If a process had no control factors, we set $v_{j} = 1$.
+There are many possible functional forms for $0\leq f_{ij}\left(x\right)\leq 1$. 
+However, in this study, each individual transfer function took the form:
+\begin{equation}\label{eqn:control-factor}
+	f_{i}\left(\mathbf{x}\right) = \frac{\kappa_{ij}^{\eta}x_{j}^{\eta}}{1 + \kappa_{ij}^{\eta}x_{j}^{\eta}}
+\end{equation}where $x_{j}$ denotes the abundance (or activity) of component $j$.  
+The $\kappa_{ij}$ parameter was species gain parameter, while $\eta$ was a cooperativity parameter (similar to a Hill coefficient).
+The model equations were encoded using the Octave programming language, and solved using the LSODE routine in Octave \citep{Octave:2014}.
+
+\subsection*{Estimation of an ensemble of model parameters from experimental data.}
+Model parameters were estimated by minimizing the squared difference between simulations and experimental data taken from ATRA-induced HL-60 cells:
+\begin{equation}\label{eqn:objective-function}
+	E_{j}(\mathbf{k}) = \sum_{i=1}^{\mathcal{T}_{j}}\biggl(\hat{\mathcal{M}}_{ij}-\hat{y}_{ij}(\mathbf{k})\biggr)^2 + \left(\frac{{\mathcal{M}^{\prime}_{ij}}-\max{y_{ij}}}{{\mathcal{M}^{\prime}_{ij}}}\right)^{2}
+\end{equation}
+The terms $\hat{\mathcal{M}}_{ij}$ and $\hat{y}_{ij}$ denote scaled experimental observations and simulation outputs from training set $j$. 
+The quantity $i$ denoted the sampled time-index and $\mathcal{T}_{j}$ denoted the number of time points for experiment j. 
+The first term in Eqn. \eqref{eqn:objective-function} quantified the relative error in the simulation. 
+We used only immunoblot measurements for model training. 
+Thus, we trained the model on the \emph{relative} change between bands within each training data set.
+The read-out from the training immunoblots was band intensity where we assumed intensity was only loosely proportional to concentration.
+Suppose we have the intensity for species $x$ at time $\{t_{1},t_{2},..,t_{n}\}$ in condition $j$. The scaled-value $\hat{\mathcal{M}}_{ij}$ would then be given by:
+\begin{equation}\label{norm_exp_data}
+\hat{\mathcal{M}}_{ij} = \frac{\mathcal{M}_{ij} - \min_{i}\mathcal{M}_{ij}}{\max_{i}{\mathcal{M}_{ij}}-\min_{i}{\mathcal{M}_{ij}}}
+\end{equation}
+Under this scaling $0\leq\hat{\mathcal{M}}_{ij}\leq{1}$ where $\hat{\mathcal{M}}_{ij}=0$ describes the lowest intensity band and $\hat{\mathcal{M}}_{ij}=1$ describes the highest intensity band. 
+A similar scaling was defined for the simulation output. The second-term in the objective function ensured the proper concentration scale was estimated by the model.
+In this study, we set the highest intensity band to $\mathcal{M}^{\prime}_{ij} = 10$ [AU] for all simulations. 
+
+We minimized the total model residual ($\sum{E_{j}}$) using Particle swarm optimization (PSO) \citep{PSO}.
+PSO uses a \textit{swarming} metaheuristic to explore parameter spaces. 
+A strength of PSO is its ability to find the global minimum, even in the presence of potentially many local minima, by communicating the local
+error landscape experienced by each particle collectively to the swarm. Thus, PSO acts both as a local and a global search algorithm. 
+For each iteration, particles in the swarm compute their local error by evaluating the model equations using their specific parameter vector realization.
+From each of these local points, a globally best error is identified. Both the local and global error 
+are then used to update the parameter estimates of each particle using the rules:
+\begin{eqnarray}
+	\mathbf{\Delta}_{i} &=&\theta_{1}\mathbf{\Delta}_{i} + \theta_{2}\mathbf{r}_{1}\left(\mathcal{L}_{i} - \mathbf{k}_{i}\right) + \theta_{3}\mathbf{r}_{2}\left(\mathcal{G} - \mathbf{k}_{i}\right) \\
+	\mathbf{k}_{i} &=& \mathbf{k}_{i} + \mathbf{\Delta}_{i}
+\end{eqnarray}where $\left(\theta_{1},\theta_{2},\theta_{3}\right)$ are adjustable parameters, $\mathcal{L}_{i}$ denotes local best solution found by particle $i$, and
+$\mathcal{G}$ denotes the best solution found over the entire population of particles. The quantities $r_{1}$ and $r_{2}$ denote uniform random vectors with the same dimension as the number of unknown model
+parameters ($\mathcal{K}\times{1}$). In thus study, we used $\left(\theta_{1},\theta_{2},\theta_{3}\right) = \left(1.0, 0.05564, 0.02886\right)$, which was taken from XXX. 
+
+
+
+
+\section*{Acknowledgements}
+The authors thank the anonymous reviewers for their helpful suggestions. 
+We acknowledge the gracious financial support to J.V. by the National Science Foundation CAREER (CBET-0846876) for the support of R.T. and H.J.
+In addition, we acknowledge support to A.Y. from the National Institutes of Health (CA 30555, CA152870) 
+and a grant from New York State Stem Cell Science.  Lastly, we acknowledge the financial support to J.V. and A.Y. 
+from the National Cancer Institute (\#U54CA143876). The content is solely the responsibility of the authors and does not necessarily 
+represent the official views of the National Cancer Institute or the National Institutes of Health.
+
+\clearpage
+%\bibliographystyle{plain}
+%\bibliographystyle{IEEEbib}
+
+\bibliography{References_v1}
+
+\clearpage
+
+% Supplemental figures -
+% Set the S- 
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand\thetable{T\arabic{table}}
+\renewcommand\thepage{S-\arabic{page}}
+\renewcommand\theequation{S\arabic{equation}}
+
+% Reset the counters -
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+\end{document}
+

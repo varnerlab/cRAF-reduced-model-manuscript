@@ -1,0 +1,292 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Breitman1980}
+Breitman TR, Selonick SE, Collins SJ (1980) {Induction of differentiation of
+  the human promyelocytic leukemia cell line (HL-60) by retinoic acid.}
+\newblock Proc Natl Acad Sci U S A 77: 2936--2940.
+\bibAnnoteFile{Breitman1980}
+
+\bibitem{Yen1998}
+Yen A, Roberson MS, Varvayanis S, Lee AT (1998) {Retinoic acid induced
+  mitogen-activated protein (MAP)/extracellular signal-regulated kinase (ERK)
+  kinase-dependent MAP kinase activation needed to elicit HL-60 cell
+  differentiation and growth arrest}.
+\newblock Cancer Res 58: 3163--3172.
+\bibAnnoteFile{Yen1998}
+
+\bibitem{Hong2001}
+Hong HY, Varvayanis S, Yen A (2001) {Retinoic acid causes MEK-dependent RAF
+  phosphorylation through RARalpha plus RXR activation in HL-60 cells.}
+\newblock Differentiation 68: 55--66.
+\bibAnnoteFile{Hong2001}
+
+\bibitem{Mangelsdorf1990}
+Mangelsdorf DJ, Ong ES, Dyck JA, Evans RM (1990) {Nuclear receptor that
+  identifies a novel retinoic acid response pathway.}
+\newblock Nature 345: 224--229.
+\bibAnnoteFile{Mangelsdorf1990}
+
+\bibitem{Congleton:2012fk}
+Congleton J, MacDonald R, Yen A (2012) {Src inhibitors, PP2 and dasatinib,
+  increase retinoic acid-induced association of Lyn and c-Raf (S259) and
+  enhance MAPK-dependent differentiation of myeloid leukemia cells}.
+\newblock Leukemia 26: 1180-8.
+\bibAnnoteFile{Congleton:2012fk}
+
+\bibitem{Shen:2011aa}
+Shen M, Bunaciu R, Congleton J, Jensen H, Sayam L, et~al. (2011) {Interferon
+  regulatory factor-1 binds c-Cbl, enhances mitogen activated protein kinase
+  signaling and promotes retinoic acid-induced differentiation of HL-60 human
+  myelo-monoblastic leukemia cells}.
+\newblock Leuk Lymphoma 52: 2372-9.
+\bibAnnoteFile{Shen:2011aa}
+
+\bibitem{Shen2009}
+Shen M, Yen A (2009) {c-Cbl tyrosine kinase-binding domain mutant G306E
+  abolishes the interaction of c-Cbl with CD38 and fails to promote retinoic
+  acid-induced cell differentiation and G0 arrest}.
+\newblock J Biol Chem 284: 25664--25677.
+\bibAnnoteFile{Shen2009}
+
+\bibitem{Yen2006}
+Yen A, Varvayanis S, Smith J, Lamkin T (2006) {Retinoic acid induces expression
+  of SLP-76: expression with c-FMS enhances ERK activation and retinoic
+  acid-induced differentiation/G0 arrest of HL-60 cells}.
+\newblock Eur J Cell Biol 85: 117--132.
+\bibAnnoteFile{Yen2006}
+
+\bibitem{Marchisio:1998aa}
+Marchisio M, Bertagnolo V, Colamussi ML, Capitani S, Neri LM (1998)
+  {Phosphatidylinositol 3-kinase in HL-60 nuclei is bound to the nuclear matrix
+  and increases during granulocytic differentiation}.
+\newblock Biochem Biophys Res Commun 253: 346-51.
+\bibAnnoteFile{Marchisio:1998aa}
+
+\bibitem{Congleton2011}
+Congleton J, Jiang H, Malavasi F, Lin H, Yen A (2011) {ATRA-induced HL-60
+  myeloid leukemia cell differentiation depends on the CD38 cytosolic tail
+  needed for membrane localization, but CD38 enzymatic activity is
+  unnecessary.}
+\newblock Exp Cell Res 317: 910--919.
+\bibAnnoteFile{Congleton2011}
+
+\bibitem{WANG2004}
+Wang J, Yen A (2004) {A novel retinoic acid-responsive element regulates
+  retinoic acid induced BLR1 expression}.
+\newblock Mol Cell Biol 24: 2423 - 2443.
+\bibAnnoteFile{WANG2004}
+
+\bibitem{YEN1990}
+Yen A (1990) {HL-60 cells as a model of growth and differentiation: the
+  significance of variant cells}.
+\newblock Hematology Review 4: 5-46.
+\bibAnnoteFile{YEN1990}
+
+\bibitem{Yang2002}
+Yang T, Xiong Q, Enslen H, Davis R, Chow CW (2002) {Phosphorylation of NFATc4
+  by p38 mitogen-activated protein kinases}.
+\newblock Mol Cell Biol 22: 3892--3904.
+\bibAnnoteFile{Yang2002}
+
+\bibitem{Wang2008}
+Wang J, Yen A (2008) {A MAPK-positive Feedback Mechanism for BLR1 Signaling
+  Propels Retinoic Acid-triggered Differentiation and Cell Cycle Arrest}.
+\newblock J Biol Chem 283: 4375--4386.
+\bibAnnoteFile{Wang2008}
+
+\bibitem{Tasseff2011}
+Tasseff R, Nayak S, Song S, Yen A, Varner J (2011) {Modeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.}
+\newblock Integr Biol 3: 578 - 591.
+\bibAnnoteFile{Tasseff2011}
+
+\bibitem{Katagiri1994}
+Katagiri K, Hattori S, Nakamura S, Yamamoto T, Yoshida T, et~al. (1994)
+  Activation of ras and formation of gap complex during tpa-induced monocytic
+  differentiation of hl-60 cells.
+\newblock Blood 84: 1780--1789.
+\bibAnnoteFile{Katagiri1994}
+
+\bibitem{Miranda2007}
+Miranda MB, Johnson DE (2007) Signal transduction pathways that contribute to
+  myeloid differentiation.
+\newblock Leukemia 21: 1363--1377.
+\bibAnnoteFile{Miranda2007}
+
+\bibitem{Hickstein1989}
+Hickstein DD, Back AL, Collins SJ (1989) Regulation of expression of the cd11b
+  and cd18 subunits of the neutrophil adherence receptor during human myeloid
+  differentiation.
+\newblock J Biol Chem 264: 21812--21817.
+\bibAnnoteFile{Hickstein1989}
+
+\bibitem{Hornstein:2004aa}
+Hornstein I, Alcover A, Katzav S (2004) {Vav proteins, masters of the world of
+  cytoskeleton organization}.
+\newblock Cell Signal 16: 1-11.
+\bibAnnoteFile{Hornstein:2004aa}
+
+\bibitem{Song1996}
+Song JS, Gomez J, Stancato LF, Rivera J (1996) Association of a p95
+  vav-containing signaling complex with the fcepsilonri gamma chain in the
+  rbl-2h3 mast cell line. evidence for a constitutive in vivo association of
+  vav with grb2, raf-1, and erk2 in an active complex.
+\newblock J Biol Chem 271: 26962--26970.
+\bibAnnoteFile{Song1996}
+
+\bibitem{Costello1999}
+Costello PS, Walters AE, Mee PJ, Turner M, Reynolds LF, et~al. (1999) The
+  rho-family gtp exchange factor vav is a critical transducer of t cell
+  receptor signals to the calcium, erk, and nf-kappab pathways.
+\newblock Proc Natl Acad Sci U S A 96: 3035--3040.
+\bibAnnoteFile{Costello1999}
+
+\bibitem{Graham2007}
+Graham D, Robertson C, Bautista J, Mascarenhas F, Diacovo M, et~al. (2007)
+  {Neutrophil-mediated oxidative burst and host defense are controlled by a
+  Vav-PLCgamma2 signaling axis in mice.}
+\newblock J Clin Invest 117: 3445--3452.
+\bibAnnoteFile{Graham2007}
+
+\bibitem{Cleghon1994}
+Cleghon V, Morrison DK (1994) Raf-1 interacts with fyn and src in a
+  non-phosphotyrosine-dependent manner.
+\newblock J Biol Chem 269: 17749--17755.
+\bibAnnoteFile{Cleghon1994}
+
+\bibitem{Zimmermann1999}
+Zimmermann S, Moelling K (1999) Phosphorylation and regulation of raf by akt
+  (protein kinase b).
+\newblock Science 286: 1741--1744.
+\bibAnnoteFile{Zimmermann1999}
+
+\bibitem{Ritt2007}
+Ritt DA, Zhou M, Conrads TP, Veenstra TD, Copeland TD, et~al. (2007) Ck2 is a
+  component of the ksr1 scaffold complex that contributes to raf kinase
+  activation.
+\newblock Curr Biol 17: 179--184.
+\bibAnnoteFile{Ritt2007}
+
+\bibitem{Hekman2004}
+Hekman M, Wiese S, Metz R, Albert S, Troppmair J, et~al. (2004) Dynamic changes
+  in c-raf phosphorylation and 14-3-3 protein binding in response to growth
+  factor stimulation: differential roles of 14-3-3 protein binding sites.
+\newblock J Biol Chem 279: 14074--14086.
+\bibAnnoteFile{Hekman2004}
+
+\bibitem{Dhillon2009}
+Dhillon AS, Yip YY, Grindlay GJ, Pakay JL, Dangers M, et~al. (2009) The
+  c-terminus of raf-1 acts as a 14-3-3-dependent activation switch.
+\newblock Cell Signal 21: 1645--1651.
+\bibAnnoteFile{Dhillon2009}
+
+\bibitem{Kim2009}
+Kim HS, Lim IK (2009) Phosphorylated extracellular signal-regulated protein
+  kinases 1 and 2 phosphorylate sp1 on serine 59 and regulate cellular
+  senescence via transcription of p21sdi1/cip1/waf1.
+\newblock J Biol Chem 284: 15475--15486.
+\bibAnnoteFile{Kim2009}
+
+\bibitem{Milanini-Mongiat2002}
+Milanini-Mongiat J, Pouyss?gur J, Pag?s G (2002) Identification of two sp1
+  phosphorylation sites for p42/p44 mitogen-activated protein kinases: their
+  implication in vascular endothelial growth factor gene transcription.
+\newblock J Biol Chem 277: 20631--20639.
+\bibAnnoteFile{Milanini-Mongiat2002}
+
+\bibitem{Zhang2004}
+Zhang Y, Cho YY, Petersen BL, Zhu F, Dong Z (2004) Evidence of stat1
+  phosphorylation modulated by mapks, mek1 and msk1.
+\newblock Carcinogenesis 25: 1165--1175.
+\bibAnnoteFile{Zhang2004}
+
+\bibitem{Li2006}
+Li Z, Theus MH, Wei L (2006) Role of erk 1/2 signaling in neuronal
+  differentiation of cultured embryonic stem cells.
+\newblock Dev Growth Differ 48: 513--523.
+\bibAnnoteFile{Li2006}
+
+\bibitem{YEN1984}
+Yen A, Reece SL, Albright KL (1984) Dependence of hl-60 myeloid cell
+  differentiation on continuous and split retinoic acid exposures:
+  precommitment memory associated with altered nuclear structure.
+\newblock J Cell Physiol 118: 277--286.
+\bibAnnoteFile{YEN1984}
+
+\bibitem{Ferrell:2002aa}
+Ferrell J (2002) {Self-perpetuating states in signal transduction: positive
+  feedback, double-negative feedback and bistability}.
+\newblock Curr Opin Cell Biol 14: 140-8.
+\bibAnnoteFile{Ferrell:2002aa}
+
+\bibitem{Xiong:2003aa}
+Xiong W, Ferrell J (2003) {A positive-feedback-based bistable 'memory module'
+  that governs a cell fate decision}.
+\newblock Nature 426: 460-5.
+\bibAnnoteFile{Xiong:2003aa}
+
+\bibitem{Bagci:2006aa}
+Bagci EZ, Vodovotz Y, Billiar TR, Ermentrout GB, Bahar I (2006) {Bistability in
+  apoptosis: roles of bax, bcl-2, and mitochondrial permeability transition
+  pores}.
+\newblock Biophys J 90: 1546-59.
+\bibAnnoteFile{Bagci:2006aa}
+
+\bibitem{Luan:2007aa}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS Comput Biol 3: e142.
+\bibAnnoteFile{Luan:2007aa}
+
+\bibitem{pr3010138}
+Wayman JA, Sagar A, Varner JD (2015) Dynamic modeling of cell-free biochemical
+  networks using effective kinetic models.
+\newblock Processes 3: 138.
+\bibAnnoteFile{pr3010138}
+
+\bibitem{Milo:2010aa}
+Milo R, Jorgensen P, Moran U, Weber G, Springer M (2010) Bionumbers--the
+  database of key numbers in molecular and cell biology.
+\newblock Nucleic Acids Res 38: D750-3.
+\bibAnnoteFile{Milo:2010aa}
+
+\bibitem{Julia}
+Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} fresh approach to
+  numerical computing.
+\newblock CoRR abs/1411.1607.
+\bibAnnoteFile{Julia}
+
+\bibitem{Hindmarsh2005}
+Hindmarsh A, Brown P, Grant K, Lee S, Serban R, et~al. (2005) Sundials: Suite
+  of nonlinear and differential/algebraic equation solvers.
+\newblock ACM Transactions on Mathematical Software 31: 363-396.
+\bibAnnoteFile{Hindmarsh2005}
+
+\bibitem{Brooks1996}
+Brooks SC, Kazmer S, Levin AA, Yen A (1996) {Myeloid differentiation and
+  retinoblastoma phosphorylation changes in HL-60 cells induced by retinoic
+  acid receptor- and retinoid X receptor-selective retinoic acid analogs.}
+\newblock Blood 87: 227--237.
+\bibAnnoteFile{Brooks1996}
+
+\bibitem{Jensen:2015aa}
+Jensen HA, Yourish HB, Bunaciu RP, Varner JD, Yen A (2015) Induced
+  myelomonocytic differentiation in leukemia cells is accompanied by
+  noncanonical transcription factor expression.
+\newblock FEBS Open Bio 5: 789-800.
+\bibAnnoteFile{Jensen:2015aa}
+
+\end{thebibliography}

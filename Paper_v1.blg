@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v1.aux
+The style file: plain.bst
+Database file #1: Paper_v1.bib
+Repeated entry---line 907 of file Paper_v1.bib
+ : @article{Breitman1980
+ :                      ,
+I'm skipping whatever remains of this entry
+You've used 25 entries,
+            2118 wiz_defined-function locations,
+            692 strings with 10453 characters,
+and the built_in function-call counts, 9734 in all, are:
+= -- 940
+> -- 578
+< -- 0
++ -- 228
+- -- 202
+* -- 808
+:= -- 1685
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 176
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 275
+empty$ -- 660
+format.name$ -- 202
+if$ -- 1938
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 25
+newline$ -- 128
+num.names$ -- 50
+pop$ -- 126
+preamble$ -- 1
+purify$ -- 151
+quote$ -- 0
+skip$ -- 178
+stack$ -- 0
+substring$ -- 717
+swap$ -- 25
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 100
+warning$ -- 0
+while$ -- 87
+width$ -- 27
+write$ -- 277
+(There was 1 error message)
