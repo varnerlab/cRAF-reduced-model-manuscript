@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 JAN 2017 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JAN 2017 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -882,96 +882,96 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 121.
 
-[1] [2
+[1] [1
 
-] [3] [4] [5
+] [2] [3] [4
 
-] [6] [7] [8] [9] [10
+] [5] [6] [7] [8] [9
 
-] [11] [12] [13] [14] [15
+] [10] [11] [12] [13] [14
 
-] [16] [17]
-[18] [19] [20] [21
+] [15] [16]
+[17] [18] [19] [20
 
 ] (./Paper_v2.bbl
-Underfull \hbox (badness 2189) in paragraph at lines 23--29
+Underfull \hbox (badness 2189) in paragraph at lines 57--63
 []\OT1/phv/m/n/12 Yen A, Rober-son MS, Var-vaya-nis S, Lee AT (1998) Retinoic a
 cid in-duced
  []
 
-[22
+[21
 
-] [23]
-Underfull \hbox (badness 1448) in paragraph at lines 165--169
+] [22]
+Underfull \hbox (badness 1448) in paragraph at lines 199--203
 []\OT1/phv/m/n/12 Cleghon V, Mor-ri-son DK (1994) Raf-1 in-ter-acts with fyn an
 d src in a non-
  []
 
-[24] [25]) [26]
+[23] [24]) [25]
 <./figs/Fig-1-IP-ExperimentalStudies.pdf, id=103, 538.01pt x 580.1675pt>
 File: ./figs/Fig-1-IP-ExperimentalStudies.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-1-IP-ExperimentalStudies.pdf>
 Package pdftex.def Info: ./figs/Fig-1-IP-ExperimentalStudies.pdf used on input 
-line 620.
+line 627.
 (pdftex.def)             Requested size: 422.77664pt x 455.91052pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 632.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 639.
 
 
-LaTeX Warning: Text page 27 contains only floats.
+LaTeX Warning: Text page 26 contains only floats.
 
 
 Overfull \vbox (5.48051pt too high) has occurred while \output is active []
 
 
-[27
+[26
 
  <./figs/Fig-1-IP-ExperimentalStudies.pdf>]
 <./figs/Fig-1-Network_v3.pdf, id=279, 1349.04pt x 1090.0725pt>
 File: ./figs/Fig-1-Network_v3.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-1-Network_v3.pdf>
-Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 636.
+Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 643.
 (pdftex.def)             Requested size: 469.75502pt x 379.56837pt.
 
-<./figs/Fig-2-cRAF-BLR1-Fit-Analysis.pdf, id=280, 508.90125pt x 590.205pt>
-File: ./figs/Fig-2-cRAF-BLR1-Fit-Analysis.pdf Graphic file (type pdf)
+<./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf, id=280, 499.8675pt x 590.205pt>
+File: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf Graphic file (type pdf)
 
-<use ./figs/Fig-2-cRAF-BLR1-Fit-Analysis.pdf>
-Package pdftex.def Info: ./figs/Fig-2-cRAF-BLR1-Fit-Analysis.pdf used on input 
-line 646.
-(pdftex.def)             Requested size: 422.77664pt x 490.33832pt.
+<use ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf>
+Package pdftex.def Info: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf used on input 
+line 653.
+(pdftex.def)             Requested size: 422.77664pt x 499.20003pt.
 
 <./figs/Fig-3-Predictions.pdf, id=281, 771.88374pt x 522.95375pt>
 File: ./figs/Fig-3-Predictions.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Predictions.pdf>
-Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 659.
+Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 666.
 (pdftex.def)             Requested size: 469.75502pt x 318.25922pt.
 
-<./figs/Fig-5-GRN-Simulations.pdf, id=282, 461.725pt x 588.1975pt>
+<./figs/Fig-5-GRN-Simulations.pdf, id=282, 463.7325pt x 585.18625pt>
 File: ./figs/Fig-5-GRN-Simulations.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-GRN-Simulations.pdf>
-Package pdftex.def Info: ./figs/Fig-5-GRN-Simulations.pdf used on input line 66
-9.
-(pdftex.def)             Requested size: 399.29463pt x 508.66716pt.
- [28 <./figs/Fig-1-Network_v3.pdf>]
-[29 <./figs/Fig-2-cRAF-BLR1-Fit-Analysis.pdf>] [30 <./figs/Fig-3-Predictions.pd
-f>] [31 <./figs/Fig-5-GRN-Simulations.pdf>] (./Paper_v2.aux) )
+Package pdftex.def Info: ./figs/Fig-5-GRN-Simulations.pdf used on input line 67
+6.
+(pdftex.def)             Requested size: 399.29463pt x 503.88434pt.
+ [27 <./figs/Fig-1-Network_v3.pdf>]
+[28 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf>] [29 <./figs/Fig-3-Predictions.pd
+f>] [30 <./figs/Fig-5-GRN-Simulations.pdf>] (./Paper_v2.aux) )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 50 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7546 strings out of 493089
- 109459 string characters out of 6134842
- 199595 words of memory out of 5000000
- 10817 multiletter control sequences out of 15000+600000
+ 7570 strings out of 493089
+ 109931 string characters out of 6134842
+ 199691 words of memory out of 5000000
+ 10835 multiletter control sequences out of 15000+600000
  29011 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,7n,41p,1240b,1039s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,7n,41p,1240b,1043s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -989,10 +989,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (32 pages, 4377123 bytes).
+Output written on Paper_v2.pdf (32 pages, 4394971 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
+ 681 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,6 +13,40 @@
   \textsc{Annotation:}\ #2\end{quotation}}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem{Bushue:2010aa}
+Bushue N, Wan YJY (2010) Retinoid pathway and cancer therapeutics.
+\newblock Adv Drug Deliv Rev 62: 1285-98.
+\bibAnnoteFile{Bushue:2010aa}
+
+\bibitem{Tang:2011aa}
+Tang XH, Gudas LJ (2011) Retinoids, retinoic acid receptors, and cancer.
+\newblock Annu Rev Pathol 6: 345-64.
+\bibAnnoteFile{Tang:2011aa}
+
+\bibitem{Cheung:2012aa}
+Cheung FSG, Lovicu FJ, Reichardt JKV (2012) Current progress in using vitamin d
+  and its analogs for cancer prevention and treatment.
+\newblock Expert Rev Anticancer Ther 12: 811-37.
+\bibAnnoteFile{Cheung:2012aa}
+
+\bibitem{Nilsson:1984aa}
+Nilsson B (1984) Probable in vivo induction of differentiation by retinoic acid
+  of promyelocytes in acute promyelocytic leukaemia.
+\newblock Br J Haematol 57: 365-71.
+\bibAnnoteFile{Nilsson:1984aa}
+
+\bibitem{Warrell:1993aa}
+Warrell RP Jr (1993) Retinoid resistance in acute promyelocytic leukemia: new
+  mechanisms, strategies, and implications.
+\newblock Blood 82: 1949-53.
+\bibAnnoteFile{Warrell:1993aa}
+
+\bibitem{Freemantle:2003aa}
+Freemantle SJ, Spinella MJ, Dmitrovsky E (2003) Retinoids in cancer therapy and
+  chemoprevention: promise meets resistance.
+\newblock Oncogene 22: 7305-15.
+\bibAnnoteFile{Freemantle:2003aa}
+
 \bibitem{Breitman1980}
 Breitman TR, Selonick SE, Collins SJ (1980) {Induction of differentiation of
   the human promyelocytic leukemia cell line (HL-60) by retinoic acid.}
