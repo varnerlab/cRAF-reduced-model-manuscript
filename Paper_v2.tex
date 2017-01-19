@@ -197,74 +197,20 @@ suggested that positive feedback architectures are central to differentiation pr
 \clearpage
 
 \section*{Results}
-
-Interrogation of the Raf interactome suggested Vav1 was involved with ATRA-induced initiation of MAPK activity (Fig. \ref{fig:ip-data}).
-The architecture ultimately responsible for mediating ATRA-induced Raf activation is not clear.
-To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
-A panel of 19 possible Raf interaction partners (kinases, GTPases, scaffolding proteins etc)
-was constructed based upon known signaling pathways.
-We did not consider the most likely binding partner,
-the small GTPase RAS, as previous studies have ruled it out in MAPK activation in HL-60 cells \cite{Wang2008,Katagiri1994}.
-Total Raf was used as a bait protein for the immunoprecipitation studies.
-Western blot analysis using total Raf and pS621 Raf specific antibodies confirmed the
-presence of the bait protein, total and phosphorylated forms, in the immunoprecipitate (Fig. \ref{fig:ip-data}A).
-Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 precipitated with Raf, suggesting a direct physical interaction was possible.
-However, only the associations between Raf and Vav1 and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
-Furthermore, the Vav1 and Src associations were correlated with pS621 Raf abundance in the precipitate.
-Others proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
-The remaining 14 proteins were expressed in whole cell lysate (Fig. \ref{fig:ip-data}B),
-but were not detectable in the precipitate of Raf IP.
-Treatment with the Raf kinase inhibitor GW5074 following ATRA exposure reduced the association of both Vav1 with Raf and Src with Raf (Fig. \ref{fig:ip-data}),
-although the signal intensity for Src was notably weak.
-However, GW5074 did not influence the association of CK2 or 14-3-3 with Raf, further demonstrating their independence from Raf phosphorylation.
-Interestingly, the Raf-Akt interaction qualitatively increased following treatment with GW5074;
-however, it remained unaffected by treatment with ATRA.
-Src family kinases are known to be important in myeloid differentiation \cite{Miranda2007} and their role in HL-60 differentiation has been investigated elsewhere \cite{Congleton:2012fk}.
-Given the existing work and variable reproducibility in the context of the Raf immunoprecipitate,
-we will not investigate the role of Src further in this study.
-Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with Raf activation following ATRA-treatment.
-Previous studies demonstrated that a Vav1-Slp76-Cbl-CD38 complex plays an important role in ATRA-induced MAPK activation and differentiation of HL-60 cells \cite{Shen2009}.
-Here we did not observe direct interaction of Raf with Cbl or Slp76;
-however, this complex could be involved upstream.
-
-%For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{fig:ip-data}A.
-
-Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers following ATRA exposure (Fig. \ref{fig:ip-data}D-F).
-Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
-ATRA treatment alone statistically significantly increased the G1/G0 percentage over the untreated control,
-while GW5074 alone had a negligible effect on the cell cycle distribution (Fig. \ref{fig:ip-data}D).
-Surprisingly, the combination of GW5074 and ATRA statistically significantly increased the G1/G0 population (82 $\pm$ 1\%)
-compared with ATRA alone (61 $\pm$ 0.5\%).
-Increased G1/G0 arrest following the combined treatment with GW5074 and ATRA was unexpected,
-as the combination of ATRA and the MEK inhibitor (PD98059) has been shown previously to decrease ATRA-induced growth arrest \cite{Yen1998}.
-However, growth arrest is not the sole indication of functional differentiation.
-Expression of the cell surface marker CD11b has also been shown to coincide with HL-60 cells myeloid differentiation \cite{Hickstein1989}.
-We measured CD11b expression, for the various treatment groups, using immuno-fluorescence flow cytometry 48 hr post-treatment.
-As with G1/G0 arrest, ATRA alone increased CD11b expression over the untreated control,
-while GW5074 further enhanced ATRA-induced CD11b expression (Fig. \ref{fig:ip-data}E).
-GW5074 alone had no statistically significant effect on CD11b expression, compared with the untreated control.
-Lastly, the inducible reactive oxygen species (ROS) response was used as a functional marker of differentiated neutrophils \cite{Congleton2011}.
-We measured the ROS response induced by the phorbol ester 12-O-tetradecanoylphorbol-13-acetate (TPA) using flow cytometry.
-Untreated cells showed no discernible TPA response,
-with only 7.0 $\pm$ 3.0\% ROS induction (Fig. \ref{fig:ip-data}F).
-Cells treated with ATRA had a significantly increased TPA response, 53 $\pm$ 7\% ROS induction 48 hr post-treatment.
-Treatment with both ATRA and GW5074 statistically significantly reduced ROS induction (22 $\pm$ 0.6\%) compared to ATRA alone.
-Interestingly, Western blot analysis did not detect a GW5074 effect on ATRA-induced expression of p47phox,
-a required upstream component of the ROS response  (Fig. \ref{fig:ip-data}F, bottom).
-Thus, the inhibitory effect of GW5074 on inducible ROS might occur downstream of p47phox expression.
-However, the ROS producing complex is MAPK dependent,
-therefore it is also possible that GW5074 inhibited ROS production by interfering
-with MAPK activation (in which case the p47Phox marker might not accurately reflect phenotypic conversion and differentiation).
-
-We constructed an effective model of the ATRA-induced HL-60 differentiation circuit which described signaling and gene expression events following the addition of ATRA (Fig. \ref{fig:network}).
+We constructed an effective model of the ATRA-induced HL-60 differentiation which described signaling and gene expression events following the addition of ATRA (Fig. \ref{fig:network}).
 The model connectivity was developed from literature and the studies presented here.
-The signaling model recapitulated sustained signalsome/MAPK activation following exposure to 1$\mu$M ATRA (Fig. \ref{fig:model-fitting}A-B).
+We decomposed the ATRA program into three modules;
+a signal initiation module that was responsible for sensing and transforming the ATRA signal into activated cRaf-S621 and the ATRA-RXR/RAR (Trigger) signals (Fig. \ref{fig:network}A);
+a signal integration module that controlled the expression of upstream transcription factors given cRaf-S621 and activated Trigger (Fig. \ref{fig:network}B); and
+a phenotype module which encoded the expression of functional differentiation markers (Fig. \ref{fig:network}C).
+
+The signal initiation module recapitulated sustained signalsome/MAPK activation following exposure to 1$\mu$M ATRA (Fig. \ref{fig:model-fitting}A-B).
 An ensemble of effective model parameters was estimated by minimizing the difference between simulations and time-series measurements of BLR1 mRNA and
-cRaf-pS621 following the addition of 1$\mu$M ATRA.
-We focused on the S621 phosphorylation site of cRaf since enhanced phosphorylation at this site is a defining characteristic of  sustained MAPK activation in HL-60.
-The effective model captured both ATRA-induced BLR1 expression (Fig. \ref{fig:model-fitting}A) and sustained phosphorylation of cRaf-pS621 (Fig. \ref{fig:model-fitting}B)
+cRaf-S621 following the addition of 1$\mu$M ATRA. We focused on the S621 phosphorylation site of cRaf since enhanced phosphorylation at this site is a defining
+characteristic of sustained MAPK activation in HL-60. The effective model captured both ATRA-induced BLR1 expression (Fig. \ref{fig:model-fitting}A)
+and sustained phosphorylation of cRaf-pS621 (Fig. \ref{fig:model-fitting}B)
 in a growing population of HL-60 cells. However, the effective model failed to capture the decline of BLR1 message after 48 hr of ATRA exposure.
-Next, we tested the response of the signalsome/MAPK signaling model to different ATRA dosages.
+Next, we tested the response of the signalsome/MAPK signaling module to different ATRA dosages.
 
 % Secondly, ATRA treatment alone increased both Raf phosphorylation at S621/S259 and Raf expression 24 hr post-treatment,
 % while ATRA-induced phosphorylation of ERK was blocked by GW5074, consistent with the loss of Raf kinase activity (Fig. \ref{fig:ip-data}B).
@@ -313,6 +259,63 @@ steady-state values for upstream members of the signal integration unit (Fig. \r
 % However, GW5074 did not influence the association of CK2 or 14-3-3 with cRaf,
 % further demonstrating their independence from cRaf phosphorylation.
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
+
+The composition of the siganlsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
+To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
+A panel of 19 possible Raf interaction partners (kinases, GTPases, scaffolding proteins etc)
+was constructed based upon known signaling pathways.
+We did not consider the most likely binding partner,
+the small GTPase RAS, as previous studies have ruled it out in MAPK activation in HL-60 cells \cite{Wang2008,Katagiri1994}.
+Total Raf was used as a bait protein for the immunoprecipitation studies.
+Interrogation of the Raf interactome suggested Vav1 was involved with ATRA-induced initiation of MAPK activity (Fig. \ref{fig:ip-data}).
+Western blot analysis using total Raf and pS621 Raf specific antibodies confirmed the
+presence of the bait protein, total and phosphorylated forms, in the immunoprecipitate (Fig. \ref{fig:ip-data}A).
+Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 precipitated with Raf, suggesting a direct physical interaction was possible.
+However, only the associations between Raf and Vav1 and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
+Furthermore, the Vav1 and Src associations were correlated with pS621 Raf abundance in the precipitate.
+Others proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
+The remaining 14 proteins were expressed in whole cell lysate (Fig. \ref{fig:ip-data}B),
+but were not detectable in the precipitate of Raf IP.
+Treatment with the Raf kinase inhibitor GW5074 following ATRA exposure reduced the association of both Vav1 with Raf and Src with Raf (Fig. \ref{fig:ip-data}),
+although the signal intensity for Src was notably weak.
+However, GW5074 did not influence the association of CK2 or 14-3-3 with Raf, further demonstrating their independence from Raf phosphorylation.
+Interestingly, the Raf-Akt interaction qualitatively increased following treatment with GW5074;
+however, it remained unaffected by treatment with ATRA.
+Src family kinases are known to be important in myeloid differentiation \cite{Miranda2007} and their role in HL-60 differentiation has been investigated elsewhere \cite{Congleton:2012fk}.
+Given the existing work and variable reproducibility in the context of the Raf immunoprecipitate,
+we did not investigate the role of Src further in this study.
+Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with Raf activation following ATRA-treatment.
+Previous studies demonstrated that a Vav1-Slp76-Cbl-CD38 complex plays an important role in ATRA-induced MAPK activation and differentiation of HL-60 cells \cite{Shen2009}.
+Here we did not observe direct interaction of Raf with Cbl or Slp76;
+however, this complex could be involved upstream.
+
+%For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{fig:ip-data}A.
+Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
+Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers following ATRA exposure (Fig. \ref{fig:ip-data}D-F).
+ATRA treatment alone statistically significantly increased the G1/G0 percentage over the untreated control,
+while GW5074 alone had a negligible effect on the cell cycle distribution (Fig. \ref{fig:ip-data}D).
+Surprisingly, the combination of GW5074 and ATRA statistically significantly increased the G1/G0 population (82 $\pm$ 1\%)
+compared with ATRA alone (61 $\pm$ 0.5\%).
+Increased G1/G0 arrest following the combined treatment with GW5074 and ATRA was unexpected,
+as the combination of ATRA and the MEK inhibitor (PD98059) has been shown previously to decrease ATRA-induced growth arrest \cite{Yen1998}.
+However, growth arrest is not the sole indication of functional differentiation.
+Expression of the cell surface marker CD11b has also been shown to coincide with HL-60 cells myeloid differentiation \cite{Hickstein1989}.
+We measured CD11b expression, for the various treatment groups, using immuno-fluorescence flow cytometry 48 hr post-treatment.
+As with G1/G0 arrest, ATRA alone increased CD11b expression over the untreated control,
+while GW5074 further enhanced ATRA-induced CD11b expression (Fig. \ref{fig:ip-data}E).
+GW5074 alone had no statistically significant effect on CD11b expression, compared with the untreated control.
+Lastly, the inducible reactive oxygen species (ROS) response was used as a functional marker of differentiated neutrophils \cite{Congleton2011}.
+We measured the ROS response induced by the phorbol ester 12-O-tetradecanoylphorbol-13-acetate (TPA) using flow cytometry.
+Untreated cells showed no discernible TPA response,
+with only 7.0 $\pm$ 3.0\% ROS induction (Fig. \ref{fig:ip-data}F).
+Cells treated with ATRA had a significantly increased TPA response, 53 $\pm$ 7\% ROS induction 48 hr post-treatment.
+Treatment with both ATRA and GW5074 statistically significantly reduced ROS induction (22 $\pm$ 0.6\%) compared to ATRA alone.
+Interestingly, Western blot analysis did not detect a GW5074 effect on ATRA-induced expression of p47phox,
+a required upstream component of the ROS response  (Fig. \ref{fig:ip-data}F, bottom).
+Thus, the inhibitory effect of GW5074 on inducible ROS might occur downstream of p47phox expression.
+However, the ROS producing complex is MAPK dependent,
+therefore it is also possible that GW5074 inhibited ROS production by interfering
+with MAPK activation (in which case the p47Phox marker might not accurately reflect phenotypic conversion and differentiation).
 
 \clearpage
 
@@ -624,22 +627,6 @@ represent the official views of the National Cancer Institute or the National In
 \clearpage
 
 \begin{figure}[!t]
-\includegraphics[width=0.9\textwidth]{./figs/Fig-1-IP-ExperimentalStudies.pdf}
-\caption{Investigation of a panel of possible Raf interaction partners in the presence and absence of ATRA.
-A: Species identified to precipitate out with Raf:
-first column shows Western blot analysis on total Raf immunoprecipitation with and without 24 hr ATRA treatment
-and the second on total lysate.
-B: The expression of species considered that did not precipitate out with Raf at levels detectable by Western blot analysis on total lysate.
-C: Effect of the Raf inhibitor GW5074 on Raf interactions as determined by Western blot analysis of total Raf immunoprecipitation.
-The Authors note the the signal associated with Src was found to be weak.
-D: Cell Cycle distribution as determined by flow cytometry indicated arrest induced by ATRA, which was increased by the addition of GW5074.
-E: Expression of the cell surface marker CD11b as determined by flow cytometry indicated increased expression induced by ATRA,
-which was enhanced by the addition of GW5074.
-F: Inducible reactive oxygen species (ROS) as determined by DCF flow cytometry. The functional differentiation response of ATRA treated cells
-was mitigated by GW5074.}\label{fig:ip-data}
-\end{figure}
-
-\begin{figure}[!t]
 \includegraphics[width=1.0\textwidth]{./figs/Fig-1-Network_v3.pdf}
 \caption{Schematic of the effective ATRA differentiation circuit.
 Above a critical threshold, ATRA activates an upstream Trigger, which induces signalsome complex formation.
@@ -678,6 +665,22 @@ Experimental data in panels A and B were reproduced from Wang and Yen \cite{Wang
 A: CD38 and CD11b expression versus time following ATRA exposure at time t = 0 hr.
 B: Gene expression at t = 48 hr following ATRA exposure.
 Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-grn-simulations}
+\end{figure}
+
+\begin{figure}[!t]
+\includegraphics[width=0.9\textwidth]{./figs/Fig-1-IP-ExperimentalStudies.pdf}
+\caption{Investigation of a panel of possible Raf interaction partners in the presence and absence of ATRA.
+A: Species identified to precipitate out with Raf:
+first column shows Western blot analysis on total Raf immunoprecipitation with and without 24 hr ATRA treatment
+and the second on total lysate.
+B: The expression of species considered that did not precipitate out with Raf at levels detectable by Western blot analysis on total lysate.
+C: Effect of the Raf inhibitor GW5074 on Raf interactions as determined by Western blot analysis of total Raf immunoprecipitation.
+The Authors note the the signal associated with Src was found to be weak.
+D: Cell Cycle distribution as determined by flow cytometry indicated arrest induced by ATRA, which was increased by the addition of GW5074.
+E: Expression of the cell surface marker CD11b as determined by flow cytometry indicated increased expression induced by ATRA,
+which was enhanced by the addition of GW5074.
+F: Inducible reactive oxygen species (ROS) as determined by DCF flow cytometry. The functional differentiation response of ATRA treated cells
+was mitigated by GW5074.}\label{fig:ip-data}
 \end{figure}
 
 \clearpage
