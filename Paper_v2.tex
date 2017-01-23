@@ -197,12 +197,18 @@ suggested that positive feedback architectures are central to differentiation pr
 \clearpage
 
 \section*{Results}
-We constructed an effective model of the ATRA-induced HL-60 differentiation which described signaling and gene expression events following the addition of ATRA (Fig. \ref{fig:network}).
-The model connectivity was developed from literature and the studies presented here.
+We constructed an effective model of ATRA-induced HL-60 differentiation which described signaling and gene expression events following the addition of ATRA (Fig. \ref{fig:network}).
+The model connectivity was developed from literature and the studies presented here (Table ZZ).
 We decomposed the ATRA program into three modules;
-a signal initiation module that was responsible for sensing and transforming the ATRA signal into activated cRaf-S621 and the ATRA-RXR/RAR (Trigger) signals (Fig. \ref{fig:network}A);
-a signal integration module that controlled the expression of upstream transcription factors given cRaf-S621 and activated Trigger (Fig. \ref{fig:network}B); and
-a phenotype module which encoded the expression of functional differentiation markers (Fig. \ref{fig:network}C).
+a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-S621 and the ATRA-RXR/RAR (Trigger) signals (Fig. \ref{fig:network}A);
+a signal integration module that controlled the expression of upstream transcription factors given cRaf-S621 and activated Trigger signals (Fig. \ref{fig:network}B); and
+a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors (Fig. \ref{fig:network}C).
+Each component of these modules was described by a mRNA and protein balance equation.
+Additionally, the signal initiation module also described the abundance of activated species e.g., Trigger and cRaf-S621 whose values were derived from
+unactivated Trigger and cRaf protein levels.
+Lastly, because the population of HL-60 cells was dividing (at least before ATRA-induced cell cycle arrest), we also considered a dilution term in all balance equations.
+The signal initiation module contained nine differential equations, while the signal integration and phenotype modules were collectively encoded by 54 differential equations.
+Model parameters were taken literature, or estimated from experimental data taken from literature using heuristic optimization (see materials and methods).
 
 The signal initiation module recapitulated sustained signalsome/MAPK activation following exposure to 1$\mu$M ATRA (Fig. \ref{fig:model-fitting}A-B).
 An ensemble of effective model parameters was estimated by minimizing the difference between simulations and time-series measurements of BLR1 mRNA and
