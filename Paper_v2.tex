@@ -426,36 +426,123 @@ prominence in the systems and synthetic biology community. However, many other t
 
 \section*{Materials and Methods}
 
-\subsubsection*{Effective ATRA differentiation model.}
-ATRA induced signaling events were modeled using saturation kinetics within an ordinary differential equation (ODE) framework:
+\subsubsection*{Model equations.}
+We decomposed the ATRA-induced differentiation program into three modules;
+a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (activated Trigger) signals;
+a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
+a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
+The output of the signal initiation module was the input to the gene expression model.
+For each gene $j=1,2,\dots,\mathcal{G}$, we modeled both the mRNA ($m_{j}$) and protein ($p_{j}$) abundance:
+\begin{eqnarray}
+	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\theta_{m,j}\right)m_{j}+\lambda_{j}\\
+	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\theta_{p,j}\right)p_{j}
+\end{eqnarray}
+The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, and translation while
+the terms $\theta_{m,j}$ and $\theta_{p,j}$ denote first-order degradation constants for mRNA and protein, respectively.
+The specific transcription rate $r_{T,j}$ was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
+abundance of transcription factors, or other regulators influenced the expression of gene $j$.
+The kinetic transcription term $\bar{r}_{T,j}$ was modeled as:
 \begin{equation}
-	\frac{1}{\tau_{i}}\frac{dx_{i}}{dt}  =  \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)-\left(\mu + k_{d}\right) x_{i}\qquad{i=1,2,\hdots,\mathcal{M}}
-\end{equation}
-The quantity $x_{i}$ denotes concentration of signaling species $i$, while $\mathcal{R}$ and $\mathcal{M}$ denote the number of signaling reactions and signaling species in the model, respectively.
-The quantity $\tau_{i}$ denotes a time scale parameter for species $i$ which captures un-modeled effects; in the current study $\tau_{i} = 1$ for all species.
-The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of process $j$.
-Typically, process $j$ is a non-linear function of biochemical and enzyme species abundance, as well as unknown model parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$).
-The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$.
-If $\sigma_{ij}>0$, species $i$ is produced by reaction $j$.
-Conversely, if $\sigma_{ij}<0$, species $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates species $i$ is not connected with reaction $j$.
-Lastly, $\mu$ denotes the specific growth rate, and $k_{d}$ denotes the rate constant controlling cell death.
-Species balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$.
+	\bar{r}_{T,j} = V^{max}_{T}\left(\frac{L_{T,o}}{L_{T,j}}\right)\left(\frac{G_{j}}{K_{T}+G_{j}}\right)
+\end{equation}where the maximum gene expression rate $V^{max}_{T}$ was defined as the product of a characteristic transcription rate constant ($k_{T}$)
+and the abundance of RNA polymerase ($R_{1}$), $V^{max}_{T} = k_{T}\left(R_{1}\right)$.
+The $\left(L_{T,o}/L_{T,j}\right)$ term denotes the ratio of transcription read lengths; $L_{T,o}$ represents a characteristic gene length, while $L_{T,j}$ denotes the length of gene $j$.
+Thus, the ratio $\left(L_{T,o}/L_{T,j}\right)$ is a gene specific correction to the characteristic transcription rate $V^{max}_{T}$.
+The degradation rate constants were defined as $\theta_{m,j}$ and $\theta_{p,j}$ denote characteristic degradation constants for mRNA and protein, respectively.
+Lastly, the $\lambda_{j}$ term denotes the constitutive rate of expression of gene $j$.
 
-Signaling rate processes were written as the product of a kinetic term ($\bar{r}_{j}$) and a control term ($v_{j}$) in the HL-60 model.
-The rate of an enzyme catalyzed process was modeled using saturation kinetics:
-\begin{equation}\label{eqn:rate-saturation}
-	\bar{r}_{j} = k_{j}\epsilon_{i}\prod_{s\in{m_{j}^{-}}}\left(\frac{x_{s}}{K_{js} + x_{s}}\right)
+The gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced the expression of gene $j$.
+If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
+$u_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
+where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on the expression of gene $j$,
+and $\mathcal{I}_{j}\left(\cdot\right)$ denotes an integration rule which combines the individual regulatory inputs for gene $j$ into a single control term.
+In this study, the integration rule governing gene expression was the weighted fraction of promoter configurations that resulted in gene expression [REFHERE]:
+\begin{equation}
+	{u}_{j} = \frac{W_{R_{1},j}+\displaystyle\sum_{n}W_{nj}f_{nj}}{1+W_{R_{1},j}+\displaystyle\sum_{d}W_{dj}f_{dj}}
 \end{equation}
-where $k_{j}$ denotes the catalytic rate constant for reaction $j$, $\epsilon_{i}$ denotes the abundance of the enzyme catalyzing reaction $j$,
-and $K_{js}$ denotes the saturation constant for species $s$ and $s\in{m_{j}}$ denotes the set of \textit{reactants} for reaction $j$.
+The numerator, the weighted sum (with weights $W_{nj}$) of promoter configurations leading to gene expression, was normalized by all possible promoter configurations.
+The likelihood of each configuration was quantified by the transfer function $f_{nj}$ (which we modeled using hill like functions), while
+the lead term in the numerator $W_{R_{1},j}$ denotes the weight of constitutive expression for gene $j$.
+Given this formulation, the rate of constitutive expression was then given by:
+\begin{equation}
+	\lambda_{j} = \bar{r}_{T,j}\left(\frac{W_{R_{1},j}}{1+W_{R_{1},j}}\right)
+\end{equation}
+If a gene expression process had no modifying factors, $u_{j}=1$.
+Lastly, the specific translation rate was modeled as:
+\begin{equation}
+	r_{X,j} = V^{max}_{X}\left(\frac{L_{X,o}}{L_{X,j}}\right)\left(\frac{m_{j}}{K_{X}+m_{j}}\right)
+\end{equation}
+where $V^{max}_{X}$ denotes a characteristic maximum translation rate estimated from literature, and $K_{X}$ denotes a translation saturation constant.
+The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
+and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. As was the case for transcription,
+we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
+
+The signal initiation, and integration modules required the level of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
+However, our base model described only the abundance of inactive proteins e.g., cRaf or RXR/RAR but not the activated forms.
+To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger.
+The abundance of activated trigger ($x_{a,1}$) was estimated directly from the RXR/RAR abundance ($x_{u,1}$):
+\begin{equation}
+	x_{a,1} \sim x_{u,1}\left(\frac{\alpha\times{\texttt{ATRA}}}{1+\alpha\times{ATRA}}\right)
+\end{equation}
+On the other hand, the abundance of cRaf-pS621 was estimated by making the pseudo steady state approximation on the cRaf-pS621 balance.
+The abundance of an activated signaling species $i$ was given by:
+\begin{equation}
+	\frac{dx_{i}}{dt}  =  r_{+,i}\left(\mathbf{x},\mathbf{k}\right) - \left(\mu+k_{d,i}\right)x_{i}\qquad{i=1,\hdots,\mathcal{M}}\\
+\end{equation}
+The quantity $x_{i}$ denotes concentration of signaling species $i$, while $\mathcal{R}$ and $\mathcal{M}$ denote the number of signaling reactions and signaling species in the model,
+respectively. The term $r_{+,i}\left(\mathbf{x},\mathbf{k}\right)$ denotes the rate of generation of activated species $i$,
+while  $\mu$ denotes the specific growth rate, and $k_{d,i}$ denotes the rate constant controlling the non-specific degradation of $x_{i}$.
+We have neglected deactivation reactions e.g., phosphatase activities.
+We assumed that signaling processes were fast compared to gene expression; this allowed us to approximate the signaling balance as:
+\begin{equation}
+	x_{i}^{*} \simeq \frac{r_{+,i}\left(\mathbf{x},\mathbf{k}\right)}{\left(\mu+k_{d,i}\right)} \qquad{i=1,\hdots,\mathcal{M}}
+\end{equation}
+The generation rate was written as the product of a kinetic term ($\bar{r}_{+,i}$) and a control term ($v_{i}$).
 The control terms $0\leq v_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
-For each rate, we used a rule-based approach to select from competing control factors.
 If rate $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
 $v_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
 where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on rate $j$.
 The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
 variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \cite{pr3010138}.
 If a process had no modifying factors, $v_{j}=1$.
+The kinetic rate of cRaf-pS621 generation $\bar{r}_{+,cRaf}$ was given as:
+\begin{equation}
+	\bar{r}_{+,cRaf} = k_{+,cRaf}x_{s}\left(\frac{x_{cRaf}}{K_{+,cRaf}+x_{cRaf}}\right)
+\end{equation}where $x_{s}$ denotes the signalsome abundance, and $K_{+,cRaf}$ denotes a saturation constant governing cRaf-pS621 formation.
+The formation of cRaf-pS621 was regulated by a single factor, the abundance of MAPK inhibitor, thus $v_{+,cRaf}$ took the form:
+\begin{equation}
+	v_{+,cRaf} = \left(1-\frac{I}{K_{D}+I}\right)
+\end{equation}where $I$ denotes the MAPK inhibitor abundance, and $K_{D}$ the affinity constant for inhibitor $I$. 
+
+% ATRA induced signaling events were modeled using saturation kinetics within an ordinary differential equation (ODE) framework:
+% \begin{equation}
+% 	\frac{1}{\tau_{i}}\frac{dx_{i}}{dt}  =  \sum_{j = 1}^{\mathcal{R}}\sigma_{ij}r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)-\left(\mu + k_{d}\right) x_{i}\qquad{i=1,2,\hdots,\mathcal{M}}
+% \end{equation}
+% The quantity $x_{i}$ denotes concentration of signaling species $i$, while $\mathcal{R}$ and $\mathcal{M}$ denote the number of signaling reactions and signaling species in the model, respectively.
+% The quantity $\tau_{i}$ denotes a time scale parameter for species $i$ which captures un-modeled effects; in the current study $\tau_{i} = 1$ for all species.
+% The quantity $r_{j}\left(\mathbf{x},\mathbf{\epsilon},\mathbf{k}\right)$ denotes the rate of process $j$.
+% Typically, process $j$ is a non-linear function of biochemical and enzyme species abundance, as well as unknown model parameters $\mathbf{k}$ ($\mathcal{K}\times{1}$).
+% The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$.
+% If $\sigma_{ij}>0$, species $i$ is produced by reaction $j$.
+% Conversely, if $\sigma_{ij}<0$, species $i$ is consumed by reaction $j$, while $\sigma_{ij} = 0$ indicates species $i$ is not connected with reaction $j$.
+% Lastly, $\mu$ denotes the specific growth rate, and $k_{d}$ denotes the rate constant controlling cell death.
+% Species balances were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$.
+%
+% Signaling rate processes were written as the product of a kinetic term ($\bar{r}_{j}$) and a control term ($v_{j}$) in the HL-60 model.
+% The rate of an enzyme catalyzed process was modeled using saturation kinetics:
+% \begin{equation}\label{eqn:rate-saturation}
+% 	\bar{r}_{j} = k_{j}\epsilon_{i}\prod_{s\in{m_{j}^{-}}}\left(\frac{x_{s}}{K_{js} + x_{s}}\right)
+% \end{equation}
+% where $k_{j}$ denotes the catalytic rate constant for reaction $j$, $\epsilon_{i}$ denotes the abundance of the enzyme catalyzing reaction $j$,
+% and $K_{js}$ denotes the saturation constant for species $s$ and $s\in{m_{j}}$ denotes the set of \textit{reactants} for reaction $j$.
+% The control terms $0\leq v_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
+% For each rate, we used a rule-based approach to select from competing control factors.
+% If rate $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
+% $v_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
+% where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on rate $j$.
+% The function $\mathcal{I}_{j}\left(\cdot\right)$ is an integration rule which maps the output of regulatory transfer functions into a control
+% variable. In this study, we used $\mathcal{I}_{j}\in\left\{min,max\right\}$ and hill transfer functions \cite{pr3010138}.
+% If a process had no modifying factors, $v_{j}=1$.
 
 % The model was constructed using the hybrid modeling approach of Wayman et al. \cite{pr3010138}.
 % The abundance of species $i$ ($x_{i}$) is governed by:
@@ -483,48 +570,10 @@ If a process had no modifying factors, $v_{j}=1$.
 % \end{equation}where $\mathcal{Z}_{i}$ denotes the abundance factor $i$, $k_{ij}$ denotes a gain parameter, and $\eta_{ij}$ denotes a cooperativity parameter.
 % In this study, we used $\mathcal{I}_{j}\in\left\{\max,\min\right\}$ \cite{pr3010138}. If a process has no modifying factors, $v_{j} = 1$.
 
-The HL-60 model described both signal transduction and gene expression events following the addition of ATRA.
-The output of the signal transduction model was the input to the gene expression model.
-For each gene $j=1,2,\dots,\mathcal{G}$, we modeled both the mRNA ($m_{j}$) and protein ($p_{j}$):
-\begin{eqnarray}
-	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\theta_{m,j}\right)m_{j}+\lambda_{j}\\
-	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\theta_{p,j}\right)p_{j}
-\end{eqnarray}
-The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, and translation while
-the terms $\theta_{m,j}$ and $\theta_{p,j}$ denote first-order degradation constants for mRNA and protein, respectively.
-The specific transcription rate was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
-abundance of transcription factors, or other regulators influenced the expression of gene $j$.
-The kinetic rate of transcription was modeled as:
-\begin{equation}
-	\bar{r}_{T,j} = V^{max}_{T}\left(\frac{L_{T,o}}{L_{T,j}}\right)\left(\frac{G_{j}}{K_{T}+G_{j}}\right)
-\end{equation}where the maximum gene expression rate $V^{max}_{T}$ was defined as the product of a characteristic transcription rate constant ($k_{T}$)
-and the abundance of RNA polymerase ($R_{1}$), $V^{max}_{T} = k_{T}\left(R_{1}\right)$. The $\left(L_{T,o}/L_{T,j}\right)$ term denotes the ratio of transcription read lengths,
-where $L_{T,o}$ is a characteristic gene length, and $L_{T,j}$ denotes the length of gene $j$.
-Thus, the $\left(L_{T,o}/L_{T,j}\right)$ term is gene specific correction to the characteristic transcription rate.
-The degradation rate constants were defined as $\theta_{m,j}$ and $\theta_{p,j}$ denote characteristic degradation constants for mRNA and protein, respectively.
+% The HL-60 model described both signal transduction and gene expression events following the addition of ATRA.
 
-The gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced rate process $j$.
-If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
-$u_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
-where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on the expression of gene $j$,
-and $\mathcal{I}_{j}\left(\cdot\right)$ denotes an integration rule.
-In this study, the integration rule governing gene expression was the weighted fraction of promoter configurations resulting in gene expression.
-Thus, the control variable $u_{j}$ took the form:
-\begin{equation}
-	{u}_{j} = \frac{W_{R_{1},j}+\displaystyle\sum_{n}W_{nj}f_{nj}}{1+W_{R_{1},j}+\displaystyle\sum_{d}W_{dj}f_{dj}}
-\end{equation}where the numerator, the weighted sum (with weights $W_{nj}$) of promoter configurations leading to gene expression, was normalized by all possible promoter configurations.
-The likelihood of each configuration was quantified by the transfer function $f_{nj}$ (which we modeled using hill like functions), while
-the lead term in the numerator $W_{R_{1},j}$ denotes the weight of constitutive expression for gene $j$.
-If a gene expression process had no modifying factors, $u_{j}=1$.
-Lastly, the specific translation rate was modeled as:
-\begin{equation}
-	r_{X,j} = V^{max}_{X}\left(\frac{m_{j}}{K_{X}+m_{j}}\right)
-\end{equation}
-where $V^{max}_{X}$ denotes a characteristic maximum translation rate estimated from literature, and $K_{X}$ denotes a translation saturation constant.
-The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
-and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$.
-
-In this study, we estimated the $W_{ij}$ parameters, and the parameters in the transfer functions $f_{dj}$ from gene expression data sets.
+\noindent\subsubsection*{Estimation of signaling and gene expression model parameters.}
+We estimated the $W_{ij}$ parameters, and the parameters in the transfer functions $f_{dj}$ from gene expression data sets.
 On the other hand, we estimated $k_{T}, k_{X}, \theta_{m,j}, \theta_{p,j}, R_{1}$ and $R_{2}$ using estimates of transcription and translation rates,
 the half-life of a typical mRNA and protein, and a typical value for the copies per cell of RNA polymerase and ribosomes from literature \cite{Milo:2010aa}.
 The saturation constants $K_{X}$ and $K_{T}$ were adjusted so that gene expression and translation resulted in gene products on a biologically realistic concentration scale.
@@ -533,7 +582,6 @@ Thus, the bulk of our gene expression parameters were based directly upon litera
 The values used for the characteristic transcription/translation parameters, degradation constants and
 macromolecular copy number are given in the supplemental materials along with the specific formulas required to calculate all derived constants.
 
-\noindent\subsubsection*{Estimation of signaling and gene expression model parameters.}
 Signal and gene expression model parameters were estimated by minimizing the squared difference between simulations and experimental data set $j$:
 \begin{equation}\label{eqn:objective-function}
 	E_{j}(\mathbf{k}) = \sum_{i=1}^{\mathcal{T}_{j}}\biggl(\hat{\mathcal{M}}_{ij}-\hat{y}_{ij}(\mathbf{k})\biggr)^2 + \left(\frac{{\mathcal{M}^{\prime}_{ij}}-\max{y_{ij}}}{{\mathcal{M}^{\prime}_{ij}}}\right)^{2}
@@ -553,7 +601,7 @@ A similar scaling was used for the simulation output. The second term in the obj
 We set the highest intensity band to $\mathcal{M}^{\prime}_{ij} = 10$ [AU] for all simulations.
 We minimized the total model residual $\sum_{j}E_{j}$ using heuristic optimization starting from a random initial parameter guess.
 
-The signaling and gene expression model equations were implemented in Julia and solved using the \texttt{CVODE} routine of the Sundials package \cite{Julia,Hindmarsh2005}.
+The signaling and gene expression model equations were implemented in the Julia programming language, and solved using the \texttt{CVODE} routine of the Sundials package \cite{Julia,Hindmarsh2005}.
 The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
 
 
