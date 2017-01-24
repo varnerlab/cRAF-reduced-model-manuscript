@@ -147,6 +147,12 @@ Tasseff R, Nayak S, Song S, Yen A, Varner J (2011) {Modeling and analysis of
 \newblock Integr Biol 3: 578 - 591.
 \bibAnnoteFile{Tasseff2011}
 
+\bibitem{Milo:2010aa}
+Milo R, Jorgensen P, Moran U, Weber G, Springer M (2010) Bionumbers--the
+  database of key numbers in molecular and cell biology.
+\newblock Nucleic Acids Res 38: D750-3.
+\bibAnnoteFile{Milo:2010aa}
+
 \bibitem{Katagiri1994}
 Katagiri K, Hattori S, Nakamura S, Yamamoto T, Yoshida T, et~al. (1994)
   Activation of ras and formation of gap complex during tpa-induced monocytic
@@ -291,12 +297,6 @@ Wayman JA, Sagar A, Varner JD (2015) Dynamic modeling of cell-free biochemical
 \newblock Processes 3: 138.
 \bibAnnoteFile{pr3010138}
 
-\bibitem{Milo:2010aa}
-Milo R, Jorgensen P, Moran U, Weber G, Springer M (2010) Bionumbers--the
-  database of key numbers in molecular and cell biology.
-\newblock Nucleic Acids Res 38: D750-3.
-\bibAnnoteFile{Milo:2010aa}
-
 \bibitem{Julia}
 Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} fresh approach to
   numerical computing.
@@ -315,6 +315,321 @@ Brooks SC, Kazmer S, Levin AA, Yen A (1996) {Myeloid differentiation and
   acid receptor- and retinoid X receptor-selective retinoic acid analogs.}
 \newblock Blood 87: 227--237.
 \bibAnnoteFile{Brooks1996}
+
+\bibitem{Rishi1996}
+Rishi AK, Gerald TM, Shao ZM, Li XS, Baumann RG, et~al. (1996) Regulation of
+  the human retinoic acid receptor alpha gene in the estrogen receptor negative
+  human breast carcinoma cell lines skbr-3 and mda-mb-435.
+\newblock Cancer Res 56: 5246-52.
+\bibAnnoteFile{Rishi1996}
+
+\bibitem{Mueller2006}
+Mueller BU, Pabst T, Fos J, Petkovic V, Fey MF, et~al. (2006) Atra resolves the
+  differentiation block in t(15;17) acute myeloid leukemia by restoring pu.1
+  expression.
+\newblock Blood 107: 3330-8.
+\bibAnnoteFile{Mueller2006}
+
+\bibitem{Friedman2007}
+Friedman AD (2007) Transcriptional control of granulocyte and monocyte
+  development.
+\newblock Oncogene 26: 6816-28.
+\bibAnnoteFile{Friedman2007}
+
+\bibitem{Luo2006}
+Luo XM, Ross AC (2006) Retinoic acid exerts dual regulatory actions on the
+  expression and nuclear localization of interferon regulatory factor-1.
+\newblock Exp Biol Med (Maywood) 231: 619-31.
+\bibAnnoteFile{Luo2006}
+
+\bibitem{Sylvester1994}
+Sylvester I, Sch{\"o}ler HR (1994) Regulation of the oct-4 gene by nuclear
+  receptors.
+\newblock Nucleic Acids Res 22: 901-11.
+\bibAnnoteFile{Sylvester1994}
+
+\bibitem{Drach1994}
+Drach J, McQueen T, Engel H, Andreeff M, Robertson KA, et~al. (1994) Retinoic
+  acid-induced expression of cd38 antigen in myeloid cells is mediated through
+  retinoic acid receptor-alpha.
+\newblock Cancer Res 54: 1746-52.
+\bibAnnoteFile{Drach1994}
+
+\bibitem{Liu1996}
+Liu M, Iavarone A, Freedman LP (1996) Transcriptional activation of the human
+  p21(waf1/cip1) gene by retinoic acid receptor. correlation with retinoid
+  induction of u937 cell differentiation.
+\newblock J Biol Chem 271: 31723-8.
+\bibAnnoteFile{Liu1996}
+
+\bibitem{Bunaciu2013}
+Bunaciu RP, Yen A (2013) 6-formylindolo (3,2-b)carbazole (ficz) enhances
+  retinoic acid (ra)-induced differentiation of hl-60 myeloblastic leukemia
+  cells.
+\newblock Mol Cancer 12: 39.
+\bibAnnoteFile{Bunaciu2013}
+
+\bibitem{Balmer2002}
+Balmer JE, Blomhoff R (2002) Gene expression regulation by retinoic acid.
+\newblock J Lipid Res 43: 1773-808.
+\bibAnnoteFile{Balmer2002}
+
+\bibitem{Rosen2002}
+Rosen ED, Hsu CH, Wang X, Sakai S, Freeman MW, et~al. (2002) C/ebpalpha induces
+  adipogenesis through ppargamma: a unified pathway.
+\newblock Genes Dev 16: 22-6.
+\bibAnnoteFile{Rosen2002}
+
+\bibitem{Varley2009}
+Varley CL, Bacon EJ, Holder JC, Southgate J (2009) Foxa1 and irf-1 intermediary
+  transcriptional regulators of ppargamma-induced urothelial
+  cytodifferentiation.
+\newblock Cell Death Differ 16: 103-14.
+\bibAnnoteFile{Varley2009}
+
+\bibitem{Bruemmer2003}
+Bruemmer D, Yin F, Liu J, Berger JP, Sakai T, et~al. (2003) Regulation of the
+  growth arrest and dna damage-inducible gene 45 (gadd45) by peroxisome
+  proliferator-activated receptor gamma in vascular smooth muscle cells.
+\newblock Circ Res 93: e38-47.
+\bibAnnoteFile{Bruemmer2003}
+
+\bibitem{Delerive1999}
+Delerive P, De~Bosscher K, Besnard S, Vanden~Berghe W, Peters JM, et~al. (1999)
+  Peroxisome proliferator-activated receptor alpha negatively regulates the
+  vascular inflammatory gene response by negative cross-talk with transcription
+  factors nf-kappab and ap-1.
+\newblock J Biol Chem 274: 32048-54.
+\bibAnnoteFile{Delerive1999}
+
+\bibitem{Altiok1997}
+Altiok S, Xu M, Spiegelman BM (1997) Ppargamma induces cell cycle withdrawal:
+  inhibition of e2f/dp dna-binding activity via down-regulation of pp2a.
+\newblock Genes Dev 11: 1987-98.
+\bibAnnoteFile{Altiok1997}
+
+\bibitem{Fei2011}
+Fei J, Cook C, Gillespie M, Yu B, Fullen K, et~al. (2011) Atherogenic
+  $\omega$-6 lipids modulate ppar- egr-1 crosstalk in vascular cells.
+\newblock PPAR Res 2011: 753917.
+\bibAnnoteFile{Fei2011}
+
+\bibitem{Song2012}
+Song EK, Lee YR, Kim YR, Yeom JH, Yoo CH, et~al. (2012) Naadp mediates
+  insulin-stimulated glucose uptake and insulin sensitization by ppar$\gamma$
+  in adipocytes.
+\newblock Cell Rep 2: 1607-19.
+\bibAnnoteFile{Song2012}
+
+\bibitem{Szanto2005}
+Szanto A, Nagy L (2005) Retinoids potentiate peroxisome proliferator-activated
+  receptor gamma action in differentiation, gene expression, and lipid
+  metabolic processes in developing myeloid cells.
+\newblock Mol Pharmacol 67: 1935-43.
+\bibAnnoteFile{Szanto2005}
+
+\bibitem{Han2004}
+Han S, Sidell N, Fisher PB, Roman J (2004) Up-regulation of p21 gene expression
+  by peroxisome proliferator-activated receptor gamma in human lung carcinoma
+  cells.
+\newblock Clin Cancer Res 10: 1911-9.
+\bibAnnoteFile{Han2004}
+
+\bibitem{Von-Knethen2002}
+Von~Knethen A, Br{\"u}ne B (2002) Activation of peroxisome
+  proliferator-activated receptor gamma by nitric oxide in
+  monocytes/macrophages down-regulates p47phox and attenuates the respiratory
+  burst.
+\newblock J Immunol 169: 2619-26.
+\bibAnnoteFile{Von-Knethen2002}
+
+\bibitem{Dispirito2013}
+Dispirito JR, Fang B, Wang F, Lazar MA (2013) Pruning of the adipocyte
+  peroxisome proliferator-activated receptor $\gamma$ cistrome by hematopoietic
+  master regulator pu.1.
+\newblock Mol Cell Biol 33: 3354-64.
+\bibAnnoteFile{Dispirito2013}
+
+\bibitem{Chen1995}
+Chen H, Ray-Gallet D, Zhang P, Hetherington CJ, Gonzalez DA, et~al. (1995) Pu.1
+  (spi-1) autoregulates its expression in myeloid cells.
+\newblock Oncogene 11: 1549-60.
+\bibAnnoteFile{Chen1995}
+
+\bibitem{Steidl2006}
+Steidl U, Rosenbauer F, Verhaak RGW, Gu X, Ebralidze A, et~al. (2006) Essential
+  role of jun family transcription factors in pu.1 knockdown-induced leukemic
+  stem cells.
+\newblock Nat Genet 38: 1269-77.
+\bibAnnoteFile{Steidl2006}
+
+\bibitem{Laslo2006}
+Laslo P, Spooner CJ, Warmflash A, Lancki DW, Lee HJ, et~al. (2006) Multilineage
+  transcriptional priming and determination of alternate hematopoietic cell
+  fates.
+\newblock Cell 126: 755-66.
+\bibAnnoteFile{Laslo2006}
+
+\bibitem{Pahl1993}
+Pahl HL, Scheibe RJ, Zhang DE, Chen HM, Galson DL, et~al. (1993) The
+  proto-oncogene pu.1 regulates expression of the myeloid-specific cd11b
+  promoter.
+\newblock J Biol Chem 268: 5014-20.
+\bibAnnoteFile{Pahl1993}
+
+\bibitem{Yuki2013}
+Yuki H, Ueno S, Tatetsu H, Niiro H, Iino T, et~al. (2013) Pu.1 is a potent
+  tumor suppressor in classical hodgkin lymphoma cells.
+\newblock Blood 121: 962-70.
+\bibAnnoteFile{Yuki2013}
+
+\bibitem{Li1999}
+Li SL, Schlegel W, Valente AJ, Clark RA (1999) Critical flanking sequences of
+  pu.1 binding sites in myeloid-specific promoters.
+\newblock J Biol Chem 274: 32453-60.
+\bibAnnoteFile{Li1999}
+
+\bibitem{Dahl2003}
+Dahl R, Walsh JC, Lancki D, Laslo P, Iyer SR, et~al. (2003) Regulation of
+  macrophage and neutrophil cell fates by the pu.1:c/ebpalpha ratio and
+  granulocyte colony-stimulating factor.
+\newblock Nat Immunol 4: 1029-36.
+\bibAnnoteFile{Dahl2003}
+
+\bibitem{Timchenko1995}
+Timchenko N, Wilson DR, Taylor LR, Abdelsayed S, Wilde M, et~al. (1995)
+  Autoregulation of the human c/ebp alpha gene by stimulation of upstream
+  stimulatory factor binding.
+\newblock Mol Cell Biol 15: 1192-202.
+\bibAnnoteFile{Timchenko1995}
+
+\bibitem{Lidonnici2010}
+Lidonnici MR, Audia A, Soliera AR, Prisco M, Ferrari-Amorotti G, et~al. (2010)
+  Expression of the transcriptional repressor gfi-1 is regulated by
+  c/ebp{alpha} and is involved in its proliferation and colony
+  formation-inhibitory effects in p210bcr/abl-expressing cells.
+\newblock Cancer Res 70: 7949-59.
+\bibAnnoteFile{Lidonnici2010}
+
+\bibitem{DAlo2003}
+D'Alo' F, Johansen LM, Nelson EA, Radomska HS, Evans EK, et~al. (2003) The
+  amino terminal and e2f interaction domains are critical for c/ebp
+  alpha-mediated induction of granulopoietic development of hematopoietic
+  cells.
+\newblock Blood 102: 3163-71.
+\bibAnnoteFile{DAlo2003}
+
+\bibitem{Pan1999}
+Pan Z, Hetherington CJ, Zhang DE (1999) Ccaat/enhancer-binding protein
+  activates the cd14 promoter and mediates transforming growth factor beta
+  signaling in monocyte development.
+\newblock J Biol Chem 274: 23242-8.
+\bibAnnoteFile{Pan1999}
+
+\bibitem{Harris2001}
+Harris TE, Albrecht JH, Nakanishi M, Darlington GJ (2001)
+  Ccaat/enhancer-binding protein-alpha cooperates with p21 to inhibit
+  cyclin-dependent kinase-2 activity and induces growth arrest independent of
+  dna binding.
+\newblock J Biol Chem 276: 29200-9.
+\bibAnnoteFile{Harris2001}
+
+\bibitem{Bauvois1999}
+Bauvois B, Durant L, Laboureau J, Barth{\'e}l{\'e}my E, Rouillard D, et~al.
+  (1999) Upregulation of cd38 gene expression in leukemic b cells by interferon
+  types i and ii.
+\newblock J Interferon Cytokine Res 19: 1059-66.
+\bibAnnoteFile{Bauvois1999}
+
+\bibitem{Passioura2005}
+Passioura T, Dolnikov A, Shen S, Symonds G (2005) N-ras-induced growth
+  suppression of myeloid cells is mediated by irf-1.
+\newblock Cancer Res 65: 797-804.
+\bibAnnoteFile{Passioura2005}
+
+\bibitem{Dahl2007}
+Dahl R, Iyer SR, Owens KS, Cuylear DD, Simon MC (2007) The transcriptional
+  repressor gfi-1 antagonizes pu.1 activity through protein-protein
+  interaction.
+\newblock J Biol Chem 282: 6473-83.
+\bibAnnoteFile{Dahl2007}
+
+\bibitem{Duan2003}
+Duan Z, Horwitz M (2003) Targets of the transcriptional repressor oncoprotein
+  gfi-1.
+\newblock Proc Natl Acad Sci U S A 100: 5932-7.
+\bibAnnoteFile{Duan2003}
+
+\bibitem{Chen1996}
+Chen H, Zhang P, Radomska HS, Hetherington CJ, Zhang DE, et~al. (1996) Octamer
+  binding factors and their coactivator can activate the murine pu.1 (spi-1)
+  promoter.
+\newblock J Biol Chem 271: 15743-52.
+\bibAnnoteFile{Chen1996}
+
+\bibitem{Behre1999}
+Behre G, Whitmarsh AJ, Coghlan MP, Hoang T, Carpenter CL, et~al. (1999) c-jun
+  is a jnk-independent coactivator of the pu.1 transcription factor.
+\newblock J Biol Chem 274: 4939-46.
+\bibAnnoteFile{Behre1999}
+
+\bibitem{Kardassis1999}
+Kardassis D, Papakosta P, Pardali K, Moustakas A (1999) c-jun transactivates
+  the promoter of the human p21(waf1/cip1) gene by acting as a superactivator
+  of the ubiquitous transcription factor sp1.
+\newblock J Biol Chem 274: 29572-81.
+\bibAnnoteFile{Kardassis1999}
+
+\bibitem{Johnson1994}
+Johnson DG, Ohtani K, Nevins JR (1994) Autoregulatory control of e2f1
+  expression in response to positive and negative regulators of cell cycle
+  progression.
+\newblock Genes Dev 8: 1514-25.
+\bibAnnoteFile{Johnson1994}
+
+\bibitem{Fu2002}
+Fu M, Zhang J, Lin Y, Zhu X, Ehrengruber MU, et~al. (2002) Early growth
+  response factor-1 is a critical transcriptional mediator of peroxisome
+  proliferator-activated receptor-gamma 1 gene expression in human aortic
+  smooth muscle cells.
+\newblock J Biol Chem 277: 26808-14.
+\bibAnnoteFile{Fu2002}
+
+\bibitem{Mak2011}
+Mak KS, Funnell APW, Pearson RCM, Crossley M (2011) Pu.1 and haematopoietic
+  cell fate: Dosage matters.
+\newblock Int J Cell Biol 2011: 808524.
+\bibAnnoteFile{Mak2011}
+
+\bibitem{Chen2004}
+Chen F, Wang Q, Wang X, Studzinski GP (2004) Up-regulation of egr1 by
+  1,25-dihydroxyvitamin d3 contributes to increased expression of p35 activator
+  of cyclin-dependent kinase 5 and consequent onset of the terminal phase of
+  hl60 cell differentiation.
+\newblock Cancer Res 64: 5425-33.
+\bibAnnoteFile{Chen2004}
+
+\bibitem{Suh2002}
+Suh J, Jeon YJ, Kim HM, Kang JS, Kaminski NE, et~al. (2002) Aryl hydrocarbon
+  receptor-dependent inhibition of ap-1 activity by
+  2,3,7,8-tetrachlorodibenzo-p-dioxin in activated b cells.
+\newblock Toxicol Appl Pharmacol 181: 116-23.
+\bibAnnoteFile{Suh2002}
+
+\bibitem{Shen2011}
+Shen M, Bunaciu RP, Congleton J, Jensen HA, Sayam LG, et~al. (2011) Interferon
+  regulatory factor-1 binds c-cbl, enhances mitogen activated protein kinase
+  signaling and promotes retinoic acid-induced differentiation of hl-60 human
+  myelo-monoblastic leukemia cells.
+\newblock Leuk Lymphoma 52: 2372-9.
+\bibAnnoteFile{Shen2011}
+
+\bibitem{Bunaciu2011}
+Bunaciu RP, Yen A (2011) Activation of the aryl hydrocarbon receptor ahr
+  promotes retinoic acid-induced differentiation of myeloblastic leukemia cells
+  by restricting expression of the stem cell transcription factor oct4.
+\newblock Cancer Res 71: 2371-80.
+\bibAnnoteFile{Bunaciu2011}
 
 \bibitem{Jensen:2015aa}
 Jensen HA, Yourish HB, Bunaciu RP, Varner JD, Yen A (2015) Induced
