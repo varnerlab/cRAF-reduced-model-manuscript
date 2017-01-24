@@ -200,11 +200,11 @@ suggested that positive feedback architectures are central to differentiation pr
 We constructed an effective model of ATRA-induced HL-60 differentiation which described signaling and gene expression events following the addition of ATRA (Fig. \ref{fig:network}).
 The model connectivity was developed from literature and the studies presented here (Table ZZ).
 We decomposed the ATRA program into three modules;
-a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-S621 and the ATRA-RXR/RAR (Trigger) signals (Fig. \ref{fig:network}A);
-a signal integration module that controlled the expression of upstream transcription factors given cRaf-S621 and activated Trigger signals (Fig. \ref{fig:network}B); and
+a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (Trigger) signals (Fig. \ref{fig:network}A);
+a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals (Fig. \ref{fig:network}B); and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors (Fig. \ref{fig:network}C).
 Each component of these modules was described by a mRNA and protein balance equation.
-Additionally, the signal initiation module also described the abundance of activated species e.g., Trigger and cRaf-S621 whose values were derived from
+Additionally, the signal initiation module also described the abundance of activated species e.g., Trigger and cRaf-pS621 whose values were derived from
 unactivated Trigger and cRaf protein levels.
 Lastly, because the population of HL-60 cells was dividing (at least before ATRA-induced cell cycle arrest), we also considered a dilution term in all balance equations.
 The signal initiation module contained nine differential equations, while the signal integration and phenotype modules were collectively encoded by 54 differential equations.
@@ -212,47 +212,51 @@ Model parameters were taken literature, or estimated from experimental data take
 
 The signal initiation module recapitulated sustained signalsome and MAPK activation following exposure to 1$\mu$M ATRA (Fig. \ref{fig:model-fitting}A-B).
 An ensemble of effective model parameters was estimated by minimizing the difference between simulations and time-series measurements of BLR1 mRNA and
-cRaf-S621 following the addition of 1$\mu$M ATRA. We focused on the S621 phosphorylation site of cRaf since enhanced phosphorylation at this site is a defining
+cRaf-pS621 following the addition of 1$\mu$M ATRA. We focused on the S621 phosphorylation site of cRaf since enhanced phosphorylation at this site is a defining
 characteristic of sustained MAPK activation in HL-60. The effective model captured both ATRA-induced BLR1 expression (Fig. \ref{fig:model-fitting}A)
-and sustained phosphorylation of cRaf-pS621 (Fig. \ref{fig:model-fitting}B)
-in a growing population of HL-60 cells. However, the effective model failed to capture the decline of BLR1 message after 48 hr of ATRA exposure.
-Next, we tested the response of the signalsome/MAPK signaling module to different ATRA dosages.
+and sustained phosphorylation of cRaf-pS621 (Fig. \ref{fig:model-fitting}B) in a growing population of HL-60 cells.
+Together, the reinforcing positive feedback between the signalsome and MAPK led to sustained activation over multiple cellular generations.
+However, the effective model failed to capture the decline of BLR1 message after 48 hr of ATRA exposure.
+This suggested that we captured the logic leading to the onset of differentiation, but failed to describe program shutdown.
+Next, we tested the response of the signal initiation module to different ATRA dosages.
 
 % Secondly, ATRA treatment alone increased both Raf phosphorylation at S621/S259 and Raf expression 24 hr post-treatment,
 % while ATRA-induced phosphorylation of ERK was blocked by GW5074, consistent with the loss of Raf kinase activity (Fig. \ref{fig:ip-data}B).
 % Lastly, both the phosphorylation and expression of Raf was inhibited by GW5074.
 % This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and ERK action on Raf transcription factors.
 
-The signalsome/MAPK signaling model was bistable with respect to ATRA induction (Fig. \ref{fig:model-fitting}C-D).
-Nullcline analysis predicted two stable steady-states and a single unstable state when ATRA was present below a critical threshold (Fig. \ref{fig:model-fitting}C).
+The signal initiation model was bistable with respect to ATRA induction (Fig. \ref{fig:model-fitting}C-D).
+Phaseplane analysis predicted two stable steady-states when ATRA was present below a critical threshold (Fig. \ref{fig:model-fitting}C).
 In the lower stable state, neither the signalsome nor cRaf-pS621 were present (thus, the differentiation program was deactivated).
 However, at the high stable state, both the signalsome and cRaf-pS621 were present, allowing for sustained activation and differentiation.
 Interestingly, when ATRA was above a critical threshold, only the activated state was accessible (Fig. \ref{fig:model-fitting}D).
 To test these findings, we first identified the ATRA threshold. We exposed HL-60 cells to different ATRA concentrations for 72 hr (Fig. \ref{fig:model-fitting}E).
 Morphological changes associated with differentiation were visible for ATRA $\geq$ 0.25 $\mu$M, suggesting the critical ATRA
-threshold was near this concentration. Next, we conducted washout ATRA washout experiments to determine if activated cells remained activated even in the absence of ATRA.
+threshold was near this concentration. Next, we conducted ATRA washout experiments to determine if activated cells remained activated in the absence of ATRA.
 HL-60 cells locked into an activated state remained activated following ATRA withdraw (Fig. \ref{fig:model-predictions}).
-Sustained activation resulted from reinforcing feedback between the signalsome and the MAPK pathway.
-Thus, following activation, if we inhibited or removed elements from the effective circuit we expected the siganlsome and MAPK signals to decay.
+This sustained activation resulted from reinforcing feedback between the signalsome and the MAPK pathway.
+Thus, following activation, if we inhibited or removed elements from the signal initiation module we expected the siganlsome and MAPK signals to decay.
 We simulated ATRA induced activation in the presence of kinase inhibitors, and without key circuit elements.
 Consistent with experimental results using multiple MAPK inhibitors, ATRA activation in the presence of MAPK inhibitors lowered the steady-state value of signalsome (Fig. \ref{fig:model-predictions}A).
-In the presence of BLR1, the signalsome and cRaf-pS621 signals were maintained following ATRA withdraw (Fig. \ref{fig:model-predictions}B, blue).
-On the other hand, BLR1 deletion removed the ability of the circuit to maintain a sustained MAPK response following the withdraw of ATRA (Fig. \ref{fig:model-predictions}B, gray).
+In the presence of BLR1, the signalsome and cRaf-pS621 signals were maintained following ATRA withdraw (Fig. \ref{fig:model-predictions}B, gray).
+On the other hand, BLR1 deletion removed the ability of the circuit to maintain a sustained MAPK response following the withdraw of ATRA (Fig. \ref{fig:model-predictions}B, blue).
 Lastly, washout experiments in which cells were exposed to 1$\mu$M ATRA for 24 hr, and then transferred to fresh media without ATRA,
 confirmed the persistence of the self sustaining activated state for up to 144 hr (Fig. \ref{fig:model-predictions}C).
-Thus, these experiments and simulations confirmed that reinforcing positive feedback likely drives the ATRA-induced differentiation program.
+Thus, these experiments confirmed that reinforcing positive feedback likely drives the ATRA-induced differentiation program.
 Next, we analyzed the ATRA-induced downstream gene expression program following signalsome and cRaf activation.
 
-The reduced order gene expression model described signal integration and ATRA-induced gene expression events in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
-The signalsome-MAPK model produced two outputs, Trigger and cRaf-S621 which drove the downstream differentiation program.
-In particular, Trigger, which is a surrogate for the RAR$\alpha$/RXR transcriptional complex, regulated the expression of the transcription factors
-CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and EGR1. In turn, these transcription factors, in combination with cRaf-S621, regulated
-the expression of downstream phenotypic markers such as CD38, CD11b or P47Phox.
-We assembled the connectivity of the signal integration program driven by Trigger, and the phenotypic program from literature (supplemental materials).
-We estimated the parameters of the signal integration and phenotype programs from previous studies which contained both steady-state and dynamic measurements
-of transcription factor and phenotypic marker expression following the addition of ATRA [REFHERE].
-The model simulations captured the time dependent expression of both CD38 and CD11b following the addition ATRA (Fig. \ref{fig:model-grn-simulations}A), and
-steady-state values for upstream members of the signal integration unit (Fig. \ref{fig:model-grn-simulations}B).
+The signal integration and phenotype modules described ATRA-induced gene expression events in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
+The signal initiation module produced two outputs, activated Trigger and cRaf-pS621 which drove the expression of ATRA-induced transcription factors,
+which then in turn activated the phenotypic program. In particular, Trigger, which is a surrogate for the RAR$\alpha$/RXR transcriptional complex,
+regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and EGR1.
+In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or P47Phox.
+We assembled the connectivity of the signal integration and phenotypic programs driven by Trigger and cRaf-pS621 from literature (Table ZZ).
+We estimated the parameters which appeared in the control laws regulating these programs
+from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA [REFHERE].
+However, the bulk of the remaining model parameters were taken from directly from literature [REFHERE] and were not estimated from data in this study (see materials and methods).
+The model simulations captured the time dependent expression of CD38 and CD11b following the addition ATRA (Fig. \ref{fig:model-grn-simulations}A),
+and the steady-state for signal integration and phenotypic markers (Fig. \ref{fig:model-grn-simulations}B).
+Taken together, the signal integration and phenotypic simulations were consistent with measurements, thereby validating the assumed molecular connectivity.
 
 % Vav1 is a member of an ATRA-inducible signalsome complex which propels sustained MAPK activation, arrest and differentiation (Fig. \ref{fig:network}B).
 % We conducted immunoprecipitation studies and identified a limited number of ATRA-dependent and -independent Raf interaction partners.
@@ -638,8 +642,8 @@ represent the official views of the National Cancer Institute or the National In
 Above a critical threshold, ATRA activates an upstream Trigger, which induces signalsome complex formation.
 Signalsome activates the mitogen-activated protein kinase (MAPK) cascade which in turn
 drives the differentiation program and signalsome formation.
-Both Trigger and activated cRaf-S621 drive a phenotype gene expression program responsible for differentiation.
-Trigger activates the expression of a series of transcription factors which in combination with cRaf-S621 result in phenotypic change.}\label{fig:network}
+Both Trigger and activated cRaf-pS621 drive a phenotype gene expression program responsible for differentiation.
+Trigger activates the expression of a series of transcription factors which in combination with cRaf-pS621 result in phenotypic change.}\label{fig:network}
 \end{figure}
 
 \begin{figure}[!t]\centering
