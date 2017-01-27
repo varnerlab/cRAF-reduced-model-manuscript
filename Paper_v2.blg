@@ -4,44 +4,44 @@ The top-level auxiliary file: Paper_v2.aux
 The style file: plos2009.bst
 Database file #1: Paper_v1.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 94 entries,
+You've used 93 entries,
             2441 wiz_defined-function locations,
-            1262 strings with 30427 characters,
-and the built_in function-call counts, 77892 in all, are:
-= -- 7110
-> -- 1520
+            1256 strings with 30161 characters,
+and the built_in function-call counts, 76625 in all, are:
+= -- 6991
+> -- 1496
 < -- 0
-+ -- 760
-- -- 380
-* -- 6626
-:= -- 9440
-add.period$ -- 188
-call.type$ -- 94
-change.case$ -- 94
++ -- 748
+- -- 374
+* -- 6510
+:= -- 9289
+add.period$ -- 186
+call.type$ -- 93
+change.case$ -- 93
 chr.to.int$ -- 0
-cite$ -- 188
-duplicate$ -- 7531
-empty$ -- 7948
-format.name$ -- 469
-if$ -- 17255
+cite$ -- 186
+duplicate$ -- 7405
+empty$ -- 7818
+format.name$ -- 462
+if$ -- 16975
 int.to.chr$ -- 0
-int.to.str$ -- 94
-missing$ -- 1037
-newline$ -- 485
-num.names$ -- 94
-pop$ -- 1073
+int.to.str$ -- 93
+missing$ -- 1024
+newline$ -- 480
+num.names$ -- 93
+pop$ -- 1061
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 691
+skip$ -- 679
 stack$ -- 0
-substring$ -- 10937
-swap$ -- 2072
+substring$ -- 10738
+swap$ -- 2046
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 661
-width$ -- 96
-write$ -- 1048
+while$ -- 652
+width$ -- 95
+write$ -- 1037

@@ -208,7 +208,7 @@ Additionally, the signal initiation module also described the abundance of activ
 unactivated Trigger and cRaf protein levels.
 Lastly, because the population of HL-60 cells was dividing (at least before ATRA-induced cell cycle arrest), we also considered a dilution term in all balance equations.
 The signal initiation module contained nine differential equations, while the signal integration and phenotype modules were collectively encoded by 54 differential equations.
-Model parameters were taken literature, or estimated from experimental data taken from literature using heuristic optimization (see materials and methods).
+Model parameters were taken literature (Table \ref{tbl:model-parameters}), or estimated from experimental data using heuristic optimization (see materials and methods).
 
 The signal initiation module recapitulated sustained signalsome and MAPK activation following exposure to 1$\mu$M ATRA (Fig. \ref{fig:model-fitting}A-B).
 An ensemble of effective model parameters was estimated by minimizing the difference between simulations and time-series measurements of BLR1 mRNA and
@@ -477,6 +477,11 @@ The characteristic maximum translation rate was defined as the product of a char
 and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. As was the case for transcription,
 we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
 
+\subsubsection*{Cell cycle arrest.}
+A defining feature of ATRA-induced differentiation is cell cycle arrest.
+We did not include a description of the restriction point logic, however, we do have a model of E2F transcription.
+We developed a heuristic 
+
 \subsubsection*{Signaling model equations.}
 The signal initiation, and integration modules required the level of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
 However, our base model described only the abundance of inactive proteins e.g., cRaf or RXR/RAR but not the activated forms.
@@ -604,8 +609,9 @@ A similar scaling was used for the simulation output. The second term in the obj
 We set the highest intensity band to $\mathcal{M}^{\prime}_{ij} = 10$ [AU] for all simulations.
 We minimized the total model residual $\sum_{j}E_{j}$ using heuristic optimization starting from a random initial parameter guess.
 
-The signaling and gene expression model equations were implemented in the Julia programming language, and solved using the \texttt{CVODE} routine of the Sundials package \cite{Julia,Hindmarsh2005}.
+The signaling and gene expression model equations were implemented in the Julia programming language, and solved using the \texttt{ODE23s} routine of the ODE package \cite{Julia}.
 The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
+Model parameters estimated directly or derived from literature, or data presented in this study are given in Table \ref{tbl:model-parameters}.
 
 
 % All code was implemented in the Octave programming language, and is available for
@@ -688,11 +694,10 @@ represent the official views of the National Cancer Institute or the National In
 \clearpage
 
 \begin{center}
-\renewcommand{\arraystretch}{0.8}
+% \renewcommand{\arraystretch}{0.8}
 \tablefirsthead{
 \hline
-\rowcolor[gray]{0.8}\textbf{Actor}  & \textbf{Effect} & \textbf{Target} & \textbf{Cite}  \\
-\hline}
+\rowcolor[gray]{0.9} Effector & Effect & Target & Source \\}
 \topcaption{Myelomonocytic transcription factor connectivity used in the signal integration and phenotype modules.}\label{tbl:TF-network-connectivity}
 \begin{scriptsize}
 \begin{supertabular}{c|c|l|l}
@@ -762,6 +767,50 @@ AhR &  + & AP-1 & \cite{Suh2002}\\
 \hline
 \end{supertabular}
 \end{scriptsize}
+\end{center}
+
+\clearpage
+
+\begin{center}
+
+	\tablefirsthead{
+	\hline
+	\rowcolor[gray]{0.9} Symbol & Description & Value & Units & Source  \\}
+	\topcaption{Model parameters estimated from literature.}\label{tbl:model-parameters}
+	\begin{scriptsize}
+	\begin{supertabular}{c|l|l|l|l}
+	\hline
+
+	$R_{1}$ & RNA polymerase abundance & 75,000 & copies/cell & [REFHERE] \\
+	$R_{2}$ & Ribosome abundance & 1 x 10$^{6}$ & copies/cell & [REFHERE] \\
+	$G_{i}$ & Characteristic gene abundance & 2 & copies/cell & \\
+	$K_{X}$ & Saturation constant transcription & 4,600 & copies/cell & \\
+	$K_{T}$ & Saturation constant translation & 100,000 & copies/cell & \\
+	& & & & \\
+	$t_{1/2,m}$ & characteristic mRNA half-life & 2 & hr & [REFHERE] \\
+	$t_{1/2,p}$ & characteristic protein half-life & 10 & hr & [REFHERE] \\
+	$\theta_{m,j}$ & characteristic mRNA degradation constant & 0.34 & hr$^{-1}$ & derived \\
+	$\theta_{p,j}$ & characteristic protein degradation constant & 0.07 & hr$^{-1}$ & derived \\
+	& & & & \\
+	$t_{d}$ & HL-60 doubling time & 19.5 & hr & this study \\
+	$\mu$ & growth rate & 0.035 & hr$^{-1}$ & derived \\
+	$k_{d}$ & death rate & 0.10$\mu$ & hr$^{-1}$ & derived \\
+	& & & & \\
+	$e_{T}$ & elongation rate RNA polymerase & 6 & nt/s & [REFHERE] \\
+	$e_{X}$ & elongation rate Ribosome & 5 & aa/s & [REFHERE] \\
+	$L_{T,o}$ & characteristic gene length & 15,000 & nt & [REFHERE] \\
+	$L_{X,o}$ & characteristic transcript length & 5,000 & nt & [REFHERE] \\
+	$k_{T}$ & characteristic transcription rate & 1.44 & hr$^{-1}$ & derived \\
+	$k_{X}$ & characteristic translation rate & 3.60 & hr$^{-1}$ & derived \\
+	& & & & \\
+	$D$	& Diameter of an HL-60 cell & 12 & $\mu$m$^{3}$ & [REFHERE] \\
+	$f_{C}$ & cytoplasmic fraction & 0.51 & & [REFHERE] \\
+
+
+	\hline
+	\end{supertabular}
+	\end{scriptsize}
+
 \end{center}
 
 \clearpage

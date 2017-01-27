@@ -303,12 +303,6 @@ Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} fresh approach to
 \newblock CoRR abs/1411.1607.
 \bibAnnoteFile{Julia}
 
-\bibitem{Hindmarsh2005}
-Hindmarsh A, Brown P, Grant K, Lee S, Serban R, et~al. (2005) Sundials: Suite
-  of nonlinear and differential/algebraic equation solvers.
-\newblock ACM Transactions on Mathematical Software 31: 363-396.
-\bibAnnoteFile{Hindmarsh2005}
-
 \bibitem{Brooks1996}
 Brooks SC, Kazmer S, Levin AA, Yen A (1996) {Myeloid differentiation and
   retinoblastoma phosphorylation changes in HL-60 cells induced by retinoic
