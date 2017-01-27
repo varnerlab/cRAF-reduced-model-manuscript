@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JAN 2017 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JAN 2017 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,7 +909,7 @@ d src in a non-
 
 [27] [28] [29] [30] [31] [32]) [33]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 698.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 714.
  [34
 
 ] [35] [36
@@ -919,7 +919,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 File: ./figs/Fig-1-Network_v3.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-1-Network_v3.pdf>
-Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 814.
+Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 830.
 (pdftex.def)             Requested size: 469.75502pt x 379.56837pt.
 
 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf, id=139, 499.8675pt x 590.205pt>
@@ -927,22 +927,22 @@ File: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf>
 Package pdftex.def Info: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf used on input 
-line 824.
+line 840.
 (pdftex.def)             Requested size: 422.77664pt x 499.20003pt.
 
 <./figs/Fig-3-Predictions.pdf, id=140, 771.88374pt x 522.95375pt>
 File: ./figs/Fig-3-Predictions.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Predictions.pdf>
-Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 837.
+Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 853.
 (pdftex.def)             Requested size: 469.75502pt x 318.25922pt.
 
 <./figs/Fig-5-GRN-Simulations.pdf, id=141, 467.7475pt x 584.1825pt>
 File: ./figs/Fig-5-GRN-Simulations.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-GRN-Simulations.pdf>
-Package pdftex.def Info: ./figs/Fig-5-GRN-Simulations.pdf used on input line 84
-7.
+Package pdftex.def Info: ./figs/Fig-5-GRN-Simulations.pdf used on input line 86
+3.
 (pdftex.def)             Requested size: 399.29463pt x 498.71461pt.
 
 <./figs/Fig-1-IP-ExperimentalStudies.pdf, id=142, 538.01pt x 580.1675pt>
@@ -950,7 +950,7 @@ File: ./figs/Fig-1-IP-ExperimentalStudies.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-1-IP-ExperimentalStudies.pdf>
 Package pdftex.def Info: ./figs/Fig-1-IP-ExperimentalStudies.pdf used on input 
-line 855.
+line 871.
 (pdftex.def)             Requested size: 422.77664pt x 455.91052pt.
  [37 <./figs/Fig-1-Network_v3.pdf>] [38 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pd
 f>] [39 <./figs/Fig-3-Predictions.pdf>] [40 <./figs/Fig-5-GRN-Simulations.pdf>]
@@ -960,10 +960,10 @@ f>] [39 <./figs/Fig-3-Predictions.pdf>] [40 <./figs/Fig-5-GRN-Simulations.pdf>]
 ### semi simple group (level 1) entered at line 50 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7761 strings out of 493089
- 112856 string characters out of 6134842
- 204747 words of memory out of 5000000
- 10980 multiletter control sequences out of 15000+600000
+ 7762 strings out of 493089
+ 112866 string characters out of 6134842
+ 204756 words of memory out of 5000000
+ 10981 multiletter control sequences out of 15000+600000
  30771 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,41p,1240b,1231s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -984,7 +984,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (43 pages, 4358746 bytes).
+Output written on Paper_v2.pdf (43 pages, 4362038 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  482 compressed objects within 5 object streams

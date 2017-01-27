@@ -477,10 +477,21 @@ The characteristic maximum translation rate was defined as the product of a char
 and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. As was the case for transcription,
 we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
 
-\subsubsection*{Cell cycle arrest.}
-A defining feature of ATRA-induced differentiation is cell cycle arrest.
-We did not include a description of the restriction point logic, however, we do have a model of E2F transcription.
-We developed a heuristic 
+\subsubsection*{Effective cell cycle arrest model.}
+A defining feature of ATRA-induced differentiation is G1/G0 cell cycle arrest followed by differentiation.
+While we included E2F transcription, we do not consider a detailed model of restriction point regulation.
+Instead, we formulated an effective model of the fraction of cells undergoing ATRA-induced cell cycle arrest, $\mathcal{A}$ as:
+\begin{equation}\label{eq:a-eqn}
+	\frac{d\mathcal{A}}{dt} = \epsilon_{1}\left(\mathrm{E2F}\right)^{\epsilon_{2}}
+\end{equation}
+The parameters $\epsilon_{1}$ and $\epsilon_{2}$ were estimated from experimental cell distribution measurements by \texttt{log} transforming Eq. \eqref{eq:a-eqn}:
+\begin{eqnarray}
+\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{1}\right) & = & \log{\dot{\mathcal{A}}_{21}} \\
+\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{2}\right) & = & \log{\dot{\mathcal{A}}_{32}}
+\end{eqnarray}
+where subscripts denote the experimental time point (1 = 24 hr, 2 = 48 hr, and 3 = 72 hr), $\mathrm{E2F}_{i}$ denotes the $\mathrm{E2F}$ abundance at time point $i$,
+and $\dot{\mathcal{A}}_{ij}$ denotes the time derivative of the fraction of arrested cells (estimated from data).
+We calculated candidate values for $\epsilon_{j}$ by solving the log-transformed system of equations for 10 biological replicates.
 
 \subsubsection*{Signaling model equations.}
 The signal initiation, and integration modules required the level of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
