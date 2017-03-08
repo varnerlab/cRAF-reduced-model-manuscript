@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -624,6 +624,57 @@ Bunaciu RP, Yen A (2011) Activation of the aryl hydrocarbon receptor ahr
   by restricting expression of the stem cell transcription factor oct4.
 \newblock Cancer Res 71: 2371-80.
 \bibAnnoteFile{Bunaciu2011}
+
+\bibitem{Jackson:2000aa}
+Jackson DA, Pombo A, Iborra F (2000) The balance sheet for transcription: an
+  analysis of nuclear rna metabolism in mammalian cells.
+\newblock FASEB J 14: 242-54.
+\bibAnnoteFile{Jackson:2000aa}
+
+\bibitem{Zhao:2014aa}
+Zhao ZW, Roy R, Gebhardt JCM, Suter DM, Chapman AR, et~al. (2014) Spatial
+  organization of rna polymerase ii inside a mammalian cell nucleus revealed by
+  reflected light-sheet superresolution microscopy.
+\newblock Proc Natl Acad Sci U S A 111: 681-6.
+\bibAnnoteFile{Zhao:2014aa}
+
+\bibitem{Freitas2004}
+Freitas R, Merkle R (2004) {Kinematic Self-Replicating Machines}.
+\newblock Oxford University Press.
+\bibAnnoteFile{Freitas2004}
+
+\bibitem{Yang:2003aa}
+Yang E, van Nimwegen E, Zavolan M, Rajewsky N, Schroeder M, et~al. (2003) Decay
+  rates of human mrnas: correlation with functional characteristics and
+  sequence attributes.
+\newblock Genome Res 13: 1863-72.
+\bibAnnoteFile{Yang:2003aa}
+
+\bibitem{Doherty:2009aa}
+Doherty MK, Hammond DE, Clague MJ, Gaskell SJ, Beynon RJ (2009) Turnover of the
+  human proteome: determination of protein intracellular stability by dynamic
+  silac.
+\newblock J Proteome Res 8: 104-12.
+\bibAnnoteFile{Doherty:2009aa}
+
+\bibitem{Darzacq:2007aa}
+Darzacq X, Shav-Tal Y, de~Turris V, Brody Y, Shenoy SM, et~al. (2007) In vivo
+  dynamics of rna polymerase ii transcription.
+\newblock Nat Struct Mol Biol 14: 796-806.
+\bibAnnoteFile{Darzacq:2007aa}
+
+\bibitem{Bostrom:1986aa}
+Bostr{\"o}m K, Wettesten M, Bor{\'e}n J, Bondjers G, Wiklund O, et~al. (1986)
+  Pulse-chase studies of the synthesis and intracellular transport of
+  apolipoprotein b-100 in hep g2 cells.
+\newblock J Biol Chem 261: 13800-6.
+\bibAnnoteFile{Bostrom:1986aa}
+
+\bibitem{Rosenbluth:2006aa}
+Rosenbluth MJ, Lam WA, Fletcher DA (2006) Force microscopy of nonadherent
+  cells: a comparison of leukemia cell deformability.
+\newblock Biophys J 90: 2994-3003.
+\bibAnnoteFile{Rosenbluth:2006aa}
 
 \bibitem{Jensen:2015aa}
 Jensen HA, Yourish HB, Bunaciu RP, Varner JD, Yen A (2015) Induced
