@@ -670,6 +670,12 @@ Bostr{\"o}m K, Wettesten M, Bor{\'e}n J, Bondjers G, Wiklund O, et~al. (1986)
 \newblock J Biol Chem 261: 13800-6.
 \bibAnnoteFile{Bostrom:1986aa}
 
+\bibitem{Meyers2004}
+Meyers R, editor (2004) {Encyclopedia of Molecular Cell Biology and Molecular
+  Medicine, Volume 1, 2nd Edition}.
+\newblock ISBN: 978-3-527-30543-8. {Wiley-Blackwell}.
+\bibAnnoteFile{Meyers2004}
+
 \bibitem{Rosenbluth:2006aa}
 Rosenbluth MJ, Lam WA, Fletcher DA (2006) Force microscopy of nonadherent
   cells: a comparison of leukemia cell deformability.

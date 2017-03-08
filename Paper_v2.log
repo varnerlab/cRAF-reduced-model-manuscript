@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2017 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 MAR 2017 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -960,10 +960,10 @@ f>] [40 <./figs/Fig-3-Predictions.pdf>] [41 <./figs/Fig-5-GRN-Simulations.pdf>]
 ### semi simple group (level 1) entered at line 50 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7794 strings out of 493089
- 113482 string characters out of 6134842
- 204888 words of memory out of 5000000
- 11005 multiletter control sequences out of 15000+600000
+ 7798 strings out of 493089
+ 113546 string characters out of 6134842
+ 204905 words of memory out of 5000000
+ 11008 multiletter control sequences out of 15000+600000
  30771 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,41p,1240b,1259s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -984,7 +984,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (44 pages, 4363729 bytes).
+Output written on Paper_v2.pdf (44 pages, 4363885 bytes).
 PDF statistics:
  712 PDF objects out of 1000 (max. 8388607)
  484 compressed objects within 5 object streams
