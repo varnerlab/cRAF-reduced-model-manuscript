@@ -426,16 +426,17 @@ prominence in the systems and synthetic biology community. However, many other t
 
 \section*{Materials and Methods}
 
-\subsubsection*{Gene expression model equations.}
+\subsubsection*{Effective gene expression model equations.}
 We decomposed the ATRA-induced differentiation program into three modules;
 a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (activated Trigger) signals;
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
 The output of the signal initiation module was the input to the gene expression model.
-For each gene $j=1,2,\dots,\mathcal{G}$, we modeled both the mRNA ($m_{j}$) and protein ($p_{j}$) abundance:
+For each gene $j=1,2,\dots,\mathcal{G}$, we modeled both the mRNA ($m_{j}$), protein ($p_{j}$) and signaling species abundance:
 \begin{eqnarray}
 	\frac{dm_{j}}{dt} &=& r_{T,j} - \left(\mu+\theta_{m,j}\right)m_{j}+\lambda_{j}\\
-	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\theta_{p,j}\right)p_{j}
+	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\theta_{p,j}\right)p_{j}\\\label{eqn-signaling-balances}
+	\mathbf{g}\left(p_{1},\hdots,p_{\mathcal{G}},\kappa\right) &=& \mathbf{0}
 \end{eqnarray}
 The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, and translation while
 the terms $\theta_{m,j}$ and $\theta_{p,j}$ denote first-order degradation constants for mRNA and protein, respectively.
@@ -456,7 +457,7 @@ If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled 
 $u_{j}=\mathcal{I}_{j}\left(f_{1j}\left(\cdot\right),\hdots,f_{mj}\left(\cdot\right)\right)$
 where $0\leq f_{ij}\left(\cdot\right)\leq 1$ denotes a regulatory transfer function quantifying the influence of factor $i$ on the expression of gene $j$,
 and $\mathcal{I}_{j}\left(\cdot\right)$ denotes an integration rule which combines the individual regulatory inputs for gene $j$ into a single control term.
-In this study, the integration rule governing gene expression was the weighted fraction of promoter configurations that resulted in gene expression [REFHERE]:
+In this study, the integration rule governing gene expression was the weighted fraction of promoter configurations that resulted in gene expression \cite{Moon:2012ab}:
 \begin{equation}
 	{u}_{j} = \frac{W_{R_{1},j}+\displaystyle\sum_{n}W_{nj}f_{nj}}{1+W_{R_{1},j}+\displaystyle\sum_{d}W_{dj}f_{dj}}
 \end{equation}
@@ -477,24 +478,10 @@ The characteristic maximum translation rate was defined as the product of a char
 and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. As was the case for transcription,
 we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
 
-\subsubsection*{Effective cell cycle arrest model.}
-We formulated an effective model of the fraction of cells undergoing ATRA-induced cell cycle arrest, $\mathcal{A}$ as:
-\begin{equation}\label{eq:a-eqn}
-	\frac{d\mathcal{A}}{dt} = \epsilon_{1}\left(\mathrm{E2F}\right)^{\epsilon_{2}}
-\end{equation}where $\epsilon_{i}$ were unknown parameters, and $\mathrm{E2F}$ denotes the abundance of the E2F transcription factor.
-The parameters $\epsilon_{1}$ and $\epsilon_{2}$ were estimated from experimental cell cycle distribution measurements, by discretizing and \texttt{log} transforming Eq. \eqref{eq:a-eqn}:
-\begin{eqnarray}
-\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{1}\right) & = & \log{\dot{\mathcal{A}}_{21}} \\
-\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{2}\right) & = & \log{\dot{\mathcal{A}}_{32}}
-\end{eqnarray}
-where subscripts denote the experimental time point (1 = 24 hr, 2 = 48 hr, and 3 = 72 hr), $\mathrm{E2F}_{i}$ denotes the $\mathrm{E2F}$ abundance at time point $i$,
-and $\dot{\mathcal{A}}_{ij}$ denotes the time derivative of the fraction of arrested cells estimated between time point $i$ and $j$ (estimated from data).
-We calculated candidate values for $\epsilon_{j}$ by solving the log-transformed system of equations for 10 biological replicates.
-
 \subsubsection*{Signaling model equations.}
 The signal initiation, and integration modules required the level of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
 However, our base model described only the abundance of inactive proteins e.g., cRaf or RXR/RAR but not the activated forms.
-To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger.
+To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger (shown generally as Eq \eqref{eqn-signaling-balances}).
 The abundance of activated trigger ($x_{a,1}$) was estimated directly from the RXR/RAR abundance ($x_{u,1}$):
 \begin{equation}
 	x_{a,1} \sim x_{u,1}\left(\frac{\alpha\cdot{\mathrm{ATRA}}}{1+\alpha\cdot\mathrm{ATRA}}\right)
@@ -529,6 +516,20 @@ The formation of cRaf-pS621 was regulated by only a single factor, the abundance
 \begin{equation}
 	v_{+,cRaf} = \left(1-\frac{\mathrm{I}}{K_{D}+\mathrm{I}}\right)
 \end{equation}where $\mathrm{I}$ denotes the abundance of the MAPK inhibitor, and $K_{D}$ denotes the inhibitor affinity.
+
+\subsubsection*{Effective cell cycle arrest model.}
+We formulated an effective model of the fraction of cells undergoing ATRA-induced cell cycle arrest, $\mathcal{A}$ as:
+\begin{equation}\label{eq:a-eqn}
+	\frac{d\mathcal{A}}{dt} = \epsilon_{1}\left(\mathrm{E2F}\right)^{\epsilon_{2}}
+\end{equation}where $\epsilon_{i}$ were unknown parameters, and $\mathrm{E2F}$ denotes the abundance of the E2F transcription factor.
+The parameters $\epsilon_{1}$ and $\epsilon_{2}$ were estimated from experimental cell cycle distribution measurements, by discretizing and \texttt{log} transforming Eq. \eqref{eq:a-eqn}:
+\begin{eqnarray}
+\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{1}\right) & = & \log{\dot{\mathcal{A}}_{21}} \\
+\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{2}\right) & = & \log{\dot{\mathcal{A}}_{32}}
+\end{eqnarray}
+where subscripts denote the experimental time point (1 = 24 hr, 2 = 48 hr, and 3 = 72 hr), $\mathrm{E2F}_{i}$ denotes the $\mathrm{E2F}$ abundance at time point $i$,
+and $\dot{\mathcal{A}}_{ij}$ denotes the time derivative of the fraction of arrested cells estimated between time point $i$ and $j$ (estimated from data).
+We calculated candidate values for $\epsilon_{j}$ by solving the log-transformed system of equations for 10 biological replicates.
 
 % ATRA induced signaling events were modeled using saturation kinetics within an ordinary differential equation (ODE) framework:
 % \begin{equation}

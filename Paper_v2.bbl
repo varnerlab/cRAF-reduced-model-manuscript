@@ -291,6 +291,12 @@ Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
 \newblock PLoS Comput Biol 3: e142.
 \bibAnnoteFile{Luan:2007aa}
 
+\bibitem{Moon:2012ab}
+Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA (2012) Genetic programs
+  constructed from layered logic gates in single cells.
+\newblock Nature 491: 249-53.
+\bibAnnoteFile{Moon:2012ab}
+
 \bibitem{pr3010138}
 Wayman JA, Sagar A, Varner JD (2015) Dynamic modeling of cell-free biochemical
   networks using effective kinetic models.
