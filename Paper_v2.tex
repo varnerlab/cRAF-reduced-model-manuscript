@@ -226,7 +226,7 @@ Next, we tested the response of the signal initiation module to different ATRA d
 % This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and ERK action on Raf transcription factors.
 
 The signal initiation model was bistable with respect to ATRA induction (Fig. \ref{fig:model-fitting}C-D).
-Phaseplane analysis predicted two stable steady-states when ATRA was present below a critical threshold (Fig. \ref{fig:model-fitting}C).
+Phaseplane analysis predicted two stable steady-states when ATRA was present below a critical threshold, and only a single steady-state above the threshold (Fig. \ref{fig:model-fitting}C).
 In the lower stable state, neither the signalsome nor cRaf-pS621 were present (thus, the differentiation program was deactivated).
 However, at the high stable state, both the signalsome and cRaf-pS621 were present, allowing for sustained activation and differentiation.
 Interestingly, when ATRA was above a critical threshold, only the activated state was accessible (Fig. \ref{fig:model-fitting}D).
@@ -479,7 +479,7 @@ and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. A
 we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
 
 \subsubsection*{Signaling model equations.}
-The signal initiation, and integration modules required the level of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
+The signal initiation, and integration modules required the abundance of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
 However, our base model described only the abundance of inactive proteins e.g., cRaf or RXR/RAR but not the activated forms.
 To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger (shown generally as Eq \eqref{eqn-signaling-balances}).
 The abundance of activated trigger ($x_{a,1}$) was estimated directly from the RXR/RAR abundance ($x_{u,1}$):
@@ -517,19 +517,64 @@ The formation of cRaf-pS621 was regulated by only a single factor, the abundance
 	v_{+,cRaf} = \left(1-\frac{\mathrm{I}}{K_{D}+\mathrm{I}}\right)
 \end{equation}where $\mathrm{I}$ denotes the abundance of the MAPK inhibitor, and $K_{D}$ denotes the inhibitor affinity.
 
-\subsubsection*{Effective cell cycle arrest model.}
-We formulated an effective model of the fraction of cells undergoing ATRA-induced cell cycle arrest, $\mathcal{A}$ as:
+\noindent\subsubsection*{Estimation of gene expression model parameters.}
+We estimated parameters appearing in the mRNA and protein balances, the abundance of polymerases and ribosomes,
+transcription and translation rates, the half-life of a typical mRNA and protein,
+and typical values for the copies per cell of RNA polymerase and ribosomes from literature (Table \ref{tbl:model-parameters}).
+The saturation constants $K_{X}$ and $K_{T}$ were adjusted so that gene expression and translation resulted in gene products on a biologically realistic concentration scale.
+Lastly, we calculated the concentration for gene $G_{j}$ by assuming, on average, that a cell had two copies of each gene at any given time.
+Thus, the bulk of our gene expression model parameters were based directly upon literature values, and were not adjusted during model identification.
+However, the remaining parameters, e.g., the $W_{ij}$ appearing in the gene expression control laws,
+or parameters appearing in the transfer functions $f_{dj}$, were estimated from the protein expression and signaling data sets discussed here.
+
+Signaling and gene expression model parameters were estimated by minimizing the squared difference between simulations and experimental protein data set $j$.
+We measured the squared difference in the scale, fold change and shape for protein $j$:
+\begin{equation}\label{eqn:objective-function}
+	E_{j}(\mathbf{k}) = \biggl(\mathcal{M}_{j}\left(t_{-}\right)-\hat{y}_{j}\left(t_{-},\mathbf{k}\right)\biggr)^2+\sum_{i=1}^{\mathcal{T}_{j}}\biggl(\hat{\mathcal{M}}_{ij}-\hat{y}_{ij}(\mathbf{k})\biggr)^2 + \sum_{i=1}^{\mathcal{T}_{j}}\biggl(\mathcal{M}^{\prime}_{ij}-y^{\prime}_{ij}(\mathbf{k})\biggr)^2
+\end{equation}
+The first term in Eqn. \eqref{eqn:objective-function} quantified the initial \textit{scale} error, directly before the addition of ATRA.
+In this case, $\mathcal{M}_{j}\left(t_{-}\right)$ (the approximate concentration of protein $j$ before the addition of ATRA) was estimated from literature.
+This term was required because the protein measurements were reported as the fold-change; thus, the data was normalized by a control
+value measured before the addition of ATRA. However, the model operated on a physical scale.
+The first term allowed the model to capture physically realistic changes following ATRA addition.
+The second term quantified the difference in the \textit{fold-change} of protein $j$ as a function of time.
+The terms $\hat{\mathcal{M}}_{ij}$ and $\hat{y}_{ij}$ denote the scaled experimental observations and simulation outputs (fold-change; protein normalized by control value directly before ATRA addition)
+at time $i$ from protein $j$,
+where $\mathcal{T}_{j}$ denoted the number of time points for data set $j$.
+Lastly, the third term of the objective function measured the difference in the \textit{shape} of the measured and simulated protein levels.
+The scaled value $0\leq\mathcal{M}^{\prime}_{ij}\leq{1}$ was given by:
+\begin{equation}\label{norm_exp_data}
+\hat{\mathcal{M}}_{ij} = \left({\mathcal{M}_{ij} - \min_{i}\mathcal{M}_{ij}}\right)/\left({\max_{i}{\mathcal{M}_{ij}}-\min_{i}{\mathcal{M}_{ij}}}\right)
+\end{equation}
+where $\mathcal{M}^{\prime}_{ij}=0$ and $\mathcal{M}^{\prime}_{ij}=1$  describe the lowest (highest) intensity bands.
+A similar scaling was used for the simulation output.
+We minimized the total model residual $\sum_{j}E_{j}$ using a heuristic direct-search optimization procedure, subject to box constraints on the parameter values,
+starting from a random initial parameter guess. Each downhill step was archived and used for ensemble calculations.
+The optimization procedure have been reported previously [REFHERE].
+
+
+% Model parameters estimated directly or derived from literature, or data presented in this study are given in Table \ref{tbl:model-parameters
+\subsubsection*{Estimation of an effective cell cycle arrest model.}
+We formulated an effective N-order polynomial model of the fraction of cells undergoing ATRA-induced cell cycle arrest at time t, $\hat{\mathcal{A}}(t)$, as:
 \begin{equation}\label{eq:a-eqn}
-	\frac{d\mathcal{A}}{dt} = \epsilon_{1}\left(\mathrm{E2F}\right)^{\epsilon_{2}}
-\end{equation}where $\epsilon_{i}$ were unknown parameters, and $\mathrm{E2F}$ denotes the abundance of the E2F transcription factor.
-The parameters $\epsilon_{1}$ and $\epsilon_{2}$ were estimated from experimental cell cycle distribution measurements, by discretizing and \texttt{log} transforming Eq. \eqref{eq:a-eqn}:
-\begin{eqnarray}
-\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{1}\right) & = & \log{\dot{\mathcal{A}}_{21}} \\
-\log\epsilon_{1}+\epsilon_{2}\log\left(\mathrm{E2F}_{2}\right) & = & \log{\dot{\mathcal{A}}_{32}}
-\end{eqnarray}
-where subscripts denote the experimental time point (1 = 24 hr, 2 = 48 hr, and 3 = 72 hr), $\mathrm{E2F}_{i}$ denotes the $\mathrm{E2F}$ abundance at time point $i$,
-and $\dot{\mathcal{A}}_{ij}$ denotes the time derivative of the fraction of arrested cells estimated between time point $i$ and $j$ (estimated from data).
-We calculated candidate values for $\epsilon_{j}$ by solving the log-transformed system of equations for 10 biological replicates.
+	\hat{\mathcal{A}}\left(t\right)\simeq a_{0}+\sum_{i=1}^{N-1}a_{i}\phi_{i}\left(\mathbf{p}(t),t\right)
+\end{equation}where $a_{i}$ were unknown parameters, and $\phi_{i}\left(\mathbf{p}(t),t\right)$ denotes a basis function.
+The basis functions were dependent upon the system state; in this study, we assumed $N = 4$ and basis functions of the form:
+\begin{equation}
+	\phi_{i}\left(\mathbf{p}(t),t\right) = \left(\frac{t}{T}+\frac{p21}{E2F}\Bigr|_{t}\right)^{(i-1)}
+\end{equation}
+The parameters $a_{0},\hdots,a_{3}$ were estimated directly from cell-cycle measurements (biological replicates) using least-squares.
+% The abundances of the $p21$ and $E2F$ proteins were taken from the gene expression model solution. The least squares solution for the polynomial
+% coefficients was given by:
+% \begin{equation}
+% 	\mathbf{a} = \left[\left(\mathbf{V}^{T}\mathbf{V}\right)^{-1}\mathbf{V}^{T}\right]\mathcal{A}(t)
+% \end{equation}where $\mathbf{V}$ denotes the Vandermonde matrix constructed from the basis functions, and $\mathcal{A}(t)$ denotes the vector of
+% measured G0 fractions following ATRA exposure.
+
+\subsubsection*{Availability of model code.}
+The signaling and gene expression model equations, and the parameter estimation procedure, were implemented in the Julia programming language.
+The model equations were solved using the \texttt{ODE23s} routine of the ODE package \cite{Julia}.
+The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
 
 % ATRA induced signaling events were modeled using saturation kinetics within an ordinary differential equation (ODE) framework:
 % \begin{equation}
@@ -589,39 +634,7 @@ We calculated candidate values for $\epsilon_{j}$ by solving the log-transformed
 
 % The HL-60 model described both signal transduction and gene expression events following the addition of ATRA.
 
-\noindent\subsubsection*{Estimation of model parameters.}
-We estimated parameters appearing in the mRNA and protein balances, and the abundance of polymerases and ribosomes, from estimates of transcription and translation rates,
-the half-life of a typical mRNA and protein, and typical values for the copies per cell of RNA polymerase and ribosomes from literature (Table \ref{tbl:model-parameters}).
-For the remaining parameters, e.g., the $W_{ij}$ appearing in the control laws,
-or parameters appearing in the transfer functions $f_{dj}$, were estimated from the gene expression and signaling data sets discussed here.
-The saturation constants $K_{X}$ and $K_{T}$ were adjusted so that gene expression and translation resulted in gene products on a biologically realistic concentration scale.
-Lastly, we calculated the concentration for gene $G_{j}$ by assuming, on average, that a cell had two copies of each gene at any given time.
-Thus, the bulk of our gene expression parameters were based directly upon literature values, and were not adjusted during model identification.
-The values used for the characteristic transcription/translation parameters, degradation constants and
-macromolecular copy number are given in the supplemental materials along with the specific formulas required to calculate all derived constants.
 
-Signal and gene expression model parameters were estimated by minimizing the squared difference between simulations and experimental data set $j$:
-\begin{equation}\label{eqn:objective-function}
-	E_{j}(\mathbf{k}) = \sum_{i=1}^{\mathcal{T}_{j}}\biggl(\hat{\mathcal{M}}_{ij}-\hat{y}_{ij}(\mathbf{k})\biggr)^2 + \left(\frac{{\mathcal{M}^{\prime}_{ij}}-\max{y_{ij}}}{{\mathcal{M}^{\prime}_{ij}}}\right)^{2}
-\end{equation}
-The terms $\hat{\mathcal{M}}_{ij}$ and $\hat{y}_{ij}$ denote scaled experimental observations and simulation outputs at time $i$ from training set $j$,
-where $\mathcal{T}_{j}$ denoted the number of time points for data set $j$.
-The first term in Eqn. \eqref{eqn:objective-function} quantified the relative simulation error.
-We used immunoblot intensity measurements for model training.
-Thus, we trained the model on the \emph{relative} change between bands within each data set.
-Suppose we have the intensity of species $x$ at time $\{t_{1},t_{2},..,t_{n}\}$ in condition $j$.
-The scaled value $0\leq\hat{\mathcal{M}}_{ij}\leq{1}$ is given by:
-\begin{equation}\label{norm_exp_data}
-\hat{\mathcal{M}}_{ij} = \left({\mathcal{M}_{ij} - \min_{i}\mathcal{M}_{ij}}\right)/\left({\max_{i}{\mathcal{M}_{ij}}-\min_{i}{\mathcal{M}_{ij}}}\right)
-\end{equation}
-where $\hat{\mathcal{M}}_{ij}=0$ and $\hat{\mathcal{M}}_{ij}=1$  describe the lowest (highest) intensity bands.
-A similar scaling was used for the simulation output. The second term in the objective function ensured a realistic concentration scale was estimated by the model.
-We set the highest intensity band to $\mathcal{M}^{\prime}_{ij} = 10$ [AU] for all simulations.
-We minimized the total model residual $\sum_{j}E_{j}$ using heuristic optimization starting from a random initial parameter guess.
-
-The signaling and gene expression model equations were implemented in the Julia programming language, and solved using the \texttt{ODE23s} routine of the ODE package \cite{Julia}.
-The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
-Model parameters estimated directly or derived from literature, or data presented in this study are given in Table \ref{tbl:model-parameters}.
 
 
 % All code was implemented in the Octave programming language, and is available for
@@ -680,9 +693,9 @@ Slides were air-dried and stained with Wright’s stain. Slide images were captu
 The authors declare that they have no competing interests.
 
 \section*{Author's contributions}
-J.V and A.Y directed the study. R.T, H.J and J.C conducted the cell culture measurements.
-J.V and W.D developed the reduced order HL-60 models and the parameter ensemble.
-W.D analyzed the model ensemble, and generated figures for the manuscript.
+J.V and A.Y directed the study. R.T, H.J, R.B and J.C conducted the cell culture measurements.
+J.V, R.B, W.D, K.R and A.S developed the reduced order HL-60 models and the parameter ensemble.
+W.D and J.V analyzed the model ensemble, and generated figures for the manuscript.
 The manuscript was prepared and edited for publication by W.D, A.Y and J.V.
 
 \section*{Acknowledgements}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 APR 2017 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 APR 2017 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -922,7 +922,7 @@ d src in a non-
 
 [27] [28] [29] [30] [31] [32] [33]) [34]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 713.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 726.
  [35
 
 ] [36] [37
@@ -932,7 +932,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 File: ./figs/Fig-1-Network_v3.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-1-Network_v3.pdf>
-Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 829.
+Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 842.
 (pdftex.def)             Requested size: 469.75502pt x 379.56837pt.
 
 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf, id=142, 499.8675pt x 590.205pt>
@@ -940,26 +940,26 @@ File: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf>
 Package pdftex.def Info: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf used on input 
-line 839.
+line 852.
 (pdftex.def)             Requested size: 422.77664pt x 499.20003pt.
 
 <./figs/Fig-3-Predictions.pdf, id=143, 771.88374pt x 522.95375pt>
 File: ./figs/Fig-3-Predictions.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Predictions.pdf>
-Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 852.
+Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 865.
 (pdftex.def)             Requested size: 469.75502pt x 318.25922pt.
 
 <./figs/Fig-4-GRN-Simulations.pdf, id=144, 413.545pt x 584.1825pt>
 File: ./figs/Fig-4-GRN-Simulations.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-4-GRN-Simulations.pdf>
-Package pdftex.def Info: ./figs/Fig-4-GRN-Simulations.pdf used on input line 86
-2.
+Package pdftex.def Info: ./figs/Fig-4-GRN-Simulations.pdf used on input line 87
+5.
 (pdftex.def)             Requested size: 399.29463pt x 564.0624pt.
 
 
-LaTeX Warning: Float too large for page by 1.63239pt on input line 867.
+LaTeX Warning: Float too large for page by 1.63239pt on input line 880.
 
 
 <./figs/Fig-5-GRN-CellCycle-Predictions.pdf, id=145, 784.9325pt x 330.23375pt>
@@ -967,14 +967,14 @@ File: ./figs/Fig-5-GRN-CellCycle-Predictions.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-GRN-CellCycle-Predictions.pdf>
 Package pdftex.def Info: ./figs/Fig-5-GRN-CellCycle-Predictions.pdf used on inp
-ut line 870.
+ut line 883.
 (pdftex.def)             Requested size: 399.29463pt x 167.9937pt.
 
 <./figs/Fig-6-GRN-Robustness.pdf, id=146, 414.54875pt x 576.1525pt>
 File: ./figs/Fig-6-GRN-Robustness.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-GRN-Robustness.pdf>
-Package pdftex.def Info: ./figs/Fig-6-GRN-Robustness.pdf used on input line 878
+Package pdftex.def Info: ./figs/Fig-6-GRN-Robustness.pdf used on input line 891
 .
 (pdftex.def)             Requested size: 399.29463pt x 554.97267pt.
 
@@ -983,7 +983,7 @@ File: ./figs/Fig-7-IP-ExperimentalStudies.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-7-IP-ExperimentalStudies.pdf>
 Package pdftex.def Info: ./figs/Fig-7-IP-ExperimentalStudies.pdf used on input 
-line 887.
+line 900.
 (pdftex.def)             Requested size: 422.77664pt x 455.91052pt.
  [38 <./figs/Fig-1-Network_v3.pdf>] [39 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pd
 f>] [40 <./figs/Fig-3-Predictions.pdf>] [41 <./figs/Fig-4-GRN-Simulations.pdf>]
@@ -1022,7 +1022,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (46 pages, 4302576 bytes).
+Output written on Paper_v2.pdf (46 pages, 4303599 bytes).
 PDF statistics:
  802 PDF objects out of 1000 (max. 8388607)
  550 compressed objects within 6 object streams
