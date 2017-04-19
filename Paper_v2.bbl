@@ -300,6 +300,13 @@ Ferrell J (2002) {Self-perpetuating states in signal transduction: positive
 \newblock Curr Opin Cell Biol 14: 140-8.
 \bibAnnoteFile{Ferrell:2002aa}
 
+\bibitem{Laslo2006}
+Laslo P, Spooner CJ, Warmflash A, Lancki DW, Lee HJ, et~al. (2006)
+  {Multilineage transcriptional priming and determination of alternate
+  hematopoietic cell fates}.
+\newblock Cell 126: 755-66.
+\bibAnnoteFile{Laslo2006}
+
 \bibitem{Xiong:2003aa}
 Xiong W, Ferrell J (2003) {A positive-feedback-based bistable 'memory module'
   that governs a cell fate decision}.
@@ -496,13 +503,6 @@ Steidl U, Rosenbauer F, Verhaak RGW, Gu X, Ebralidze A, et~al. (2006) Essential
   stem cells.
 \newblock Nat Genet 38: 1269-77.
 \bibAnnoteFile{Steidl2006}
-
-\bibitem{Laslo2006}
-Laslo P, Spooner CJ, Warmflash A, Lancki DW, Lee HJ, et~al. (2006) Multilineage
-  transcriptional priming and determination of alternate hematopoietic cell
-  fates.
-\newblock Cell 126: 755-66.
-\bibAnnoteFile{Laslo2006}
 
 \bibitem{Pahl1993}
 Pahl HL, Scheibe RJ, Zhang DE, Chen HM, Galson DL, et~al. (1993) The
