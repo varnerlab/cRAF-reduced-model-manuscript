@@ -252,11 +252,17 @@ regulated the expression of the transcription factors CCATT/enhancer binding pro
 In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or P47Phox.
 We assembled the connectivity of the signal integration and phenotypic programs driven by Trigger and cRaf-pS621 from literature (Table \ref{tbl:TF-network-connectivity}).
 We estimated the parameters which appeared in the control laws regulating these programs
-from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA [REFHERE].
+from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA \cite{Jensen:2013aa,Jensen:2014aa,Jensen:2015ab,Jensen:2015aa}.
 However, the bulk of the remaining model parameters were taken from directly from literature \cite{Milo:2010aa} and were not estimated in this study (see materials and methods).
 The model simulations captured the time dependent expression of CD38 and CD11b following the addition ATRA (Fig. \ref{fig:model-grn-simulations}A),
 and the steady-state for signal integration and phenotypic markers (Fig. \ref{fig:model-grn-simulations}B).
-Taken together, the signal integration and phenotypic simulations were consistent with measurements, thereby validating the assumed molecular connectivity.
+Lastly, we used the \textit{predicted} values of the P21 and E2F protein abundance to estimate a blackbox model of ATRA-induced G0 arrest (Fig. \ref{fig:model-cell-cycle-simulations}).
+The phenotype module predicted P21 expression significantly increased and E2F expression decreased, in response to ATRA exposure (Fig. \ref{fig:model-cell-cycle-simulations}A).
+We then used the ratio of these values in a polynomial model to calculate the fraction of HL-60 cells in G0 arrest following the addition of ATRA (Fig. \ref{fig:model-cell-cycle-simulations}B).
+The third-order polynomial model captured the trend in measured G0-arrest values as a function of time, and wash robust to uncertainty in the measured data (Fig. \ref{fig:model-cell-cycle-simulations}B, gray).
+Taken together, the output of the signal integration and phenotypic modules was consistent with time-series and steady-state measurements, thereby validating the assumed molecular connectivity.
+Moreover, outputs from the phenotype module described the trend in ATRA-induced G0 cell cycle arrest.
+Next, we explored which nodes and interactions between nodes in the signal integration module most influenced the system response.
 
 % Vav1 is a member of an ATRA-inducible signalsome complex which propels sustained MAPK activation, arrest and differentiation (Fig. \ref{fig:network}B).
 % We conducted immunoprecipitation studies and identified a limited number of ATRA-dependent and -independent Raf interaction partners.
@@ -269,6 +275,8 @@ Taken together, the signal integration and phenotypic simulations were consisten
 % However, GW5074 did not influence the association of CK2 or 14-3-3 with cRaf,
 % further demonstrating their independence from cRaf phosphorylation.
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
+
+
 
 The composition of the siganlsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
 To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
@@ -297,10 +305,9 @@ we did not investigate the role of Src further in this study.
 Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with Raf activation following ATRA-treatment.
 Previous studies demonstrated that a Vav1-Slp76-Cbl-CD38 complex plays an important role in ATRA-induced MAPK activation and differentiation of HL-60 cells \cite{Shen2009}.
 Here we did not observe direct interaction of Raf with Cbl or Slp76;
-however, this complex could be involved upstream.
+however, this complex could be involved upstream. Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
 
 %For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{fig:ip-data}A.
-Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
 Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers following ATRA exposure (Fig. \ref{fig:ip-data}D-F).
 ATRA treatment alone statistically significantly increased the G1/G0 percentage over the untreated control,
 while GW5074 alone had a negligible effect on the cell cycle distribution (Fig. \ref{fig:ip-data}D).
@@ -550,7 +557,7 @@ where $\mathcal{M}^{\prime}_{ij}=0$ and $\mathcal{M}^{\prime}_{ij}=1$  describe 
 A similar scaling was used for the simulation output.
 We minimized the total model residual $\sum_{j}E_{j}$ using a heuristic direct-search optimization procedure, subject to box constraints on the parameter values,
 starting from a random initial parameter guess. Each downhill step was archived and used for ensemble calculations.
-The optimization procedure has been reported previously [REFHERE].
+The optimization procedure (a covariance matrix adaptation evolution strategy) has been reported previously \cite{Igel:2007aa}.
 
 
 % Model parameters estimated directly or derived from literature, or data presented in this study are given in Table \ref{tbl:model-parameters
@@ -881,18 +888,19 @@ Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jen
 
 \begin{figure}[!t]\centering
 \includegraphics[width=0.85\textwidth]{./figs/Fig-5-GRN-CellCycle-Predictions.pdf}
-\caption{Model simulation of the HL-60 gene expression program following exposure to 1$\mu$M ATRA at t = 0 hr.
-A: CD38 and CD11b expression versus time following ATRA exposure at time t = 0 hr.
-B: Gene expression at t = 48 hr following ATRA exposure.
-Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-grn-simulations}
+\caption{Model simulation of HL-60 cell-cycle arrest following exposure to 1$\mu$M ATRA at t = 0 hr.
+A: Predicted P21 and E2F expression levels for the best parameter set following ATRA exposure at time t = 0 hr.
+B: Estimated fraction of HL-60 cells in G0 arrest following ATRA exposure at time t = 0 hr.
+The gray region denotes the 95\% confidence estimate of the polynomial model.
+Experimental data in panel B was reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-cell-cycle-simulations}
 \end{figure}
 
 \begin{figure}[!t]\centering
 \includegraphics[width=0.85\textwidth]{./figs/Fig-6-GRN-Robustness.pdf}
-\caption{Model simulation of the HL-60 gene expression program following exposure to 1$\mu$M ATRA at t = 0 hr.
-A: CD38 and CD11b expression versus time following ATRA exposure at time t = 0 hr.
-B: Gene expression at t = 48 hr following ATRA exposure.
-Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-grn-simulations}
+\caption{Robustness of the HL-60 differentiation program following exposure to 1$\mu$M ATRA at t = 0 hr.
+A: Singular value decomposition of the system response ($l^{2}$-norm between the perturbed and nominal state) following pairwise gene knockout simulations using the best fit parameter set.
+The percentage at the top of each column describes the fraction of the variance in the system state captured by the node combinations in the rows.
+B: Singular value decomposition of the system response ($l^{2}$-norm between the perturbed and nominal state) following the pairwise removal of connections from the PU.1 and AP1 nodes.}\label{fig:model-response-ko}
 \end{figure}
 
 

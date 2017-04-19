@@ -147,6 +147,34 @@ Tasseff R, Nayak S, Song S, Yen A, Varner J (2011) {Modeling and analysis of
 \newblock Integr Biol 3: 578 - 591.
 \bibAnnoteFile{Tasseff2011}
 
+\bibitem{Jensen:2013aa}
+Jensen HA, Styskal LE, Tasseff R, Bunaciu RP, Congleton J, et~al. (2013) The
+  src-family kinase inhibitor pp2 rescues inducible differentiation events in
+  emergent retinoic acid-resistant myeloblastic leukemia cells.
+\newblock PLoS One 8: e58621.
+\bibAnnoteFile{Jensen:2013aa}
+
+\bibitem{Jensen:2014aa}
+Jensen HA, Bunaciu RP, Ibabao CN, Myers R, Varner JD, et~al. (2014) Retinoic
+  acid therapy resistance progresses from unilineage to bilineage in hl-60
+  leukemic blasts.
+\newblock PLoS One 9: e98929.
+\bibAnnoteFile{Jensen:2014aa}
+
+\bibitem{Jensen:2015ab}
+Jensen HA, Bunaciu RP, Varner JD, Yen A (2015) Gw5074 and pp2 kinase inhibitors
+  implicate nontraditional c-raf and lyn function as drivers of retinoic
+  acid-induced maturation.
+\newblock Cell Signal 27: 1666-75.
+\bibAnnoteFile{Jensen:2015ab}
+
+\bibitem{Jensen:2015aa}
+Jensen HA, Yourish HB, Bunaciu RP, Varner JD, Yen A (2015) Induced
+  myelomonocytic differentiation in leukemia cells is accompanied by
+  noncanonical transcription factor expression.
+\newblock FEBS Open Bio 5: 789-800.
+\bibAnnoteFile{Jensen:2015aa}
+
 \bibitem{Milo:2010aa}
 Milo R, Jorgensen P, Moran U, Weber G, Springer M (2010) Bionumbers--the
   database of key numbers in molecular and cell biology.
@@ -302,6 +330,12 @@ Wayman JA, Sagar A, Varner JD (2015) Dynamic modeling of cell-free biochemical
   networks using effective kinetic models.
 \newblock Processes 3: 138.
 \bibAnnoteFile{pr3010138}
+
+\bibitem{Igel:2007aa}
+Igel C, Hansen N, Roth S (2007) Covariance matrix adaptation for
+  multi-objective optimization.
+\newblock Evol Comput 15: 1-28.
+\bibAnnoteFile{Igel:2007aa}
 
 \bibitem{Julia}
 Bezanson J, Edelman A, Karpinski S, Shah VB (2014) Julia: {A} fresh approach to
@@ -687,12 +721,5 @@ Rosenbluth MJ, Lam WA, Fletcher DA (2006) Force microscopy of nonadherent
   cells: a comparison of leukemia cell deformability.
 \newblock Biophys J 90: 2994-3003.
 \bibAnnoteFile{Rosenbluth:2006aa}
-
-\bibitem{Jensen:2015aa}
-Jensen HA, Yourish HB, Bunaciu RP, Varner JD, Yen A (2015) Induced
-  myelomonocytic differentiation in leukemia cells is accompanied by
-  noncanonical transcription factor expression.
-\newblock FEBS Open Bio 5: 789-800.
-\bibAnnoteFile{Jensen:2015aa}
 
 \end{thebibliography}
