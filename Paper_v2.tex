@@ -167,7 +167,7 @@ are phosphorylated by ERK, JNK or p38 MAPK family members suggesting positive fe
 BLR1 overexpression enhanced Raf phosphorylation and accelerated terminal differentiation, while Raf inhibition reduced BLR1 expression and differentiation \cite{Wang2008}.
 BLR1 knock-out cells failed to activate Raf or differentiate in the presence of ATRA \cite{Wang2008}.
 Interestingly, both the knockdown or inhibition of Raf, also reduced BLR1 expression and functional differentiation \cite{Wang2008}.
-Thus, the expression of signalsome components e.g., BLR1 was Raf dependent, while Raf activation depended upon the siganlsome.
+Thus, the expression of signalsome components e.g., BLR1 was Raf dependent, while Raf activation depended upon the signalsome.
 A recent computational study of ATRA-induced differentiation in HL-60 cells suggested that the BLR1-MAPK positive feedback circuit was sufficient
 to explain ATRA-induced sustained MAPK activation, and the expression of a limited number of functional differentiation markers \cite{Tasseff2011}.
 Model analysis also suggested that Raf was the most distinct of the MAPK proteins.
@@ -183,7 +183,7 @@ This formulation significantly reduced the size and complexity of the model comp
 The effective model, despite its simplicity, captured key features of ATRA induced differentiation of HL-60 cells.
 Model analysis predicted the bistability of MAPK activation as a function of ATRA exposure; conformational experiments supported ATRA-induced bistability.
 Model simulations were also consistent with measurements of the influence of MAPK inhibitors, and the failure of BLR1 knockout cells to differentiate when exposed to ATRA.
-Lastly, we showed by through immunoprecipitation studies, that the guanine nucleotide exchange factor Vav1 is potentially a new ATRA-inducible member of the siganlsome complex.
+Lastly, we showed by through immunoprecipitation studies, that the guanine nucleotide exchange factor Vav1 is potentially a new ATRA-inducible member of the signalsome complex.
 Taken together, these findings when combined with other literature evidence,
 suggested that positive feedback architectures are central to differentiation programs generally, and necessary for ATRA-induced differentiation.
 
@@ -235,7 +235,7 @@ Morphological changes associated with differentiation were visible for ATRA $\ge
 threshold was near this concentration. Next, we conducted ATRA washout experiments to determine if activated cells remained activated in the absence of ATRA.
 HL-60 cells locked into an activated state remained activated following ATRA withdraw (Fig. \ref{fig:model-predictions}).
 This sustained activation resulted from reinforcing feedback between the signalsome and the MAPK pathway.
-Thus, following activation, if we inhibited or removed elements from the signal initiation module we expected the siganlsome and MAPK signals to decay.
+Thus, following activation, if we inhibited or removed elements from the signal initiation module we expected the signalsome and MAPK signals to decay.
 We simulated ATRA induced activation in the presence of kinase inhibitors, and without key circuit elements.
 Consistent with experimental results using multiple MAPK inhibitors, ATRA activation in the presence of MAPK inhibitors lowered the steady-state value of signalsome (Fig. \ref{fig:model-predictions}A).
 In the presence of BLR1, the signalsome and cRaf-pS621 signals were maintained following ATRA withdraw (Fig. \ref{fig:model-predictions}B, gray).
@@ -256,8 +256,8 @@ from steady-state and dynamic measurements of transcription factor and phenotypi
 However, the bulk of the remaining model parameters were taken from directly from literature \cite{Milo:2010aa} and were not estimated in this study (see materials and methods).
 The model simulations captured the time dependent expression of CD38 and CD11b following the addition ATRA (Fig. \ref{fig:model-grn-simulations}A),
 and the steady-state for signal integration and phenotypic markers (Fig. \ref{fig:model-grn-simulations}B).
-Lastly, we used the \textit{predicted} values of the P21 and E2F protein abundance to estimate a blackbox model of ATRA-induced G0 arrest (Fig. \ref{fig:model-cell-cycle-simulations}).
-The phenotype module predicted P21 expression significantly increased and E2F expression decreased, in response to ATRA exposure (Fig. \ref{fig:model-cell-cycle-simulations}A).
+Lastly, we used the \textit{predicted} values of the p21 and E2F protein abundance to estimate a blackbox model of ATRA-induced G0 arrest (Fig. \ref{fig:model-cell-cycle-simulations}).
+The phenotype module predicted p21 expression significantly increased and E2F expression decreased, in response to ATRA exposure (Fig. \ref{fig:model-cell-cycle-simulations}A).
 We then used the ratio of these values in a polynomial model to calculate the fraction of HL-60 cells in G0 arrest following the addition of ATRA (Fig. \ref{fig:model-cell-cycle-simulations}B).
 The third-order polynomial model captured the trend in measured G0-arrest values as a function of time, and wash robust to uncertainty in the measured data (Fig. \ref{fig:model-cell-cycle-simulations}B, gray).
 Taken together, the output of the signal integration and phenotypic modules was consistent with time-series and steady-state measurements, thereby validating the assumed molecular connectivity.
@@ -276,21 +276,22 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % further demonstrating their independence from cRaf phosphorylation.
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
-The PU.1 and AP1 proteins were critical regulators of the ATRA-induced signal integration and phenotypic programs (Fig. \ref{fig:model-response-ko}).
+The PU.1 and AP1 proteins were important regulators of the ATRA-induced signal integration and phenotypic programs (Fig. \ref{fig:model-response-ko}).
 We conducted pairwise knock simulations of genes in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
-The difference between the system state with and without the gene knockouts (encoded in a state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
+The difference between the system state with and without the gene knockouts (encoded as a state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
 All simulations were conducted using the best fit parameter set.
 The first four modes described $>$99\% of the gene knockout variance,
-with the most important components of these modes being the PU.1 and AP1 proteins, and to a much lesser extent GFI1 and CEBPa (Fig. \ref{fig:model-response-ko}A).
+with the most important components of these modes being the PU.1 and AP1 proteins, and to a much lesser extent Gfi1 and C/EBPa (Fig. \ref{fig:model-response-ko}A).
 To better understand which connections involving the PU.1 and AP1 proteins were important, we simulated the pairwise deletion of interactions between these proteins and their respective regulatory targets.
 SVD decomposition of the state displacement matrix assembled from the pairwise deletion of interactions, suggested the first five modes accounted for $>$99\% of the variance resulting from deletion of the interactions.
-The most sensitive interactions for the PU.1 protein involved the regulation of P47Phox expression, and to a lesser extent AP1 and EGR1 expression (Fig. \ref{fig:model-response-ko}B).
-On the other other, the most sensitive connections for AP1 involved the regulation of P21 expression, and the mutual activation of PU.1 and AP1 expression.
-Taken together, these results suggested that the PU.1 and AP1 proteins acted as important regulators for both the signal integration and phenotype modules.
-However, this analysis did not given insight into which components of the signal initiation module was important, and particularly the nature of the signalsome complex.
-Toward this question, we experimentally explored the composition and regulation of the signalsome complex.
+The most sensitive interactions for the PU.1 protein involved the C/EBPa-dependent regulation of P47Phox expression, and to a lesser extent AP1 and EGR1 expression (Fig. \ref{fig:model-response-ko}B).
+On the other other, the most sensitive connections for AP1 involved the C/EBPa-dependent regulation of p21 expression, and the mutual activation of PU.1 and AP1 expression.
+Taken together, these results suggested that the PU.1 and AP1 proteins acted as important self-reinforcing regulators for both the signal integration and phenotype modules.
+The analysis suggested that the PU.1 signaling axis promoted the formation of the neutrophil NADPH oxidase (through p47Phox), while AP1 was responsible for cell cycle arrest (through p21).
+However, this analysis did not give insight into which upstream components of the signal initiation module were important.
+Toward this question, we explored the composition and regulation of the signalsome complex by experimentally interrogating a panel of possible Raf interaction partners.
 
-The composition of the siganlsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
+The composition of the signalsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
 To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
 A panel of 19 possible Raf interaction partners (kinases, GTPases, scaffolding proteins etc)
 was constructed based upon known signaling pathways.
@@ -363,7 +364,11 @@ furthermore, transfection of HL-60 cells with Cbl mutants that fail to bind CD38
 ATRA-induced MAPK activation \cite{Shen2009}. Thus, interaction of Cbl-Slp76-Vav1 and CD38 appears to be required for transmission of the ATRA signal by the
 signalsome.
 
-We conducted immunoprecipitation studies and identified a limited number of ATRA-dependent and -independent Raf interaction partners.
+Analysis of the signal integration and phenotype modules suggested that PU.1 and AP1 regulated distinct phenotypic axes following ATRA exposure.
+
+
+
+Immunoprecipitation studies identified a limited number of ATRA-dependent and -independent Raf interaction partners.
 While we were unable to detect the association of Raf with common kinases and GTPases such as PKC, PKA, p38, Rac and Rho,
 we did establish potential interactions between Raf and key partners such as Vav1, Src, Akt, CK2 and 14-3-3.
 All of these partners are known to be associated with Raf activation or function.
@@ -431,7 +436,7 @@ Model performance was impressive given its limited size. However, there were sev
 First, there was likely missing connectivity in the effective differentiation circuit.
 Decreasing BLR1 expression with simultaneously sustained cRaf-pS261 activation was not captured by the current network architecture.
 This suggested that signalsome, once activated, had a long lifetime as decreased BLR1 expression did not impact cRaf-pS261 abundance.
-We could model this by separating siganlsome formation into an inactive precursor pool that is transformed to a long-lived activated siganlsome by MAPK activation.
+We could model this by separating signalsome formation into an inactive precursor pool that is transformed to a long-lived activated signalsome by MAPK activation.
 We should also explore adding additional downstream biological modules to this skeleton model, for example the upregulation of reactive oxygen markers such as p47Phox or
 cell cycle arrest components to capture the switch from an actively proliferating population to a population in G0-arrest.
 Next, the choice of max/min integration rules or the particular form of the transfer functions could also be explored.
@@ -901,7 +906,7 @@ Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jen
 \begin{figure}[!t]\centering
 \includegraphics[width=0.85\textwidth]{./figs/Fig-5-GRN-CellCycle-Predictions.pdf}
 \caption{Model simulation of HL-60 cell-cycle arrest following exposure to 1$\mu$M ATRA at t = 0 hr.
-A: Predicted P21 and E2F expression levels for the best parameter set following ATRA exposure at time t = 0 hr.
+A: Predicted p21 and E2F expression levels for the best parameter set following ATRA exposure at time t = 0 hr.
 B: Estimated fraction of HL-60 cells in G0 arrest following ATRA exposure at time t = 0 hr.
 The gray region denotes the 95\% confidence estimate of the polynomial model.
 Experimental data in panel B was reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-cell-cycle-simulations}
