@@ -245,7 +245,7 @@ confirmed the persistence of the self sustaining activated state for up to 144 h
 Thus, these experiments confirmed that reinforcing positive feedback likely drives the ATRA-induced differentiation program.
 Next, we analyzed the ATRA-induced downstream gene expression program following signalsome and cRaf activation.
 
-The signal integration and phenotype modules described ATRA-induced gene expression events in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
+The signal integration and phenotype modules described ATRA-induced gene expression in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
 The signal initiation module produced two outputs, activated Trigger and cRaf-pS621 which drove the expression of ATRA-induced transcription factors,
 which then in turn activated the phenotypic program. In particular, Trigger, which is a surrogate for the RAR$\alpha$/RXR transcriptional complex,
 regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and EGR1.
@@ -276,7 +276,19 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % further demonstrating their independence from cRaf phosphorylation.
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
-
+The PU.1 and AP1 proteins were critical regulators of the ATRA-induced signal integration and phenotypic programs (Fig. \ref{fig:model-response-ko}).
+We conducted pairwise knock simulations of genes in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
+The difference between the system state with and without the gene knockouts (encoded in a state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
+All simulations were conducted using the best fit parameter set.
+The first four modes described $>$99\% of the gene knockout variance,
+with the most important components of these modes being the PU.1 and AP1 proteins, and to a much lesser extent GFI1 and CEBPa (Fig. \ref{fig:model-response-ko}A).
+To better understand which connections involving the PU.1 and AP1 proteins were important, we simulated the pairwise deletion of interactions between these proteins and their respective regulatory targets.
+SVD decomposition of the state displacement matrix assembled from the pairwise deletion of interactions, suggested the first five modes accounted for $>$99\% of the variance resulting from deletion of the interactions.
+The most sensitive interactions for the PU.1 protein involved the regulation of P47Phox expression, and to a lesser extent AP1 and EGR1 expression (Fig. \ref{fig:model-response-ko}B).
+On the other other, the most sensitive connections for AP1 involved the regulation of P21 expression, and the mutual activation of PU.1 and AP1 expression.
+Taken together, these results suggested that the PU.1 and AP1 proteins acted as important regulators for both the signal integration and phenotype modules.
+However, this analysis did not given insight into which components of the signal initiation module was important, and particularly the nature of the signalsome complex.
+Toward this question, we experimentally explored the composition and regulation of the signalsome complex.
 
 The composition of the siganlsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
 To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
