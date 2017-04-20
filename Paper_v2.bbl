@@ -207,27 +207,50 @@ Hornstein I, Alcover A, Katzav S (2004) {Vav proteins, masters of the world of
 \newblock Cell Signal 16: 1-11.
 \bibAnnoteFile{Hornstein:2004aa}
 
-\bibitem{Song1996}
-Song JS, Gomez J, Stancato LF, Rivera J (1996) Association of a p95
-  vav-containing signaling complex with the fcepsilonri gamma chain in the
-  rbl-2h3 mast cell line. evidence for a constitutive in vivo association of
-  vav with grb2, raf-1, and erk2 in an active complex.
-\newblock J Biol Chem 271: 26962--26970.
-\bibAnnoteFile{Song1996}
+\bibitem{Ferrell:2002aa}
+Ferrell J (2002) {Self-perpetuating states in signal transduction: positive
+  feedback, double-negative feedback and bistability}.
+\newblock Curr Opin Cell Biol 14: 140-8.
+\bibAnnoteFile{Ferrell:2002aa}
 
-\bibitem{Costello1999}
-Costello PS, Walters AE, Mee PJ, Turner M, Reynolds LF, et~al. (1999) The
-  rho-family gtp exchange factor vav is a critical transducer of t cell
-  receptor signals to the calcium, erk, and nf-kappab pathways.
-\newblock Proc Natl Acad Sci U S A 96: 3035--3040.
-\bibAnnoteFile{Costello1999}
+\bibitem{Laslo2006}
+Laslo P, Spooner CJ, Warmflash A, Lancki DW, Lee HJ, et~al. (2006)
+  {Multilineage transcriptional priming and determination of alternate
+  hematopoietic cell fates}.
+\newblock Cell 126: 755-66.
+\bibAnnoteFile{Laslo2006}
 
-\bibitem{Graham2007}
-Graham D, Robertson C, Bautista J, Mascarenhas F, Diacovo M, et~al. (2007)
-  {Neutrophil-mediated oxidative burst and host defense are controlled by a
-  Vav-PLCgamma2 signaling axis in mice.}
-\newblock J Clin Invest 117: 3445--3452.
-\bibAnnoteFile{Graham2007}
+\bibitem{Xiong:2003aa}
+Xiong W, Ferrell J (2003) {A positive-feedback-based bistable 'memory module'
+  that governs a cell fate decision}.
+\newblock Nature 426: 460-5.
+\bibAnnoteFile{Xiong:2003aa}
+
+\bibitem{Bagci:2006aa}
+Bagci EZ, Vodovotz Y, Billiar TR, Ermentrout GB, Bahar I (2006) {Bistability in
+  apoptosis: roles of bax, bcl-2, and mitochondrial permeability transition
+  pores}.
+\newblock Biophys J 90: 1546-59.
+\bibAnnoteFile{Bagci:2006aa}
+
+\bibitem{Luan:2007aa}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS Comput Biol 3: e142.
+\bibAnnoteFile{Luan:2007aa}
+
+\bibitem{Friedman2007}
+Friedman AD (2007) {Transcriptional control of granulocyte and monocyte
+  development}.
+\newblock Oncogene 26: 6816-28.
+\bibAnnoteFile{Friedman2007}
+
+\bibitem{Dahl2003}
+Dahl R, Walsh JC, Lancki D, Laslo P, Iyer SR, et~al. (2003) {Regulation of
+  macrophage and neutrophil cell fates by the PU.1:C/EBPalpha ratio and
+  granulocyte colony-stimulating factor}.
+\newblock Nat Immunol 4: 1029-36.
+\bibAnnoteFile{Dahl2003}
 
 \bibitem{Cleghon1994}
 Cleghon V, Morrison DK (1994) Raf-1 interacts with fyn and src in a
@@ -261,6 +284,28 @@ Dhillon AS, Yip YY, Grindlay GJ, Pakay JL, Dangers M, et~al. (2009) The
 \newblock Cell Signal 21: 1645--1651.
 \bibAnnoteFile{Dhillon2009}
 
+\bibitem{Song1996}
+Song JS, Gomez J, Stancato LF, Rivera J (1996) Association of a p95
+  vav-containing signaling complex with the fcepsilonri gamma chain in the
+  rbl-2h3 mast cell line. evidence for a constitutive in vivo association of
+  vav with grb2, raf-1, and erk2 in an active complex.
+\newblock J Biol Chem 271: 26962--26970.
+\bibAnnoteFile{Song1996}
+
+\bibitem{Costello1999}
+Costello PS, Walters AE, Mee PJ, Turner M, Reynolds LF, et~al. (1999) The
+  rho-family gtp exchange factor vav is a critical transducer of t cell
+  receptor signals to the calcium, erk, and nf-kappab pathways.
+\newblock Proc Natl Acad Sci U S A 96: 3035--3040.
+\bibAnnoteFile{Costello1999}
+
+\bibitem{Graham2007}
+Graham D, Robertson C, Bautista J, Mascarenhas F, Diacovo M, et~al. (2007)
+  {Neutrophil-mediated oxidative burst and host defense are controlled by a
+  Vav-PLCgamma2 signaling axis in mice.}
+\newblock J Clin Invest 117: 3445--3452.
+\bibAnnoteFile{Graham2007}
+
 \bibitem{Kim2009}
 Kim HS, Lim IK (2009) Phosphorylated extracellular signal-regulated protein
   kinases 1 and 2 phosphorylate sp1 on serine 59 and regulate cellular
@@ -293,38 +338,6 @@ Yen A, Reece SL, Albright KL (1984) Dependence of hl-60 myeloid cell
   precommitment memory associated with altered nuclear structure.
 \newblock J Cell Physiol 118: 277--286.
 \bibAnnoteFile{YEN1984}
-
-\bibitem{Ferrell:2002aa}
-Ferrell J (2002) {Self-perpetuating states in signal transduction: positive
-  feedback, double-negative feedback and bistability}.
-\newblock Curr Opin Cell Biol 14: 140-8.
-\bibAnnoteFile{Ferrell:2002aa}
-
-\bibitem{Laslo2006}
-Laslo P, Spooner CJ, Warmflash A, Lancki DW, Lee HJ, et~al. (2006)
-  {Multilineage transcriptional priming and determination of alternate
-  hematopoietic cell fates}.
-\newblock Cell 126: 755-66.
-\bibAnnoteFile{Laslo2006}
-
-\bibitem{Xiong:2003aa}
-Xiong W, Ferrell J (2003) {A positive-feedback-based bistable 'memory module'
-  that governs a cell fate decision}.
-\newblock Nature 426: 460-5.
-\bibAnnoteFile{Xiong:2003aa}
-
-\bibitem{Bagci:2006aa}
-Bagci EZ, Vodovotz Y, Billiar TR, Ermentrout GB, Bahar I (2006) {Bistability in
-  apoptosis: roles of bax, bcl-2, and mitochondrial permeability transition
-  pores}.
-\newblock Biophys J 90: 1546-59.
-\bibAnnoteFile{Bagci:2006aa}
-
-\bibitem{Luan:2007aa}
-Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
-  a human cascade are consistent with current therapeutic strategies.
-\newblock PLoS Comput Biol 3: e142.
-\bibAnnoteFile{Luan:2007aa}
 
 \bibitem{Moon:2012ab}
 Moon TS, Lou C, Tamsir A, Stanton BC, Voigt CA (2012) Genetic programs
@@ -370,12 +383,6 @@ Mueller BU, Pabst T, Fos J, Petkovic V, Fey MF, et~al. (2006) Atra resolves the
   expression.
 \newblock Blood 107: 3330-8.
 \bibAnnoteFile{Mueller2006}
-
-\bibitem{Friedman2007}
-Friedman AD (2007) Transcriptional control of granulocyte and monocyte
-  development.
-\newblock Oncogene 26: 6816-28.
-\bibAnnoteFile{Friedman2007}
 
 \bibitem{Luo2006}
 Luo XM, Ross AC (2006) Retinoic acid exerts dual regulatory actions on the
@@ -522,13 +529,6 @@ Li SL, Schlegel W, Valente AJ, Clark RA (1999) Critical flanking sequences of
   pu.1 binding sites in myeloid-specific promoters.
 \newblock J Biol Chem 274: 32453-60.
 \bibAnnoteFile{Li1999}
-
-\bibitem{Dahl2003}
-Dahl R, Walsh JC, Lancki D, Laslo P, Iyer SR, et~al. (2003) Regulation of
-  macrophage and neutrophil cell fates by the pu.1:c/ebpalpha ratio and
-  granulocyte colony-stimulating factor.
-\newblock Nat Immunol 4: 1029-36.
-\bibAnnoteFile{Dahl2003}
 
 \bibitem{Timchenko1995}
 Timchenko N, Wilson DR, Taylor LR, Abdelsayed S, Wilde M, et~al. (1995)

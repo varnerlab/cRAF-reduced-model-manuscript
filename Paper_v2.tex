@@ -349,24 +349,47 @@ with MAPK activation (in which case the p47Phox marker might not accurately refl
 
 \clearpage
 
+% The presence of Vav1 in Raf/Grb2 complexes has been shown to correlate with increased Raf activity in mast cells \cite{Song1996}.
+% Furthermore, studies on Vav1 knockout mice demonstrated that the loss of Vav1 resulted in deficiencies
+% of ERK signaling for both T-cells as well as neutrophils \cite{Costello1999,Graham2007}.
+% While its function in the signalsome is unclear, Vav1 has been shown to associate with a Cbl-Slp76-CD38 complex in an ATRA-dependent manner;
+% furthermore, transfection of HL-60 cells with Cbl mutants that fail to bind CD38, yet still bind Slp76 and Vav1, prevented
+% ATRA-induced MAPK activation \cite{Shen2009}.
+% Thus, interaction of Cbl-Slp76-Vav1 and CD38 appears to be required for transmission of the ATRA signal by the signalsome.
+
 \section*{Discussion}
-In this study, we presented an effective model of ATRA-inducible differentiation of HL-60 cells which
-encoded positive feedback between the ATRA-inducible signalsome complex and the MAPK pathway.
-Despite its simplicity, the model captured key features of the ATRA induced differentiation such as
-sustained MAPK activation, and bistability with respect to ATRA exposure. We also reported a new ATRA-inducible component of the signalsome, Vav1.
+In this study, we presented an effective model of ATRA-inducible differentiation of HL-60 cells.
+The model consisted of three modules: a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (Trigger) signals;
+a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
+a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
+The model described the transcription and translation of genes in each module, and signaling events in each module in a growing population of HL-60 cells.
+Model parameters were largely taken from literature, however, unknown coefficients were estimated from protein measurements in HL-60 cells following ATRA exposure.
+Despite its simplicity, the effective model captured key features of the ATRA induced differentiation such as
+sustained MAPK activation, and bistability with respect to ATRA exposure.
+The model also described the expression of upstream transcription factors which regulated the expression of differentiation markers.
+Lastly, analysis of the response of the model to perturbations identified PU.1 and AP1 as master regulators of ATRA-induced differentiation.
+We also reported a new ATRA-inducible component of the signalsome, Vav1.
 Vav1 is a guanine nucleotide exchange factor for Rho family GTPases that activate pathways leading to actin cytoskeletal rearrangements and transcriptional alterations \cite{Hornstein:2004aa}.
-The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with GW5074.
-The presence of Vav1 in Raf/Grb2 complexes has been shown to correlate with increased Raf activity in mast cells \cite{Song1996}.
-Furthermore, studies on Vav1 knockout mice demonstrated that the loss of Vav1 resulted in deficiencies
-of ERK signaling for both T-cells as well as neutrophils \cite{Costello1999,Graham2007}.
-While its function in the signalsome is unclear, Vav1 has been shown to associate with a Cbl-Slp76-CD38 complex in an ATRA-dependent manner;
-furthermore, transfection of HL-60 cells with Cbl mutants that fail to bind CD38, yet still bind Slp76 and Vav1, prevented
-ATRA-induced MAPK activation \cite{Shen2009}. Thus, interaction of Cbl-Slp76-Vav1 and CD38 appears to be required for transmission of the ATRA signal by the
-signalsome.
+The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with the Raf inhibitor GW5074.
+
+Man-made engineered systems, or naturally occurring cell fate decision programs incorporate reinforcing feedback and bistability \cite{Ferrell:2002aa,Laslo2006}.
+One of the most well studied cell fate circuits is the Mos mitogen-activated protein kinase cascade in \textit{Xenopus} oocytes.
+This cascade is activated when oocytes are induced by the steroid hormone progesterone \cite{Xiong:2003aa}.
+The MEK-dependent activation of p42 MAPK stimulates the accumulation of the Mos oncoprotein, which in turn activates MEK, thereby closing the feedback loop.
+This is similar to the signal initiation module presented here; ATRA drives signalsome formation, which activates MAPK, which in turn leads to more signalsome activation.
+Thus, while HL-60 and \textit{Xenopus} oocytes are vastly different biological models, their cell fate programs share a similar architectural feature.
+Reinforcing feedback and bistability has also been implicated in hematopoietic cell fate determination.
+Laslo et al showed that the counter antagonistic repressors, Gfi-1 and Egr-1/2 (whose expression is tuned by PU.1 and C/EBPa), encodes a bistable switch that
+results in a macrophage, neutrophil or a mixed lineage population depending upon PU.1 and C/EBPa expression \cite{Laslo2006}.
+The current model contained the Gfi-1 and Egr-1/2 agonistic switch.
+Other unrelated cell fate decisions such as programmed cell death have also been suggested to be bistable \cite{Bagci:2006aa}.
+Still more biochemical networks important to human health, for example the human coagulation or complement cascades, also feature strong positive feedback elements \cite{Luan:2007aa}.
+Thus, while reinforcing feedback is often undesirable in human engineered systems, it is at the core of a diverse variety of
+cell fate programs and other networks important to human health.
 
 Analysis of the signal integration and phenotype modules suggested that PU.1 and AP1 regulated distinct phenotypic axes following ATRA exposure.
-In particular, deletion of PU.1 and AP1 was predicted to lead to largest shift in the system state.
-
+The PU.1 transcription factor, a member of the ets transcription factor family, is a well known regulatory protein in granulocyte and monocyte development \cite{Friedman2007}.
+The relative level of PU.1 and C/EBPa regulates macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
 
 Immunoprecipitation studies identified a limited number of ATRA-dependent and -independent Raf interaction partners.
 While we were unable to detect the association of Raf with common kinases and GTPases such as PKC, PKA, p38, Rac and Rho,
@@ -419,20 +442,6 @@ CD38 expression correlated with the ppERK, suggesting its involvement in the sig
 Our computational and experimental results showed that positive feedback,
 through ERK-dependent Raf expression, could sustain MAPK signaling through many division cycles.
 Such molecular mechanisms could underly aspects of cellular memory associated to consecutive ATRA treatments.
-
-Several engineered, or naturally occurring systems involved in cell fate decisions incorporate reinforcing feedback and bistability \cite{Ferrell:2002aa,Laslo2006}.
-One of the most well studied cell fate circuits is the Mos mitogen-activated protein kinase cascade in \textit{Xenopus} oocytes.
-This cascade is activated when oocytes are induced by the steroid hormone progesterone \cite{Xiong:2003aa}.
-The MEK-dependent activation of p42 MAPK stimulates the accumulation of the Mos oncoprotein, which in turn activates MEK, thereby closing the feedback loop.
-This is similar to the signal initiation module presented here; ATRA drives signalsome formation, which activates MAPK, which in turn leads to more signalsome activation.
-Thus, while HL-60 and \textit{Xenopus} oocytes are vastly different biological models, their cell fate programs share a similar architectural feature.
-Reinforcing feedback and bistability has also been implicated in hematopoietic stem cell fate determination.
-Laslo et al showed that the counter antagonistic repressors, Gfi-1 and Egr-1/2 (whose expression is tuned by PU.1 and C/EBPa), encodes a bistable switch that
-results in a macrophage, neutrophil or a mixed lineage population depending upon PU.1 and C/EBPa expression \cite{Laslo2006}.
-Other unrelated cell fate decisions such as programmed cell death have also been suggested to be bistable \cite{Bagci:2006aa}.
-Still more biochemical networks important to human health, for example the human coagulation or complement cascades, also feature strong positive feedback elements \cite{Luan:2007aa}.
-Thus, while positive feedback is often undesirable in human engineered systems, it may be at the core of a diverse variety of
-cell fate programs and other networks important to human health.
 
 There were several issues that can be explored further with the effective ATRA differentiation model.
 First, there was likely missing connectivity in the effective differentiation circuit.
