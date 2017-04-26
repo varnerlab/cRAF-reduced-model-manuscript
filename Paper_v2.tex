@@ -98,13 +98,13 @@
 \begin{titlepage}
 {\par\centering\textbf{\Large {An Effective Model of the Retinoic Acid Induced HL-60 Differentiation Program}}}
 \vspace{0.05in}
-{\par \centering \large{Ryan Tasseff, Holly A. Jensen, Wei Dai, Katherine Rogers, Adithya Sagar, Rodica P. Bunaciu$^{\dag}$, Johanna Congleton$^{\dag}$, Andrew Yen$^{\dag}$, and Jeffrey D. Varner$^{*}$}}
+{\par \centering \large{Ryan Tasseff, Holly A. Jensen, Johanna Congleton$^{\dag}$, Wei Dai, Katherine Rogers, Adithya Sagar, Rodica P. Bunaciu$^{\dag}$, Andrew Yen$^{\dag}$, and Jeffrey D. Varner$^{*}$}}
 \vspace{0.10in}
 {\par \centering {Robert Frederick Smith School of Chemical and Biomolecular Engineering} and {$^{\dag}$Department of Biomedical Sciences, {Cornell University, Ithaca NY 14853}}}
 \vspace{0.1in}
 {\par \centering \textbf{Running Title:}~Effective modeling of HL-60 differentiation}
 \vspace{0.1in}
-{\par \centering \textbf{To be submitted:}~\emph{Frontiers~in~Systems~Biology}}
+{\par \centering \textbf{To be submitted:}~\emph{?}}
 \vspace{0.5in}
 {\par \centering $^{*}$Corresponding author:}
 {\par \centering Jeffrey D. Varner,}
@@ -247,19 +247,19 @@ Next, we analyzed the ATRA-induced downstream gene expression program following 
 
 The signal integration and phenotype modules described ATRA-induced gene expression in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
 The signal initiation module produced two outputs, activated Trigger and cRaf-pS621 which drove the expression of ATRA-induced transcription factors,
-which then in turn activated the phenotypic program. In particular, Trigger, which is a surrogate for the RAR$\alpha$/RXR transcriptional complex,
+which then in turn activated the phenotypic program. In particular, Trigger (a surrogate for the RAR$\alpha$/RXR transcriptional complex)
 regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and EGR1.
 In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or P47Phox.
 We assembled the connectivity of the signal integration and phenotypic programs driven by Trigger and cRaf-pS621 from literature (Table \ref{tbl:TF-network-connectivity}).
-We estimated the parameters which appeared in the control laws regulating these programs
+We estimated the parameters for the signal initiation, and phenotype modules
 from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA \cite{Jensen:2013aa,Jensen:2014aa,Jensen:2015ab,Jensen:2015aa}.
-However, the bulk of the remaining model parameters were taken from directly from literature \cite{Milo:2010aa} and were not estimated in this study (see materials and methods).
+However, the bulk of the model parameters were taken from directly from literature \cite{Milo:2010aa} and were not estimated in this study (see materials and methods).
 The model simulations captured the time dependent expression of CD38 and CD11b following the addition ATRA (Fig. \ref{fig:model-grn-simulations}A),
 and the steady-state for signal integration and phenotypic markers (Fig. \ref{fig:model-grn-simulations}B).
 Lastly, we used the \textit{predicted} values of the p21 and E2F protein abundance to estimate a blackbox model of ATRA-induced G0 arrest (Fig. \ref{fig:model-cell-cycle-simulations}).
 The phenotype module predicted p21 expression significantly increased and E2F expression decreased, in response to ATRA exposure (Fig. \ref{fig:model-cell-cycle-simulations}A).
 We then used the ratio of these values in a polynomial model to calculate the fraction of HL-60 cells in G0 arrest following the addition of ATRA (Fig. \ref{fig:model-cell-cycle-simulations}B).
-The third-order polynomial model captured the trend in measured G0-arrest values as a function of time, and wash robust to uncertainty in the measured data (Fig. \ref{fig:model-cell-cycle-simulations}B, gray).
+The third-order polynomial model captured the trend in measured G0-arrest values as a function of time, and was robust to uncertainty in the measured data (Fig. \ref{fig:model-cell-cycle-simulations}B, gray).
 Taken together, the output of the signal integration and phenotypic modules was consistent with time-series and steady-state measurements, thereby validating the assumed molecular connectivity.
 Moreover, outputs from the phenotype module described the trend in ATRA-induced G0 cell cycle arrest.
 Next, we explored which nodes and interactions between nodes in the signal integration module most influenced the system response.
@@ -277,9 +277,9 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
 The PU.1 and AP1 proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
-We conducted pairwise knock simulations of genes in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
+We conducted pairwise knockout simulations of genes in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
 The difference between the system state with and without the gene knockouts (encoded as a state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
-All simulations were conducted using the best fit parameter set.
+A panel of twenty parameter sets was sampled, and the average displacement matrix was decomposed.
 The first four modes described $>$99\% of the gene knockout variance,
 with the most important components of these modes being the PU.1 and AP1 proteins, and to a much lesser extent Gfi1 and C/EBPa (Fig. \ref{fig:model-response-ko}A).
 To better understand which connections involving the PU.1 and AP1 proteins were important, we simulated the pairwise deletion of interactions between these proteins and their respective regulatory targets.
@@ -372,7 +372,7 @@ We also reported a new ATRA-inducible component of the signalsome, Vav1.
 Vav1 is a guanine nucleotide exchange factor for Rho family GTPases that activate pathways leading to actin cytoskeletal rearrangements and transcriptional alterations \cite{Hornstein:2004aa}.
 The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with the Raf inhibitor GW5074.
 
-Man-made engineered systems, or naturally occurring cell fate decision programs incorporate reinforcing feedback and bistability \cite{Ferrell:2002aa,Laslo2006}.
+Naturally occurring cell fate decisions often incorporate reinforcing feedback and bistability \cite{Ferrell:2002aa,Laslo2006}.
 One of the most well studied cell fate circuits is the Mos mitogen-activated protein kinase cascade in \textit{Xenopus} oocytes.
 This cascade is activated when oocytes are induced by the steroid hormone progesterone \cite{Xiong:2003aa}.
 The MEK-dependent activation of p42 MAPK stimulates the accumulation of the Mos oncoprotein, which in turn activates MEK, thereby closing the feedback loop.
@@ -382,6 +382,11 @@ Reinforcing feedback and bistability has also been implicated in hematopoietic c
 Laslo et al showed that the counter antagonistic repressors, Gfi-1 and Egr-1/2 (whose expression is tuned by PU.1 and C/EBPa), encodes a bistable switch that
 results in a macrophage, neutrophil or a mixed lineage population depending upon PU.1 and C/EBPa expression \cite{Laslo2006}.
 The current model contained the Gfi-1 and Egr-1/2 agonistic switch; however, its significance was unclear for HL-60 cells.
+The expression of Gfi-1, Egr-1/2, C/EBPa and PU.1 was not consistent with the canonical lineage pattern expected from literature.
+For example, Egr-1/2 expression (associated with a macrophage lineage) increased, while Gfi-1 expression (associated with a neutrophil lineage)
+remained constant following ATRA exposure.
+Literature evidence in nonmalignant myelomonocytic fate selection has shown that Gfi-1 and EGR-1/2 promote granulocytic and monocytic differentiation, respectively \cite{Laslo2006}.
+Thus, HL-60 cells, which are a less mature cancer cell line, exhibited a non-canonical expression pattern.
 Other unrelated cell fate decisions such as programmed cell death have also been suggested to be bistable \cite{Bagci:2006aa}.
 Still more biochemical networks important to human health, for example the human coagulation or complement cascades, also feature strong positive feedback elements \cite{Luan:2007aa}.
 Thus, while reinforcing feedback is often undesirable in human engineered systems, it is at the core of a diverse variety of
