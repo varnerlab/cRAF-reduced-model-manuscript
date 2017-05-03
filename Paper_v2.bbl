@@ -252,6 +252,13 @@ Dahl R, Walsh JC, Lancki D, Laslo P, Iyer SR, et~al. (2003) {Regulation of
 \newblock Nat Immunol 4: 1029-36.
 \bibAnnoteFile{Dahl2003}
 
+\bibitem{El-Benna:2009aa}
+El-Benna J, Dang PMC, Gougerot-Pocidalo MA, Marie JC, Braut-Boucher F (2009)
+  p47phox, the phagocyte nadph oxidase/nox2 organizer: structure,
+  phosphorylation and implication in diseases.
+\newblock Exp Mol Med 41: 217-25.
+\bibAnnoteFile{El-Benna:2009aa}
+
 \bibitem{Cleghon1994}
 Cleghon V, Morrison DK (1994) Raf-1 interacts with fyn and src in a
   non-phosphotyrosine-dependent manner.
@@ -697,11 +704,30 @@ Doherty MK, Hammond DE, Clague MJ, Gaskell SJ, Beynon RJ (2009) Turnover of the
 \newblock J Proteome Res 8: 104-12.
 \bibAnnoteFile{Doherty:2009aa}
 
+\bibitem{Sehgal:1976aa}
+Sehgal PB, Derman E, Molloy GR, Tamm I, Darnell JE (1976)
+  5,6-dichloro-1-beta-d-ribofuranosylbenzimidazole inhibits initiation of
+  nuclear heterogeneous rna chains in hela cells.
+\newblock Science 194: 431-3.
+\bibAnnoteFile{Sehgal:1976aa}
+
 \bibitem{Darzacq:2007aa}
 Darzacq X, Shav-Tal Y, de~Turris V, Brody Y, Shenoy SM, et~al. (2007) In vivo
   dynamics of rna polymerase ii transcription.
 \newblock Nat Struct Mol Biol 14: 796-806.
 \bibAnnoteFile{Darzacq:2007aa}
+
+\bibitem{Kos:2010aa}
+Kos M, Tollervey D (2010) Yeast pre-rrna processing and modification occur
+  cotranscriptionally.
+\newblock Mol Cell 37: 809-20.
+\bibAnnoteFile{Kos:2010aa}
+
+\bibitem{Darnell:2013aa}
+Darnell JE Jr (2013) Reflections on the history of pre-mrna processing and
+  highlights of current knowledge: a unified picture.
+\newblock RNA 19: 443-60.
+\bibAnnoteFile{Darnell:2013aa}
 
 \bibitem{Bostrom:1986aa}
 Bostr{\"o}m K, Wettesten M, Bor{\'e}n J, Bondjers G, Wiklund O, et~al. (1986)
