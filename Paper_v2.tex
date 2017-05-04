@@ -248,8 +248,8 @@ Next, we analyzed the ATRA-induced downstream gene expression program following 
 The signal integration and phenotype modules described ATRA-induced gene expression in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
 The signal initiation module produced two outputs, activated Trigger and cRaf-pS621 which drove the expression of ATRA-induced transcription factors,
 which then in turn activated the phenotypic program. In particular, Trigger (a surrogate for the RAR$\alpha$/RXR transcriptional complex)
-regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and EGR1.
-In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or P47Phox.
+regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and Egr-1.
+In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or p47Phox.
 We assembled the connectivity of the signal integration and phenotypic programs driven by Trigger and cRaf-pS621 from literature (Table \ref{tbl:TF-network-connectivity}).
 We estimated the parameters for the signal initiation, and phenotype modules
 from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA \cite{Jensen:2013aa,Jensen:2014aa,Jensen:2015ab,Jensen:2015aa}.
@@ -276,20 +276,33 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % further demonstrating their independence from cRaf phosphorylation.
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
-The PU.1 and AP1 proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
-We conducted pairwise knockout simulations of genes in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
-The difference between the system state with and without the gene knockouts (encoded as a state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
-A panel of twenty parameter sets was sampled, and the average displacement matrix was decomposed.
-The first four modes described $>$99\% of the gene knockout variance,
-with the most important components of these modes being the PU.1 and AP1 proteins, and to a much lesser extent Gfi1 and C/EBPa (Fig. \ref{fig:model-response-ko}A).
-To better understand which connections involving the PU.1 and AP1 proteins were important, we simulated the pairwise deletion of interactions between these proteins and their respective regulatory targets.
-SVD decomposition of the state displacement matrix assembled from the pairwise deletion of interactions, suggested the first five modes accounted for $>$99\% of the variance resulting from deletion of the interactions.
-The most sensitive interactions for the PU.1 protein involved the C/EBPa-dependent regulation of P47Phox expression, and to a lesser extent AP1 and EGR1 expression (Fig. \ref{fig:model-response-ko}B).
-On the other other, the most sensitive connections for AP1 involved the C/EBPa-dependent regulation of p21 expression, and the mutual activation of PU.1 and AP1 expression.
-Taken together, these results suggested that the PU.1 and AP1 proteins acted as important self-reinforcing regulators for both the signal integration and phenotype modules.
-The analysis suggested that the PU.1 signaling axis promoted the formation of the neutrophil NADPH oxidase (through p47Phox), while AP1 was responsible for cell cycle arrest (through p21).
-However, this analysis did not give insight into which upstream components of the signal initiation module were important.
+The Gfi-1 and PPARg proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
+We conducted pairwise gene knockout simulations in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
+The difference between the system state with and without the gene knockouts (encoded as a normalized state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
+A panel of ten parameter sets was sampled, and the average normalized displacement matrix was decomposed.
+The first six modes (approximately 36\% of the total) described $>$95\% of the gene knockout variance,
+with the most important components of these modes being the Gfi-1 and PPARg proteins, and to a lesser extent PU.1, C/EBPa and and AP1 (Fig. \ref{fig:model-response-ko}A).
+To better understand which protein-DNA connections were important, we simulated the pairwise deletion of interactions between these proteins and their respective regulatory targets.
+SVD decomposition of the normalized state displacement matrix assembled from the pairwise connection deletions, suggested the first six modes (approximately 26\% of the total) accounted for $>$90\% of the variance.
+Globally, the most sensitive interactions controlled p21 and p47Phox expression, markers for cell-cycle arrest and reactive oxygen formation phenotypic axes activated following ATRA addition (Fig. \ref{fig:model-response-ko}B).
+Analysis of the modes suggested the action of PPARg, Gfi-1 and C/EBPa were consistently important over multiple target genes.
+The connection knockout analysis also revealed robustness in the network.
+For example, no pair of deletions qualitatively changed the expression of regulators such as PU.1, Oct1, Oct4 or PPARg.
+Thus, the expression of these species was robust to disturbance in the connectivity.
+To better understand the combined influence of the PPARg and Gfi-1 deletions, we computed the fold change in the protein levels in the
+single ($\Delta$Gfi-1 or $\Delta$PPARg) and double ($\Delta$Gfi-1 and $\Delta$PPARg) mutants for the best fit parameter set (Fig. \ref{fig:model-response-ko-simulations}).
+Deletion of Gfi-1 led to a 2-4 fold increase in EGR-1, CD11b and C/EBPa expression, and a $>$8 fold increase in PU.1 abundance (Fig. \ref{fig:model-response-ko-simulations},blue).
+On the other hand, deletion of PPARg led to $>$8 fold downregulation of CD38, p21, IRF1 and OCT1 (Fig. \ref{fig:model-response-ko-simulations},red).
+Both knockouts slightly increased E2F expression, but neither influenced the expression of p47Phox.
+The double mutant was qualitatively similar to the combined behavior of the two single mutant cases.
+Taken together, Gfi-1 and PPARg controlled the cell-cycle arrest and receptor signaling axes, with PPARg regulating CD38, IRF1 and p21 expression
+while Gfi-1 controlled CD11b expression. These simulations suggested deletion of PPARg and Gfi-1 would not interfere with reactive oxygen formation,
+but would limit the ability of HL-60 cells to arrest.
+However, this analysis did not give insight into which components upstream of the signal initiation module were important.
 Toward this question, we explored the composition and regulation of the signalsome complex by experimentally interrogating a panel of possible Raf interaction partners.
+
+% Taken together, these results suggested that the PU.1 and AP1 proteins acted as important self-reinforcing regulators for both the signal integration and phenotype modules.
+% The analysis suggested that the PU.1 signaling axis promoted the formation of the neutrophil NADPH oxidase (through p47Phox), while AP1 was responsible for cell cycle arrest (through p21).
 
 The composition of the signalsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
 To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
@@ -340,9 +353,9 @@ Untreated cells showed no discernible TPA response,
 with only 7.0 $\pm$ 3.0\% ROS induction (Fig. \ref{fig:ip-data}F).
 Cells treated with ATRA had a significantly increased TPA response, 53 $\pm$ 7\% ROS induction 48 hr post-treatment.
 Treatment with both ATRA and GW5074 statistically significantly reduced ROS induction (22 $\pm$ 0.6\%) compared to ATRA alone.
-Interestingly, Western blot analysis did not detect a GW5074 effect on ATRA-induced expression of p47phox,
+Interestingly, Western blot analysis did not detect a GW5074 effect on ATRA-induced expression of p47Phox,
 a required upstream component of the ROS response  (Fig. \ref{fig:ip-data}F, bottom).
-Thus, the inhibitory effect of GW5074 on inducible ROS might occur downstream of p47phox expression.
+Thus, the inhibitory effect of GW5074 on inducible ROS might occur downstream of p47Phox expression.
 However, the ROS producing complex is MAPK dependent,
 therefore it is also possible that GW5074 inhibited ROS production by interfering
 with MAPK activation (in which case the p47Phox marker might not accurately reflect phenotypic conversion and differentiation).
@@ -385,25 +398,24 @@ The current model contained the Gfi-1 and Egr-1/2 agonistic switch; however, its
 The expression of Gfi-1, Egr-1/2, C/EBPa and PU.1 was not consistent with the canonical lineage pattern expected from literature.
 For example, Egr-1/2 expression (associated with a macrophage lineage) increased, while Gfi-1 expression (associated with a neutrophil lineage)
 remained constant following ATRA exposure.
-Literature evidence in nonmalignant myelomonocytic fate selection has shown that Gfi-1 and EGR-1/2 promote granulocytic and monocytic differentiation, respectively \cite{Laslo2006}.
+Literature evidence in nonmalignant myelomonocytic fate selection has shown that Gfi-1 and Egr-1/2 promote granulocytic and monocytic differentiation, respectively \cite{Laslo2006}.
 Thus, HL-60 cells, which are a less mature cancer cell line, exhibited a non-canonical expression pattern.
 Other unrelated cell fate decisions such as programmed cell death have also been suggested to be bistable \cite{Bagci:2006aa}.
 Still more biochemical networks important to human health, for example the human coagulation or complement cascades, also feature strong positive feedback elements \cite{Luan:2007aa}.
 Thus, while reinforcing feedback is often undesirable in human engineered systems, it is at the core of a diverse variety of
 cell fate programs and other networks important to human health.
 
-Analysis of the signal integration and phenotype modules suggested that PU.1 and AP1 regulated distinct phenotypic axes following ATRA exposure.
+Analysis of the signal integration and phenotype modules suggested that Gfi-1 and PPARg regulated distinct phenotypic axes following ATRA exposure.
+The most significantly unregulated protein in the $\Delta$Gfi-1 mutant was the PU.1 protein.
 PU.1, a member of the ets transcription factor family, is a well known regulatory protein in granulocyte and monocyte development \cite{Friedman2007}.
 The relative level of PU.1 and C/EBPa is thought to regulate macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
-However, in previous studies we showed that PU.1 has additional non-canonical function as it is highly expressed following the addition of ATRA to HL-60 cells. 
-Analysis of the model in this study suggested that the C/EBPa dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes for the P47Phox protein, was the most sensitive PU.1 connection.
-P47Phox, also known as neutrophil cytosol factor 1, is one of four cytosolic subunits of the multi-protein NADPH oxidase complex found in neutrophils \cite{El-Benna:2009aa}.
+However, in previous studies we showed that PU.1 has additional non-canonical function as it is highly expressed following the addition of ATRA to HL-60 cells.
+Analysis of the model in this study suggested that the C/EBPa dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes for the p47Phox protein, was the most sensitive PU.1 connection.
+p47Phox, also known as neutrophil cytosol factor 1, is one of four cytosolic subunits of the multi-protein NADPH oxidase complex found in neutrophils \cite{El-Benna:2009aa}.
 This enzyme is responsible for reactive oxygen species (ROS) production, a key component of the anti-microbial function of neutrophils.
 PU.1 also acted in concert with the activator protein 1 (AP-1) transcription factor to regulate p21 expression, a second phenotypic outcome of ATRA-induced differentiation.
 The AP-1 transcription factor regulates gene expression in response to a variety of stimuli.
-However, in the context of ATRA-induced differentiation, AP1 have been shown to
-
-
+However, in the context of ATRA-induced differentiation, AP1 has been shown to be inhibited in
 
 Immunoprecipitation studies identified a limited number of ATRA-dependent and -independent Raf interaction partners.
 While we were unable to detect the association of Raf with common kinases and GTPases such as PKC, PKA, p38, Rac and Rho,
@@ -782,26 +794,26 @@ RAR$\alpha$ &  + & RAR$\alpha$ & \cite{Rishi1996} \\
  	&  + & CD38 & \cite{Drach1994}\\
  	&  + & p21 & \cite{Liu1996}\\
  	&  + & AhR & \cite{Bunaciu2013}\\
- 	&  + & EGR1 & \cite{Balmer2002}\\
+ 	&  + & Egr-1 & \cite{Balmer2002}\\
 \hline
 PPAR$\gamma$ &  + & C/EBP$\alpha$ & \cite{Rosen2002}\\
  &  + & IRF-1 & \cite{Varley2009}\\
  &  + & Oct1 & \cite{Bruemmer2003}\\
  &  - & AP-1 & \cite{Delerive1999}\\
  &  - & E2F & \cite{Altiok1997}\\
- &  - & EGR1 & \cite{Fei2011}\\
+ &  - & Egr-1 & \cite{Fei2011}\\
  &  + & CD38 & \cite{Song2012}\\
  &  + & CD14 & \cite{Szanto2005}\\
  &  + & p21 & \cite{Han2004}\\
- &  - & p47phox & \cite{Von-Knethen2002}\\
+ &  - & p47Phox & \cite{Von-Knethen2002}\\
 \hline
 PU.1 &  - & PPAR$\gamma$ & \cite{Dispirito2013}\\
 &  + & PU.1 & \cite{Chen1995}\\
 &  + & AP-1 & \cite{Steidl2006}\\
-&  + & EGR1 & \cite{Laslo2006}\\
+&  + & Egr-1 & \cite{Laslo2006}\\
 &  + & CD11b & \cite{Pahl1993}\\
 &  + & p21 & \cite{Yuki2013}\\
-&  + & p47phox & \cite{Li1999}\\
+&  + & p47Phox & \cite{Li1999}\\
 \hline
 C/EBP$\alpha$ &  + & PPAR$\gamma$ & \cite{Rosen2002}\\
  &  + & PU.1 & \cite{Dahl2003}\\
@@ -816,7 +828,7 @@ IRF-1 &  + & CD38 & \cite{Bauvois1999}\\
  &  - & PU.1 & \cite{Dahl2007}\\
  &  - & C/EBP$\alpha$ & \cite{Duan2003}\\
  &  - & E2F & \cite{Duan2003}\\
- &  - & EGR1 & \cite{Laslo2006}\\
+ &  - & Egr-1 & \cite{Laslo2006}\\
  &  - & p21 & \cite{Duan2003}\\
 \hline
 Oct1 &  + & PU.1 & \cite{Chen1996}\\
@@ -827,7 +839,7 @@ AP-1 &  - & PPAR$\gamma$  & \cite{Delerive1999}\\
 \hline
 E2F &  + & E2F & \cite{Johnson1994}\\
 \hline
-EGR1 &  + & PPAR$\gamma$ & \cite{Fu2002}\\
+Egr-1 &  + & PPAR$\gamma$ & \cite{Fu2002}\\
 &  - & Gfi-1 & \cite{Mak2011}\\
 &  + & CD14 & \cite{Chen2004}\\
 \hline
@@ -942,12 +954,20 @@ Experimental data in panel B was reproduced from Jensen et al. \cite{Jensen:2015
 \caption{Robustness of the HL-60 differentiation program following exposure to 1$\mu$M ATRA at t = 0 hr.
 A: Singular value decomposition of the system response ($l^{2}$-norm between the perturbed and nominal state) following pairwise gene knockout simulations using the best fit parameter set.
 The percentage at the top of each column describes the fraction of the variance in the system state captured by the node combinations in the rows.
-B: Singular value decomposition of the system response ($l^{2}$-norm between the perturbed and nominal state) following the pairwise removal of connections from the PU.1 and AP1 nodes.}\label{fig:model-response-ko}
+B: Singular value decomposition of the system response ($l^{2}$-norm between the perturbed and nominal state) following the pairwise removal of connections.}\label{fig:model-response-ko}
+\end{figure}
+
+\begin{figure}[!t]\centering
+\includegraphics[width=0.85\textwidth]{./figs/Fig-7-GeneKO-Simulations.pdf}
+\caption{Robustness of the HL-60 differentiation program following exposure to 1$\mu$M ATRA at t = 0 hr.
+Protein fold change at t = 48 hr (rows) in single and double knock-out mutants (columns) relative to wild-type HL-60 cells.
+The responses were grouped into $>$2,4 and 8 fold changes.
+The best fit parameter set was used to calculate the protein fold change.}\label{fig:model-response-ko-simulations}
 \end{figure}
 
 
 \begin{figure}[!t]
-\includegraphics[width=0.9\textwidth]{./figs/Fig-7-IP-ExperimentalStudies.pdf}
+\includegraphics[width=0.9\textwidth]{./figs/Fig-8-IP-ExperimentalStudies.pdf}
 \caption{Investigation of a panel of possible Raf interaction partners in the presence and absence of ATRA.
 A: Species identified to precipitate out with Raf:
 first column shows Western blot analysis on total Raf immunoprecipitation with and without 24 hr ATRA treatment
