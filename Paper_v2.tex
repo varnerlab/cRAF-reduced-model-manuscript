@@ -290,7 +290,7 @@ The connection knockout analysis also revealed robustness in the network.
 For example, no pair of deletions qualitatively changed the expression of regulators such as PU.1, Oct1, Oct4 or PPARg.
 Thus, the expression of these species was robust to disturbance in the connectivity.
 To better understand the combined influence of the PPARg and Gfi-1 deletions, we computed the fold change in the protein levels in the
-single ($\Delta$Gfi-1 or $\Delta$PPARg) and double ($\Delta$Gfi-1 and $\Delta$PPARg) mutants for the best fit parameter set (Fig. \ref{fig:model-response-ko-simulations}).
+single (Gfi-1$^{-/-}$ or $\Delta$PPARg) and double (Gfi-1$^{-/-}$ and $\Delta$PPARg) mutants for the best fit parameter set (Fig. \ref{fig:model-response-ko-simulations}).
 Deletion of Gfi-1 led to a 2-4 fold increase in EGR-1, CD11b and C/EBPa expression, and a $>$8 fold increase in PU.1 abundance (Fig. \ref{fig:model-response-ko-simulations},blue).
 On the other hand, deletion of PPARg led to $>$8 fold downregulation of CD38, p21, IRF1 and OCT1 (Fig. \ref{fig:model-response-ko-simulations},red).
 Both knockouts slightly increased E2F expression, but neither influenced the expression of p47Phox.
@@ -376,11 +376,12 @@ The model consisted of three modules: a signal initiation module that sensed and
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
 The model described the transcription and translation of genes in each module, and signaling events in each module in a growing population of HL-60 cells.
-Model parameters were largely taken from literature, however, unknown coefficients were estimated from protein measurements in HL-60 cells following ATRA exposure.
+Model parameters were taken from literature, however, unknown coefficients
+that appear in the promoter logic models were estimated from protein measurements in HL-60 cells following ATRA exposure.
 Despite its simplicity, the effective model captured key features of the ATRA induced differentiation such as
 sustained MAPK activation, and bistability with respect to ATRA exposure.
 The model also described the expression of upstream transcription factors which regulated the expression of differentiation markers.
-Lastly, analysis of the response of the model to perturbations identified PU.1 and AP1 as master regulators of ATRA-induced differentiation.
+Lastly, analysis of the response of the model to perturbations identified Gfi-1 and PPARg as master regulators of ATRA-induced differentiation.
 We also reported a new ATRA-inducible component of the signalsome, Vav1.
 Vav1 is a guanine nucleotide exchange factor for Rho family GTPases that activate pathways leading to actin cytoskeletal rearrangements and transcriptional alterations \cite{Hornstein:2004aa}.
 The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with the Raf inhibitor GW5074.
@@ -405,17 +406,25 @@ Still more biochemical networks important to human health, for example the human
 Thus, while reinforcing feedback is often undesirable in human engineered systems, it is at the core of a diverse variety of
 cell fate programs and other networks important to human health.
 
-Analysis of the signal integration and phenotype modules suggested that Gfi-1 and PPARg regulated distinct phenotypic axes following ATRA exposure.
-The most significantly unregulated protein in the $\Delta$Gfi-1 mutant was the PU.1 protein.
-PU.1, a member of the ets transcription factor family, is a well known regulatory protein in granulocyte and monocyte development \cite{Friedman2007}.
-The relative level of PU.1 and C/EBPa is thought to regulate macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
-However, in previous studies we showed that PU.1 has additional non-canonical function as it is highly expressed following the addition of ATRA to HL-60 cells.
-Analysis of the model in this study suggested that the C/EBPa dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes for the p47Phox protein, was the most sensitive PU.1 connection.
-p47Phox, also known as neutrophil cytosol factor 1, is one of four cytosolic subunits of the multi-protein NADPH oxidase complex found in neutrophils \cite{El-Benna:2009aa}.
-This enzyme is responsible for reactive oxygen species (ROS) production, a key component of the anti-microbial function of neutrophils.
-PU.1 also acted in concert with the activator protein 1 (AP-1) transcription factor to regulate p21 expression, a second phenotypic outcome of ATRA-induced differentiation.
-The AP-1 transcription factor regulates gene expression in response to a variety of stimuli.
-However, in the context of ATRA-induced differentiation, AP1 has been shown to be inhibited in
+%However, in previous studies we have shown that PU.1 has additional non-canonical function, as it is highly expressed following the addition of ATRA to HL-60 cells.
+%
+Analysis of the signal integration and phenotype modules suggested that Gfi-1 and PPARg were required for ATRA-induced differentiation in HL-60 cells.
+Model analysis showed that PU.1, Egr-1 and C/EBPa expression increased in Gfi-1$^{-/-}$ mutants, where PU.1 expression was upregulated by greater than 8-fold.
+PU.1, a member of the \textit{ets} transcription factor family, is a well known regulator of granulocyte and monocyte development \cite{Friedman2007}.
+The relative level of PU.1 and C/EBPa is thought to control macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
+Simulations suggested that combined Gfi-1 + PPARg deletion crippled the ability of HL-60 cells to undergo neutrophilic differentiation following ATRA exposure.
+p21 expression decreased significantly, suggesting Gfi-1$^{-/-}$ + PPARg$^{-/-}$ mutants were less likely to G0-arrest following ATRA exposure.
+The expression of other neutrophilic markers, such as CD38, also decreased in Gfi-1$^{-/-}$ + PPARg$^{-/-}$ cells.
+On the other hand, the expression of reactive oxygen metabolic markers, or other important transcription factors such as OCT4 did not change.
+For example, model analysis suggested that the C/EBPa dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes the p47Phox protein, was the most sensitive PU.1 connection; deletion of this connection removed the ability of the system to express p47Phox.
+p47Phox, also known as neutrophil cytosol factor 1, is one of four cytosolic subunits of the multi-protein NADPH oxidase complex found in neutrophils \cite{El-Benna:2009aa}. This enzyme is responsible for reactive oxygen species (ROS) production, a key component of the anti-microbial function of neutrophils.
+However, Gfi-1 deletion did not increase p47Phox expression, nor did the deletion of PPARg.
+This suggested that while p47Phox expression required C/EBPa and PU.1, it was saturated with respect these proteins, and simultaneously not sensitive to PPARg abundance.
+Together, Gfi-1$^{-/-}$ + PPARg$^{-/-}$ cells were predicted to exhibit
+some aspects of the ATRA response, but not other critical features such as cell cycle arrest.
+Hock et al showed that Gfi-1$^{-/-}$ mice lacked normal neutrophils, and were highly sensitive to bacterial infection \cite{Hock:2003aa}.
+Thus, the model analysis was consistent with this study.
+However, other predictions concerning the behavior of the Gfi-1$^{-/-}$ + PPARg$^{-/-}$ mutants have yet to be verified experimentally.
 
 Immunoprecipitation studies identified a limited number of ATRA-dependent and -independent Raf interaction partners.
 While we were unable to detect the association of Raf with common kinases and GTPases such as PKC, PKA, p38, Rac and Rho,
@@ -462,26 +471,25 @@ We validated the treatment memory property predicted by the Raf-Vav1 circuit exp
 ERK phosphorylation levels remained high for more then 96 hr after ATRA was removed.
 Previous studies demonstrated that HL-60 cells possessed an inheritable memory of ATRA stimulus \cite{YEN1984}.
 Although the active state was self-sustaining, the inactive state demonstrated considerable robustness to perturbation.
-For example, we found that 50x overexpression of Raf was required to reliably lock MAPK into the activated state, while small perturbations had almost no effect on ppERK levels
-over the entire ensemble.
+For example, we found that 50x overexpression of Raf was required to reliably lock MAPK into the activated state, while small perturbations had almost no effect on ppERK levels over the entire ensemble.
 CD38 expression correlated with the ppERK, suggesting its involvement in the signaling complex.
 Our computational and experimental results showed that positive feedback,
 through ERK-dependent Raf expression, could sustain MAPK signaling through many division cycles.
 Such molecular mechanisms could underly aspects of cellular memory associated to consecutive ATRA treatments.
 
-There were several issues that can be explored further with the effective ATRA differentiation model.
-First, there was likely missing connectivity in the effective differentiation circuit.
-Decreasing BLR1 expression with simultaneously sustained cRaf-pS261 activation was not captured by the current network architecture.
-This suggested that signalsome, once activated, had a long lifetime as decreased BLR1 expression did not impact cRaf-pS261 abundance.
-We could model this by separating signalsome formation into an inactive precursor pool that is transformed to a long-lived activated signalsome by MAPK activation.
-We should also explore adding additional downstream biological modules to this skeleton model, for example the upregulation of reactive oxygen markers such as p47Phox or
-cell cycle arrest components to capture the switch from an actively proliferating population to a population in G0-arrest.
-Next, the choice of max/min integration rules or the particular form of the transfer functions could also be explored.
-Integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
-Alternative integration rules might have different properties which could influence model identification or performance.
-For example, a mean integration rule would be differentiable, allowing derivative-based optimization approaches to be used.
-The form of the transfer function could also be explored. We choose hill-like functions because of their
-prominence in the systems and synthetic biology community. However, many other transfer functions are possible.
+% There were several issues that can be explored further with the effective ATRA differentiation model.
+% First, there was likely missing connectivity in the effective differentiation circuit.
+% Decreasing BLR1 expression with simultaneously sustained cRaf-pS261 activation was not captured by the current network architecture.
+% This suggested that signalsome, once activated, had a long lifetime as decreased BLR1 expression did not impact cRaf-pS261 abundance.
+% We could model this by separating signalsome formation into an inactive precursor pool that is transformed to a long-lived activated signalsome by MAPK activation.
+% We should also explore adding additional downstream biological modules to this skeleton model, for example the upregulation of reactive oxygen markers such as p47Phox or
+% cell cycle arrest components to capture the switch from an actively proliferating population to a population in G0-arrest.
+% Next, the choice of max/min integration rules or the particular form of the transfer functions could also be explored.
+% Integration rules other than max/min could be used, such as the mean or the product, assuming the range of the transfer functions is always $f\in[0,1]$.
+% Alternative integration rules might have different properties which could influence model identification or performance.
+% For example, a mean integration rule would be differentiable, allowing derivative-based optimization approaches to be used.
+% The form of the transfer function could also be explored. We choose hill-like functions because of their
+% prominence in the systems and synthetic biology community. However, many other transfer functions are possible.
 
 \clearpage
 

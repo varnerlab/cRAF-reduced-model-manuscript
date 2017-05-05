@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2017 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 MAY 2017 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,7 +890,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 ] [13] [14] [15] [16]
 [17]
-Overfull \hbox (0.17198pt too wide) in paragraph at lines 491--497
+Overfull \hbox (0.17198pt too wide) in paragraph at lines 499--505
 \OT1/phv/m/n/12 mod-ule which en-coded the ex-pres-sion of func-tional dif-fer-
 en-ti-a-tion mark-ers from the ATRA-
  []
@@ -907,15 +907,15 @@ cid in-duced
 
 [27
 
-] [28] [29]
-Underfull \hbox (badness 1038) in paragraph at lines 263--267
+] [28] [29] [30]
+Underfull \hbox (badness 1038) in paragraph at lines 270--274
 []\OT1/phv/m/n/12 Cleghon V, Mor-ri-son DK (1994) Raf-1 in-ter-acts with fyn an
 d src in a non-
  []
 
-[30] [31] [32] [33] [34] [35] [36] [37]) [38]
+[31] [32] [33] [34] [35] [36] [37]) [38]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 787.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 795.
  [39
 
 ] [40] [41
@@ -925,7 +925,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 File: ./figs/Fig-1-Network_v3.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-1-Network_v3.pdf>
-Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 903.
+Package pdftex.def Info: ./figs/Fig-1-Network_v3.pdf used on input line 911.
 (pdftex.def)             Requested size: 469.75502pt x 379.56837pt.
 
 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf, id=155, 499.8675pt x 590.205pt>
@@ -933,26 +933,26 @@ File: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf>
 Package pdftex.def Info: ./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pdf used on input 
-line 913.
+line 921.
 (pdftex.def)             Requested size: 422.77664pt x 499.20003pt.
 
 <./figs/Fig-3-Predictions.pdf, id=156, 771.88374pt x 522.95375pt>
 File: ./figs/Fig-3-Predictions.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-3-Predictions.pdf>
-Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 926.
+Package pdftex.def Info: ./figs/Fig-3-Predictions.pdf used on input line 934.
 (pdftex.def)             Requested size: 469.75502pt x 318.25922pt.
 
 <./figs/Fig-4-GRN-Simulations.pdf, id=157, 391.4625pt x 578.16pt>
 File: ./figs/Fig-4-GRN-Simulations.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-4-GRN-Simulations.pdf>
-Package pdftex.def Info: ./figs/Fig-4-GRN-Simulations.pdf used on input line 93
-6.
+Package pdftex.def Info: ./figs/Fig-4-GRN-Simulations.pdf used on input line 94
+4.
 (pdftex.def)             Requested size: 399.29463pt x 589.7595pt.
 
 
-LaTeX Warning: Float too large for page by 27.3295pt on input line 941.
+LaTeX Warning: Float too large for page by 27.3295pt on input line 949.
 
 
 <./figs/Fig-5-GRN-CellCycle-Predictions.pdf, id=158, 784.9325pt x 330.23375pt>
@@ -960,14 +960,14 @@ File: ./figs/Fig-5-GRN-CellCycle-Predictions.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-5-GRN-CellCycle-Predictions.pdf>
 Package pdftex.def Info: ./figs/Fig-5-GRN-CellCycle-Predictions.pdf used on inp
-ut line 944.
+ut line 952.
 (pdftex.def)             Requested size: 399.29463pt x 167.9937pt.
 
 <./figs/Fig-6-GRN-Robustness.pdf, id=159, 784.9325pt x 580.1675pt>
 File: ./figs/Fig-6-GRN-Robustness.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-6-GRN-Robustness.pdf>
-Package pdftex.def Info: ./figs/Fig-6-GRN-Robustness.pdf used on input line 953
+Package pdftex.def Info: ./figs/Fig-6-GRN-Robustness.pdf used on input line 961
 .
 (pdftex.def)             Requested size: 399.29463pt x 295.13788pt.
 
@@ -976,7 +976,7 @@ File: ./figs/Fig-7-GeneKO-Simulations.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-7-GeneKO-Simulations.pdf>
 Package pdftex.def Info: ./figs/Fig-7-GeneKO-Simulations.pdf used on input line
- 961.
+ 969.
 (pdftex.def)             Requested size: 399.29463pt x 357.10106pt.
 
 <./figs/Fig-8-IP-ExperimentalStudies.pdf, id=161, 538.01pt x 580.1675pt>
@@ -984,7 +984,7 @@ File: ./figs/Fig-8-IP-ExperimentalStudies.pdf Graphic file (type pdf)
 
 <use ./figs/Fig-8-IP-ExperimentalStudies.pdf>
 Package pdftex.def Info: ./figs/Fig-8-IP-ExperimentalStudies.pdf used on input 
-line 970.
+line 978.
 (pdftex.def)             Requested size: 422.77664pt x 455.91052pt.
  [42 <./figs/Fig-1-Network_v3.pdf>] [43 <./figs/Fig-2-cRaf-BLR1-Fit-Analysis.pd
 f>] [44 <./figs/Fig-3-Predictions.pdf>] [45 <./figs/Fig-4-GRN-Simulations.pdf>]
@@ -997,10 +997,10 @@ rimentalStudies.pdf>]
 ### semi simple group (level 1) entered at line 50 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 7853 strings out of 493089
- 114906 string characters out of 6134842
- 209222 words of memory out of 5000000
- 11051 multiletter control sequences out of 15000+600000
+ 7857 strings out of 493089
+ 114974 string characters out of 6134842
+ 210239 words of memory out of 5000000
+ 11054 multiletter control sequences out of 15000+600000
  30771 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,41p,1240b,1299s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1022,7 +1022,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_v2.pdf (51 pages, 4475267 bytes).
+Output written on Paper_v2.pdf (51 pages, 4474945 bytes).
 PDF statistics:
  850 PDF objects out of 1000 (max. 8388607)
  585 compressed objects within 6 object streams
