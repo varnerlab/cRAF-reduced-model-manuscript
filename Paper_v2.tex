@@ -219,6 +219,8 @@ and sustained phosphorylation of cRaf-pS621 (Fig. \ref{fig:model-fitting}B) in a
 Together, the reinforcing positive feedback between the signalsome and MAPK led to sustained activation over multiple cellular generations.
 However, the effective model failed to capture the decline of BLR1 message after 48 hr of ATRA exposure.
 This suggested that we captured the logic leading to the onset of differentiation, but failed to describe program shutdown.
+Much of the focus in the literature has been on understanding the initiation of differentiation, with little attention paid to understanding how a program is
+terminated. This is a potential new direction that could be explored.
 Next, we tested the response of the signal initiation module to different ATRA dosages.
 
 % Secondly, ATRA treatment alone increased both Raf phosphorylation at S621/S259 and Raf expression 24 hr post-treatment,
@@ -277,27 +279,27 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % further demonstrating their independence from cRaf phosphorylation.
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
-The Gfi-1 and PPARg proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
+The Gfi-1 and PPAR$\gamma$ proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
 We conducted pairwise gene knockout simulations in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
 The difference between the system state with and without the gene knockouts (encoded as a normalized state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
 A panel of ten parameter sets was sampled, and the average normalized displacement matrix was decomposed.
 The first six modes (approximately 36\% of the total) described $>$95\% of the gene knockout variance,
-with the most important components of these modes being the Gfi-1 and PPARg proteins, and to a lesser extent PU.1, C/EBPa and and AP1 (Fig. \ref{fig:model-response-ko}A).
+with the most important components of these modes being the Gfi-1 and PPAR$\gamma$ proteins, and to a lesser extent PU.1, C/EBP$\alpha$ and and AP1 (Fig. \ref{fig:model-response-ko}A).
 To better understand which protein-DNA connections were important, we simulated the pairwise deletion of interactions between these proteins and their respective regulatory targets.
-SVD decomposition of the normalized state displacement matrix assembled from the pairwise connection deletions, suggested the first six modes (approximately 26\% of the total) accounted for $>$90\% of the variance.
+Singular value decomposition of the normalized state displacement matrix assembled from the pairwise connection deletions, suggested the first six modes (approximately 26\% of the total) accounted for $>$90\% of the variance.
 Globally, the most sensitive interactions controlled p21 and p47Phox expression, markers for cell-cycle arrest and reactive oxygen formation phenotypic axes activated following ATRA addition (Fig. \ref{fig:model-response-ko}B).
-Analysis of the modes suggested the action of PPARg, Gfi-1 and C/EBPa were consistently important over multiple target genes.
+Analysis of the modes suggested the action of PPAR$\gamma$, Gfi-1 and C/EBP$\alpha$ were consistently important over multiple target genes.
 The connection knockout analysis also revealed robustness in the network.
-For example, no pair of deletions qualitatively changed the expression of regulators such as PU.1, Oct1, Oct4 or PPARg.
+For example, no pair of deletions qualitatively changed the expression of regulators such as PU.1, Oct1, Oct4 or PPAR$\gamma$.
 Thus, the expression of these species was robust to disturbance in the connectivity.
-To better understand the combined influence of the PPARg and Gfi-1 deletions, we computed the fold change in the protein levels in the
-single (Gfi-1$^{-/-}$ or PPARg$^{-/-}$) and double (Gfi-1$^{-/-}$ and PPARg$^{-/-}$) mutants for the best fit parameter set (Fig. \ref{fig:model-response-ko-simulations}).
-Deletion of Gfi-1 led to a 2-4 fold increase in EGR-1, CD11b and C/EBPa expression, and a $>$8 fold increase in PU.1 abundance (Fig. \ref{fig:model-response-ko-simulations},blue).
-On the other hand, deletion of PPARg led to $>$8 fold downregulation of CD38, p21, IRF1 and OCT1 (Fig. \ref{fig:model-response-ko-simulations},red).
+To better understand the combined influence of the PPAR$\gamma$ and Gfi-1 deletions, we computed the fold change in the protein levels in the
+single (Gfi-1$^{-/-}$ or PPAR$\gamma$$^{-/-}$) and double (Gfi-1$^{-/-}$ and PPAR$\gamma$$^{-/-}$) mutants for the best fit parameter set (Fig. \ref{fig:model-response-ko-simulations}).
+Deletion of Gfi-1 led to a 2-4 fold increase in EGR-1, CD11b and C/EBP$\alpha$ expression, and a $>$8 fold increase in PU.1 abundance (Fig. \ref{fig:model-response-ko-simulations},blue).
+On the other hand, deletion of PPAR$\gamma$ led to $>$8 fold downregulation of CD38, p21, IRF1 and OCT1 (Fig. \ref{fig:model-response-ko-simulations},red).
 Both knockouts slightly increased E2F expression, but neither influenced the expression of p47Phox.
 The double mutant was qualitatively similar to the combined behavior of the two single mutant cases.
-Taken together, Gfi-1 and PPARg controlled the cell-cycle arrest and receptor signaling axes, with PPARg regulating CD38, IRF1 and p21 expression
-while Gfi-1 controlled CD11b expression. These simulations suggested deletion of PPARg and Gfi-1 would not interfere with reactive oxygen formation,
+Taken together, Gfi-1 and PPAR$\gamma$ controlled the cell-cycle arrest and receptor signaling axes, with PPAR$\gamma$ regulating CD38, IRF1 and p21 expression
+while Gfi-1 controlled CD11b expression. These simulations suggested deletion of PPAR$\gamma$ and Gfi-1 would not interfere with reactive oxygen formation,
 but would limit the ability of HL-60 cells to arrest.
 However, this analysis did not give insight into which components upstream of the signal initiation module were important.
 Toward this question, we explored the composition and regulation of the signalsome complex by experimentally interrogating a panel of possible Raf interaction partners.
@@ -316,7 +318,7 @@ Interrogation of the Raf interactome suggested Vav1 was involved with ATRA-induc
 Western blot analysis using total Raf and pS621 Raf specific antibodies confirmed the
 presence of the bait protein, total and phosphorylated forms, in the immunoprecipitate (Fig. \ref{fig:ip-data}A).
 Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 precipitated with Raf, suggesting a direct physical interaction was possible.
-However, only the associations between Raf and Vav1 and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
+However, only the associations between Raf and Vav1, and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
 Furthermore, the Vav1 and Src associations were correlated with pS621 Raf abundance in the precipitate.
 Others proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
 The remaining 14 proteins were expressed in whole cell lysate (Fig. \ref{fig:ip-data}B),
@@ -382,7 +384,7 @@ that appear in the promoter logic models were estimated from protein measurement
 Despite its simplicity, the effective model captured key features of the ATRA induced differentiation such as
 sustained MAPK activation, and bistability with respect to ATRA exposure.
 The model also described the expression of upstream transcription factors which regulated the expression of differentiation markers.
-Lastly, analysis of the response of the model to perturbations identified Gfi-1 and PPARg as master regulators of ATRA-induced differentiation.
+Lastly, analysis of the response of the model to perturbations identified Gfi-1 and PPAR$\gamma$ as master regulators of ATRA-induced differentiation.
 We also reported a new ATRA-inducible component of the signalsome, Vav1.
 Vav1 is a guanine nucleotide exchange factor for Rho family GTPases that activate pathways leading to actin cytoskeletal rearrangements and transcriptional alterations \cite{Hornstein:2004aa}.
 The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with the Raf inhibitor GW5074.
@@ -394,13 +396,12 @@ The MEK-dependent activation of p42 MAPK stimulates the accumulation of the Mos 
 This is similar to the signal initiation module presented here; ATRA drives signalsome formation, which activates MAPK, which in turn leads to more signalsome activation.
 Thus, while HL-60 and \textit{Xenopus} oocytes are vastly different biological models, their cell fate programs share a similar architectural feature.
 Reinforcing feedback and bistability has also been implicated in hematopoietic cell fate determination.
-Laslo et al showed that the counter antagonistic repressors, Gfi-1 and Egr-1/2 (whose expression is tuned by PU.1 and C/EBPa), encodes a bistable switch that
-results in a macrophage, neutrophil or a mixed lineage population depending upon PU.1 and C/EBPa expression \cite{Laslo2006}.
+Laslo et al showed in nonmalignant myelomonocytic cells that the counter antagonistic repressors, Gfi-1 and Egr-1/2 (whose expression is tuned by PU.1 and C/EBP$\alpha$), encode a bistable switch that
+results in a macrophage, neutrophil or a mixed lineage population depending upon PU.1 and C/EBP$\alpha$ expression \cite{Laslo2006}.
 The current model contained the Gfi-1 and Egr-1/2 agonistic switch; however, its significance was unclear for HL-60 cells.
-The expression of Gfi-1, Egr-1/2, C/EBPa and PU.1 was not consistent with the canonical lineage pattern expected from literature.
+The expression of Gfi-1, Egr-1/2, C/EBP$\alpha$ and PU.1 was not consistent with the canonical lineage pattern expected from literature.
 For example, Egr-1/2 expression (associated with a macrophage lineage) increased, while Gfi-1 expression (associated with a neutrophil lineage)
 remained constant following ATRA exposure.
-Literature evidence in nonmalignant myelomonocytic fate selection has shown that Gfi-1 and Egr-1/2 promote granulocytic and monocytic differentiation, respectively \cite{Laslo2006}.
 Thus, HL-60 cells, which are a less mature cancer cell line, exhibited a non-canonical expression pattern.
 Other unrelated cell fate decisions such as programmed cell death have also been suggested to be bistable \cite{Bagci:2006aa}.
 Still more biochemical networks important to human health, for example the human coagulation or complement cascades, also feature strong positive feedback elements \cite{Luan:2007aa}.
@@ -409,23 +410,23 @@ cell fate programs and other networks important to human health.
 
 %However, in previous studies we have shown that PU.1 has additional non-canonical function, as it is highly expressed following the addition of ATRA to HL-60 cells.
 %
-Analysis of the signal integration and phenotype modules suggested that Gfi-1 and PPARg were required for ATRA-induced differentiation in HL-60 cells.
-Model analysis showed that PU.1, Egr-1 and C/EBPa expression increased in Gfi-1$^{-/-}$ mutants, where PU.1 expression was upregulated by greater than 8-fold.
+Analysis of the signal integration and phenotype modules suggested that Gfi-1 and PPAR$\gamma$ were required for ATRA-induced differentiation in HL-60 cells.
+Model analysis showed that PU.1, Egr-1 and C/EBP$\alpha$ expression increased in Gfi-1$^{-/-}$ mutants, where PU.1 expression was upregulated by greater than 8-fold.
 PU.1, a member of the \textit{ets} transcription factor family, is a well known regulator of granulocyte and monocyte development \cite{Friedman2007}.
-The relative level of PU.1 and C/EBPa is thought to control macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
-Simulations suggested that combined Gfi-1 + PPARg deletion crippled the ability of HL-60 cells to undergo neutrophilic differentiation following ATRA exposure.
-p21 expression decreased significantly, suggesting Gfi-1$^{-/-}$ + PPARg$^{-/-}$ mutants were less likely to G0-arrest following ATRA exposure.
-The expression of other neutrophilic markers, such as CD38, also decreased in Gfi-1$^{-/-}$ + PPARg$^{-/-}$ cells.
+The relative level of PU.1 and C/EBP$\alpha$ is thought to control macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
+Simulations suggested that combined Gfi-1 + PPAR$\gamma$ deletion crippled the ability of HL-60 cells to undergo neutrophilic differentiation following ATRA exposure.
+p21 expression decreased significantly, suggesting Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ mutants were less likely to G0-arrest following ATRA exposure.
+The expression of other neutrophilic markers, such as CD38, also decreased in Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ cells.
 On the other hand, the expression of reactive oxygen metabolic markers, or other important transcription factors such as OCT4 did not change.
-For example, model analysis suggested that the C/EBPa dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes the p47Phox protein, was the most sensitive PU.1 connection; deletion of this connection removed the ability of the system to express p47Phox.
+For example, model analysis suggested that the C/EBP$\alpha$ dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes the p47Phox protein, was the most sensitive PU.1 connection; deletion of this connection removed the ability of the system to express p47Phox.
 p47Phox, also known as neutrophil cytosol factor 1, is one of four cytosolic subunits of the multi-protein NADPH oxidase complex found in neutrophils \cite{El-Benna:2009aa}. This enzyme is responsible for reactive oxygen species (ROS) production, a key component of the anti-microbial function of neutrophils.
-However, Gfi-1 deletion did not increase p47Phox expression, nor did the deletion of PPARg.
-This suggested that while p47Phox expression required C/EBPa and PU.1, it was saturated with respect these proteins, and simultaneously not sensitive to PPARg abundance.
-Together, Gfi-1$^{-/-}$ + PPARg$^{-/-}$ cells were predicted to exhibit
+While p47Phox expression required C/EBP$\alpha$ and PU.1, neither Gfi-1 nor PPAR$\gamma$ deletion increased expression.
+This suggested that p47Phox expression was saturated with respect to C/EBP$\alpha$ and PU.1, and simultaneously not sensitive to PPAR$\gamma$ abundance.
+Taken together, Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ cells were predicted to exhibit
 some aspects of the ATRA response, but not other critical features such as cell cycle arrest.
 Hock et al showed that Gfi-1$^{-/-}$ mice lacked normal neutrophils, and were highly sensitive to bacterial infection \cite{Hock:2003aa}.
 Thus, the model analysis was consistent with this study.
-However, other predictions concerning the behavior of the Gfi-1$^{-/-}$ + PPARg$^{-/-}$ mutants have yet to be verified experimentally.
+However, other predictions concerning the behavior of the Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ mutants have yet to be verified experimentally.
 
 Immunoprecipitation studies identified a limited number of ATRA-dependent and -independent Raf interaction partners.
 While we were unable to detect the association of Raf with common kinases and GTPases such as PKC, PKA, p38, Rac and Rho,
@@ -519,7 +520,6 @@ The kinetic transcription term $\bar{r}_{T,j}$ was modeled as:
 and the abundance of RNA polymerase ($R_{1}$), $V^{max}_{T} = k_{T}\left(R_{1}\right)$.
 The $\left(L_{T,o}/L_{T,j}\right)$ term denotes the ratio of transcription read lengths; $L_{T,o}$ represents a characteristic gene length, while $L_{T,j}$ denotes the length of gene $j$.
 Thus, the ratio $\left(L_{T,o}/L_{T,j}\right)$ is a gene specific correction to the characteristic transcription rate $V^{max}_{T}$.
-The degradation rate constants were defined as $\theta_{m,j}$ and $\theta_{p,j}$ denote characteristic degradation constants for mRNA and protein, respectively.
 Lastly, the $\lambda_{j}$ term denotes the constitutive rate of expression of gene $j$.
 
 The gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced the expression of gene $j$.
@@ -532,7 +532,7 @@ In this study, the integration rule governing gene expression was the weighted f
 	{u}_{j} = \frac{W_{R_{1},j}+\displaystyle\sum_{n}W_{nj}f_{nj}}{1+W_{R_{1},j}+\displaystyle\sum_{d}W_{dj}f_{dj}}
 \end{equation}
 The numerator, the weighted sum (with weights $W_{nj}$) of promoter configurations leading to gene expression, was normalized by all possible promoter configurations.
-The likelihood of each configuration was quantified by the transfer function $f_{nj}$ (which we modeled using hill like functions), while
+The likelihood of each configuration was quantified by the transfer function $f_{nj}$ (which we modeled using Hill like functions), while
 the lead term in the numerator $W_{R_{1},j}$ denotes the weight of constitutive expression for gene $j$.
 Given this formulation, the rate of constitutive expression was then given by:
 \begin{equation}
@@ -551,7 +551,7 @@ we corrected the characteristic translation rate by the ratio of the length of a
 \subsubsection*{Signaling model equations.}
 The signal initiation, and integration modules required the abundance of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
 However, our base model described only the abundance of inactive proteins e.g., cRaf or RXR/RAR but not the activated forms.
-To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger (shown generally as Eq \eqref{eqn-signaling-balances}).
+To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger.
 The abundance of activated trigger ($x_{a,1}$) was estimated directly from the RXR/RAR abundance ($x_{u,1}$):
 \begin{equation}
 	x_{a,1} \sim x_{u,1}\left(\frac{\alpha\cdot{\mathrm{ATRA}}}{1+\alpha\cdot\mathrm{ATRA}}\right)
@@ -602,7 +602,7 @@ We measured the squared difference in the scale, fold change and shape for prote
 \begin{equation}\label{eqn:objective-function}
 	E_{j}(\mathbf{k}) = \biggl(\mathcal{M}_{j}\left(t_{-}\right)-\hat{y}_{j}\left(t_{-},\mathbf{k}\right)\biggr)^2+\sum_{i=1}^{\mathcal{T}_{j}}\biggl(\hat{\mathcal{M}}_{ij}-\hat{y}_{ij}(\mathbf{k})\biggr)^2 + \sum_{i=1}^{\mathcal{T}_{j}}\biggl(\mathcal{M}^{\prime}_{ij}-y^{\prime}_{ij}(\mathbf{k})\biggr)^2
 \end{equation}
-The first term in Eqn. \eqref{eqn:objective-function} quantified the initial \textit{scale} error, directly before the addition of ATRA.
+The first term in Eq. \eqref{eqn:objective-function} quantified the initial \textit{scale} error, directly before the addition of ATRA.
 In this case, $\mathcal{M}_{j}\left(t_{-}\right)$ (the approximate concentration of protein $j$ before the addition of ATRA) was estimated from literature.
 This term was required because the protein measurements were reported as the fold-change; thus, the data was normalized by a control
 value measured before the addition of ATRA. However, the model operated on a physical scale.
@@ -904,6 +904,40 @@ AhR &  + & AP-1 & \cite{Suh2002}\\
 	\end{supertabular}
 	\end{scriptsize}
 
+\end{center}
+
+\clearpage
+
+\begin{center}
+% \renewcommand{\arraystretch}{0.8}
+\tablefirsthead{
+\hline
+\rowcolor[gray]{0.9} Gene Name & Gene (bp) & RNA (bp) & Protein (AA) & Gene ID & Protein ID \\}
+\topcaption{Sequence lengths from NCBI RefSeq database was used in the signal integration and phenotype modules \cite{OLeary:2016aa}.
+The RNA sequence length used represents the total distance of transcription, and assume to be equal to the gene length. }\label{tbl:TF-sequences}
+\begin{scriptsize}
+\begin{supertabular}{r|l|l|l|l|l}
+\hline
+AP-1 &  10323 & 10323 & 331 & Gene ID: 3725 & NP\_002219\\
+AhR &  47530 & 47530 & 848 & Gene ID: 196 & NP\_001621\\
+CD11b &  72925 & 72925 & 1153 & Gene ID: 3684 & NP\_001139280 \\
+CD14 &  8974 & 8974 & 375 & Gene ID: 929 & NP\_001035110\\
+CD38 &  174978 & 74978 & 300 & Gene ID: 952 & NP\_001766\\
+C/EBP$\alpha$ &  2630 & 2630 & 393 & Gene ID: 1050 & NP\_001274353.1\\
+E2F &  17919 & 17919 & 437 & Gene ID: 1869 & NP\_005216\\
+Egr-1 &  10824 & 10824 & 543 & Gene ID: 1958 & NP\_001955\\
+Gfi-1 &  13833 & 13833 & 422 & Gene ID: 2672 & NP\_005254\\
+IRF-1 &  16165 & 16165 & 325 & Gene ID: 3659 & NP\_002189\\
+Oct1 &  206516 & 206516 & 741.33 & Gene ID: 5451 & NP\_002688.3, NP\_001185712.1, NP\_001185715.1\\
+Oct4 &  6356 & 6356 & 206.33 &Gene ID: 5460 & NP\_001167002, NP\_001167015, NP\_001167016\\
+P21 &  15651 & 15651 & 198 & NG\_009364.1 & NP\_001621\\
+P47 &  3074 & 3074 & 390 & GenBank: AF003533.1 & NP\_000256 \\
+PPAR$\gamma$ &  153507 & 153507 & 250 & Gene ID: 5468 &  NP\_001317544\\
+PU.1 &  40782 & 40782 & 270.5 & Gene ID: 6688 & NP\_001074016, NP\_003111 \\
+
+\hline
+\end{supertabular}
+\end{scriptsize}
 \end{center}
 
 \clearpage

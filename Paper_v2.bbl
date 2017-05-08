@@ -755,4 +755,11 @@ Rosenbluth MJ, Lam WA, Fletcher DA (2006) Force microscopy of nonadherent
 \newblock Biophys J 90: 2994-3003.
 \bibAnnoteFile{Rosenbluth:2006aa}
 
+\bibitem{OLeary:2016aa}
+O'Leary NA, Wright MW, Brister JR, Ciufo S, Haddad D, et~al. (2016) Reference
+  sequence (refseq) database at ncbi: current status, taxonomic expansion, and
+  functional annotation.
+\newblock Nucleic Acids Res 44: D733-45.
+\bibAnnoteFile{OLeary:2016aa}
+
 \end{thebibliography}
