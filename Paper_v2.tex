@@ -166,7 +166,7 @@ RAR/RXR activation is necessary for ATRA-induced Raf phosphorylation  \cite{Hong
 and the formation of an ATRA-inducible signalsome complex at the membrane, which drives MAPK activation.
 While the makeup of the signalsome complex is not yet known,
 we do know that it is composed of Src family kinases Fgr and Lyn, PI3K, c-Cbl, Slp76, and KSR, plus transcription factors
-AhR and IRF1 \cite{Congleton:2012fk,Shen:2011aa,Shen2009,Yen2006,Marchisio:1998aa}.
+AhR and IRF1 \cite{Congleton:2012fk,Shen:2011aa,Shen:2009aa,Yen2006,Marchisio:1998aa}.
 Signalsome activity is driven by ATRA-induced expression of CD38 and putatively the heterotrimeric Gq protein-coupled receptor BLR1 \cite{Congleton2011,WANG2004}.
 BLR1 (also known as CXCR5), identified as an early ATRA (or D3)-inducible gene using differential display \cite{YEN1990},
 is necessary for MAPK activation and differentiation \cite{WANG2004}, and drives signalsome activity.
@@ -217,6 +217,9 @@ We decomposed the ATRA program into three modules;
 a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (Trigger) signals (Fig. \ref{fig:network}A);
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals (Fig. \ref{fig:network}B); and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors (Fig. \ref{fig:network}C).
+In particular, Trigger (a surrogate for the RAR$\alpha$/RXR transcriptional complex)
+regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and Egr-1.
+In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or p47Phox.
 Each component of these modules was described by a mRNA and protein balance equation.
 Additionally, the signal initiation module also described the abundance of activated species e.g., Trigger and cRaf-pS621 whose values were derived from
 unactivated Trigger and cRaf protein levels.
@@ -264,9 +267,7 @@ Next, we analyzed the ATRA-induced downstream gene expression program following 
 
 The signal integration and phenotype modules described ATRA-induced gene expression in wild-type HL-60 cells (Fig. \ref{fig:model-grn-simulations}).
 The signal initiation module produced two outputs, activated Trigger and cRaf-pS621 which drove the expression of ATRA-induced transcription factors,
-which then in turn activated the phenotypic program. In particular, Trigger (a surrogate for the RAR$\alpha$/RXR transcriptional complex)
-regulated the expression of the transcription factors CCATT/enhancer binding protein $\alpha$ (C/EBP$\alpha$), PU.1, and Egr-1.
-In turn, these transcription factors, in combination with cRaf-pS621, regulated the expression of downstream phenotypic markers such as CD38, CD11b or p47Phox.
+which then in turn activated the phenotypic program.
 We assembled the connectivity of the signal integration and phenotypic programs driven by Trigger and cRaf-pS621 from literature (Table \ref{tbl:TF-network-connectivity}).
 We estimated the parameters for the signal initiation, and phenotype modules
 from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA \cite{Jensen:2013aa,Jensen:2014aa,Jensen:2015ab,Jensen:2015aa}.
@@ -279,7 +280,7 @@ We then used the ratio of these values in a polynomial model to calculate the fr
 The third-order polynomial model captured the trend in measured G0-arrest values as a function of time, and was robust to uncertainty in the measured data (Fig. \ref{fig:model-cell-cycle-simulations}B, gray).
 Taken together, the output of the signal integration and phenotypic modules was consistent with time-series and steady-state measurements, thereby validating the assumed molecular connectivity.
 Moreover, outputs from the phenotype module described the trend in ATRA-induced G0 cell cycle arrest.
-Next, we explored which nodes and interactions between nodes in the signal integration module most influenced the system response.
+Next, we explored which proteins and protein interactions in the signal integration module most influenced the system response.
 
 % Vav1 is a member of an ATRA-inducible signalsome complex which propels sustained MAPK activation, arrest and differentiation (Fig. \ref{fig:network}B).
 % We conducted immunoprecipitation studies and identified a limited number of ATRA-dependent and -independent Raf interaction partners.
@@ -294,7 +295,8 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
 The Gfi-1 and PPAR$\gamma$ proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
-We conducted pairwise gene knockout simulations in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaf-S621 signals.
+We conducted pairwise gene knockout simulations in the signal integration and phenotype modules to estimate which proteins
+controlled the processing of the Trigger and cRaf-S621 signals.
 The difference between the system state with and without the gene knockouts (encoded as a normalized state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
 A panel of ten parameter sets was sampled, and the average normalized displacement matrix was decomposed.
 The first six modes (approximately 36\% of the total) described $>$95\% of the gene knockout variance,
@@ -321,7 +323,7 @@ Toward this question, we explored the composition and regulation of the signalso
 % Taken together, these results suggested that the PU.1 and AP1 proteins acted as important self-reinforcing regulators for both the signal integration and phenotype modules.
 % The analysis suggested that the PU.1 signaling axis promoted the formation of the neutrophil NADPH oxidase (through p47Phox), while AP1 was responsible for cell cycle arrest (through p21).
 
-The composition of the signalsome, and the kinase ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
+The full composition of the signalsome, and the kinase therein ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
 To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
 A panel of 19 possible Raf interaction partners (kinases, GTPases, scaffolding proteins etc)
 was constructed based upon known signaling pathways.
@@ -331,12 +333,12 @@ Total Raf was used as a bait protein for the immunoprecipitation studies.
 Interrogation of the Raf interactome suggested Vav1 was involved with ATRA-induced initiation of MAPK activity (Fig. \ref{fig:ip-data}).
 Western blot analysis using total Raf and Raf-pS621 specific antibodies confirmed the
 presence of the bait protein, total and phosphorylated forms, in the immunoprecipitate (Fig. \ref{fig:ip-data}A).
-Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 precipitated with Raf, suggesting a direct physical interaction was possible.
+Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 co-precipitated with Raf, suggesting their co-existence in a complex was possible.
 However, only the associations between Raf and Vav1, and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
 Furthermore, the Vav1 and Src associations were correlated with Raf-pS621 abundance in the precipitate.
-Others proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
+Other proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
 The remaining 14 proteins were expressed in whole cell lysate (Fig. \ref{fig:ip-data}B),
-but were not detectable in the precipitate of Raf IP.
+but were not detectable in the immuno-precipitate with Raf IP; consistent with the potential importance of the Raf-Vav interaction for signaling, it paralleled Raf phosphorylation at S621, a putative telltale of the activated kinase.
 Treatment with the Raf kinase inhibitor GW5074 following ATRA exposure reduced the association of both Vav1 with Raf and Src with Raf (Fig. \ref{fig:ip-data}),
 although the signal intensity for Src was notably weak.
 However, GW5074 did not influence the association of CK2 or 14-3-3 with Raf, further demonstrating their independence from Raf phosphorylation.
@@ -346,9 +348,10 @@ Src family kinases are known to be important in myeloid differentiation \cite{Mi
 Given the existing work and variable reproducibility in the context of the Raf immunoprecipitate,
 we did not investigate the role of Src further in this study.
 Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with Raf activation following ATRA-treatment.
-Previous studies demonstrated that a Vav1-Slp76-Cbl-CD38 complex plays an important role in ATRA-induced MAPK activation and differentiation of HL-60 cells \cite{Shen2009}.
+Previous studies demonstrated that a Vav1-Slp76-Cbl-CD38 complex plays an important role in ATRA-induced MAPK activation and differentiation of HL-60 cells \cite{Shen:2009aa}.
 Here we did not observe direct interaction of Raf with Cbl or Slp76;
-however, this complex could be involved upstream. Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
+however, this interaction could could be involved upstream.
+Next, we considered the effect of the Raf kinase inhibitor GW5074 on functional markers of ATRA-induced growth arrest and differentiation.
 
 %For more details on GW5074 including dose response see Supplemental Materials including Fig. \ref{fig:ip-data}A.
 Inhibition of Raf kinase activity modulated MAPK activation and differentiation markers following ATRA exposure (Fig. \ref{fig:ip-data}D-F).
@@ -384,7 +387,7 @@ with MAPK activation (in which case the p47Phox marker might not accurately refl
 % of ERK signaling for both T-cells as well as neutrophils \cite{Costello1999,Graham2007}.
 % While its function in the signalsome is unclear, Vav1 has been shown to associate with a Cbl-Slp76-CD38 complex in an ATRA-dependent manner;
 % furthermore, transfection of HL-60 cells with Cbl mutants that fail to bind CD38, yet still bind Slp76 and Vav1, prevented
-% ATRA-induced MAPK activation \cite{Shen2009}.
+% ATRA-induced MAPK activation \cite{Shen:2009aa}.
 % Thus, interaction of Cbl-Slp76-Vav1 and CD38 appears to be required for transmission of the ATRA signal by the signalsome.
 
 \section*{Discussion}
@@ -399,7 +402,7 @@ Despite its simplicity, the effective model captured key features of the ATRA in
 sustained MAPK activation, and bistability with respect to ATRA exposure.
 The model also described the expression of upstream transcription factors which regulated the expression of differentiation markers.
 Lastly, analysis of the response of the model to perturbations identified Gfi-1 and PPAR$\gamma$ as master regulators of ATRA-induced differentiation.
-We also reported a new ATRA-inducible component of the signalsome, Vav1.
+We also reported an ATRA-inducible component of the signalsome, Vav1.
 Vav1 is a guanine nucleotide exchange factor for Rho family GTPases that activate pathways leading to actin cytoskeletal rearrangements and transcriptional alterations \cite{Hornstein:2004aa}.
 The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with the Raf inhibitor GW5074.
 
@@ -415,7 +418,7 @@ results in a macrophage, neutrophil or a mixed lineage population depending upon
 The current model contained the Gfi-1 and Egr-1/2 agonistic switch; however, its significance was unclear for HL-60 cells.
 The expression of Gfi-1, Egr-1/2, C/EBP$\alpha$ and PU.1 was not consistent with the canonical lineage pattern expected from literature.
 For example, Egr-1/2 expression (associated with a macrophage lineage) increased, while Gfi-1 expression (associated with a neutrophil lineage)
-remained constant following ATRA exposure.
+was unchanged following ATRA exposure.
 Thus, HL-60 cells, which are a less mature cancer cell line, exhibited a non-canonical expression pattern.
 Other unrelated cell fate decisions such as programmed cell death have also been suggested to be bistable \cite{Bagci:2006aa}.
 Still more biochemical networks important to human health, for example the human coagulation or complement cascades, also feature strong positive feedback elements \cite{Luan:2007aa}.
@@ -424,7 +427,7 @@ cell fate programs and other networks important to human health.
 
 %However, in previous studies we have shown that PU.1 has additional non-canonical function, as it is highly expressed following the addition of ATRA to HL-60 cells.
 %
-Analysis of the signal integration and phenotype modules suggested that Gfi-1 and PPAR$\gamma$ were required for ATRA-induced differentiation in HL-60 cells.
+Analysis of the signal integration and phenotype modules suggested Gfi-1 and PPAR$\gamma$ proteins were important regulators of ATRA-induced signal integration and phenotypic change.
 Model analysis showed that PU.1, Egr-1 and C/EBP$\alpha$ expression increased in Gfi-1$^{-/-}$ mutants, where PU.1 expression was upregulated by greater than 8-fold.
 PU.1, a member of the \textit{ets} transcription factor family, is a well known regulator of granulocyte and monocyte development \cite{Friedman2007}.
 The relative level of PU.1 and C/EBP$\alpha$ is thought to control macrophage versus neutrophil cell fate decisions in granulocytic macrophage progenitor cells \cite{Dahl2003}.
@@ -460,13 +463,13 @@ Finally, we found that Vav1/Raf association correlated with Raf activity, was AT
 The presence of Vav1 in Raf/Grb2 complexes has been shown to correlate with increased Raf activity in mast cells \cite{Song1996}.
 Furthermore, studies on Vav1 knockout mice demonstrated that the loss of Vav1 resulted in deficiencies
 of ERK signaling for both T-cells as well as neutrophils \cite{Costello1999,Graham2007}.
-Interestingly, while an integrin ligand-induced ROS response was blocked in Vav1 knockout neutrophils, TPA was able to bypass the Vav1 requirement and stimulate both ERK phosphorylation
-and ROS induction \cite{Graham2007}.
+Interestingly, while an integrin ligand-induced ROS response was blocked in Vav1 knockout neutrophils,
+TPA was able to bypass the Vav1 requirement and stimulate both ERK phosphorylation and ROS induction \cite{Graham2007}.
 In this study, the TPA-induced ROS response was dependent upon Raf kinase activity, and was mitigated by the addition of GW5074.
 It is possible that Vav1 is downstream of various integrin receptors but upstream of Raf in terms of inducible ROS responses.
 Vav1 has also been shown to associate with a Cbl-Slp76-CD38 complex in an ATRA-dependent manner;
 furthermore, transfection of HL-60 cells with Cbl mutants that fail to bind CD38, yet still bind Slp76 and Vav1, prevents
-ATRA-induced MAPK activation \cite{Shen2009}.
+ATRA-induced MAPK activation \cite{Shen:2009aa}.
 The literature suggest a variety of possible receptor-signaling pathways, which involve Vav1, for MAPK activation; moreover,
 given the ATRA-inducible association Vav1 may play a direct role in Raf activation.
 
@@ -523,6 +526,8 @@ For each gene $j=1,2,\dots,\mathcal{G}$, we modeled both the mRNA ($m_{j}$), pro
 	\frac{dp_{j}}{dt} &=& r_{X,j} - \left(\mu+\theta_{p,j}\right)p_{j}\\\label{eqn-signaling-balances}
 	\mathbf{g}\left(p_{1},\hdots,p_{\mathcal{G}},\kappa\right) &=& \mathbf{0}
 \end{eqnarray}
+where signaling species abundance was governed by the non-linear algebraic equations $\mathbf{g}\left(p_{1},\hdots,p_{\mathcal{G}},\kappa\right) = \mathbf{0}$.
+The model parameter vector is denoted by $\kappa$.
 The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, and translation while
 the terms $\theta_{m,j}$ and $\theta_{p,j}$ denote first-order degradation constants for mRNA and protein, respectively.
 The specific transcription rate $r_{T,j}$ was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
@@ -648,6 +653,9 @@ The basis functions were dependent upon the system state; in this study, we assu
 	\phi_{i}\left(\mathbf{p}(t),t\right) = \left(\frac{t}{T}+\frac{p21}{E2F}\Bigr|_{t}\right)^{(i-1)}
 \end{equation}
 The parameters $a_{0},\hdots,a_{3}$ were estimated directly from cell-cycle measurements (biological replicates) using least-squares.
+The form of the basis function assumed p21 was directly proportional, and E2F inversely proportional to G0-arrest.
+However, this was only one form for the basis functions, many others are possible.
+
 % The abundances of the $p21$ and $E2F$ proteins were taken from the gene expression model solution. The least squares solution for the polynomial
 % coefficients was given by:
 % \begin{equation}
@@ -655,10 +663,10 @@ The parameters $a_{0},\hdots,a_{3}$ were estimated directly from cell-cycle meas
 % \end{equation}where $\mathbf{V}$ denotes the Vandermonde matrix constructed from the basis functions, and $\mathcal{A}(t)$ denotes the vector of
 % measured G0 fractions following ATRA exposure.
 
-\subsubsection*{Availability of model code.}
+\subsubsection*{Availability of the model code and parameters.}
 The signaling and gene expression model equations, and the parameter estimation procedure, were implemented in the Julia programming language.
 The model equations were solved using the \texttt{ODE23s} routine of the ODE package \cite{Julia}.
-The model code and parameter ensemble is freely available under an MIT software license and can be downloaded from http://www.varnerlab.org.
+The model code and parameter ensemble is available under an MIT software license and can be downloaded from http://www.varnerlab.org.
 
 % ATRA induced signaling events were modeled using saturation kinetics within an ordinary differential equation (ODE) framework:
 % \begin{equation}
@@ -750,22 +758,32 @@ HL-60 cells were treated with 2$\mu$M GW5074 with or without ATRA (1$\mu$M) at 0
 This GW5074 dosage had a negligible effect on the cell cycle distribution, compared to ATRA treatment alone.
 
 \subsubsection*{Immunoprecipitation and western blotting}
-Approximately $1.2 \times 10^7$ cells were lysed using 400$\mu$L of M-Per lysis buffer from Thermo Scientific (Waltham, MA).
-Lysates were cleared by centrifugation at 16,950 $\times$ g in a micro-centrifuge for 20 min at 4$^{o}$C.
-Lysates were pre-cleared using 100$\mu$L protein A/G Plus agarose beads from Santa Cruz Biotechnology (Santa Cruz, CA) by
-inverting overnight at 4$^{o}$C.  Beads were cleared by centrifugation and total protein concentration
-was determined by a BCA assay (Thermo Scientific, Waltham, MA).  Immunoprecipitations were setup by bringing
-lysate to a concentration of 1g/L in a total volume of 300$\mu$L (M-Per buffer was used for dilution).
-The anti-Raf antibody was added at 3$\mu$L.
-A negative control with no bait protein was also used to exclude the direct interaction of proteins with the A/G beads.
-After 1 hr of inversion at 4$^{o}$C, 20$\mu$L of agarose beads was added and samples were left
-to invert overnight at 4$^{o}$C. Samples were then washed three times with M-Per buffer by centrifugation.
-Finally proteins were eluted from agarose beads using a laemmli loading buffer.
-Eluted proteins were resolved by SDS-PAGE and Western blotting.  Total
-lysate samples were normalized by total protein concentration (20$\mu$g per sample)
-and resolved by SDS-PAGE and Western blotting.  Secondary HRP bound antibody was used for visualization.
+For immunoprecipitation experiments, approximately $1.2 \times 10^7$ cells were lysed as previously described.
+300$\mu$g protein (in 300 $\mu$L total volume) per sample was pre-cleared with Protein A/G beads.
+The beads were pelleted and supernatant was incubated with Raf antibody (3$\mu$L/sample) and beads overnight.
+All incubations included protease and phosphatase inhibitors in M-PER used for lysis with constant rotation at 4$^{o}$C.
+Bead/antibody/protein slurries were then washed and subjected to standard SDS-PAGE analysis as previously described \cite{Shen:2009aa}.
 All antibodies were purchased from Cell Signaling (Boston, MA) with the exception of $\alpha$-p621 Raf which was purchased from Biosource/Invitrogen (Carlsbad, CA),
 and $\alpha$-CK2 from BD Biosciences (San Jose, CA).
+
+% (Shen M, Yen A. c-Cbl interacts with CD38 and promotes retinoic acid-induced differentiation and G0 arrest of human myeloblastic leukemia cells. Cancer Res. 2008 Nov 1;68(21):8761–8769.)
+
+% Approximately $1.2 \times 10^7$ cells were lysed using 400$\mu$L of M-Per lysis buffer from Thermo Scientific (Waltham, MA).
+% Lysates were cleared by centrifugation at 16,950 $\times$ g in a micro-centrifuge for 20 min at 4$^{o}$C.
+% Lysates were pre-cleared using 100$\mu$L protein A/G Plus agarose beads from Santa Cruz Biotechnology (Santa Cruz, CA) by
+% inverting overnight at 4$^{o}$C.  Beads were cleared by centrifugation and total protein concentration
+% was determined by a BCA assay (Thermo Scientific, Waltham, MA).  Immunoprecipitations were setup by bringing
+% lysate to a concentration of 1g/L in a total volume of 300$\mu$L (M-Per buffer was used for dilution).
+% The anti-Raf antibody was added at 3$\mu$L.
+% A negative control with no bait protein was also used to exclude the direct interaction of proteins with the A/G beads.
+% After 1 hr of inversion at 4$^{o}$C, 20$\mu$L of agarose beads was added and samples were left
+% to invert overnight at 4$^{o}$C. Samples were then washed three times with M-Per buffer by centrifugation.
+% Finally proteins were eluted from agarose beads using a laemmli loading buffer.
+% Eluted proteins were resolved by SDS-PAGE and Western blotting.  Total
+% lysate samples were normalized by total protein concentration (20$\mu$g per sample)
+% and resolved by SDS-PAGE and Western blotting.  Secondary HRP bound antibody was used for visualization.
+% All antibodies were purchased from Cell Signaling (Boston, MA) with the exception of $\alpha$-p621 Raf which was purchased from Biosource/Invitrogen (Carlsbad, CA),
+% and $\alpha$-CK2 from BD Biosciences (San Jose, CA).
 
 \subsubsection*{Morphology assessment}
 Untreated and ATRA-treated HL-60 cells were collected after 72 hr and cytocentrifuged for 3 min at 700 rpm onto glass slides.

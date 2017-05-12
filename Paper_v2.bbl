@@ -100,12 +100,12 @@ Shen M, Bunaciu R, Congleton J, Jensen H, Sayam L, et~al. (2011) {Interferon
 \newblock Leuk Lymphoma 52: 2372-9.
 \bibAnnoteFile{Shen:2011aa}
 
-\bibitem{Shen2009}
-Shen M, Yen A (2009) {c-Cbl tyrosine kinase-binding domain mutant G306E
-  abolishes the interaction of c-Cbl with CD38 and fails to promote retinoic
-  acid-induced cell differentiation and G0 arrest}.
-\newblock J Biol Chem 284: 25664--25677.
-\bibAnnoteFile{Shen2009}
+\bibitem{Shen:2009aa}
+Shen M, Yen A (2009) c-cbl tyrosine kinase-binding domain mutant g306e
+  abolishes the interaction of c-cbl with cd38 and fails to promote retinoic
+  acid-induced cell differentiation and g0 arrest.
+\newblock J Biol Chem 284: 25664-77.
+\bibAnnoteFile{Shen:2009aa}
 
 \bibitem{Yen2006}
 Yen A, Varvayanis S, Smith J, Lamkin T (2006) {Retinoic acid induces expression

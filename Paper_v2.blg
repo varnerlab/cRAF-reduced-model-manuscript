@@ -6,24 +6,24 @@ Database file #1: Paper_v1.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 116 entries,
             2441 wiz_defined-function locations,
-            1418 strings with 36505 characters,
-and the built_in function-call counts, 95499 in all, are:
-= -- 8689
+            1416 strings with 36391 characters,
+and the built_in function-call counts, 95460 in all, are:
+= -- 8684
 > -- 1877
 < -- 0
 + -- 938
 - -- 469
-* -- 8101
-:= -- 11567
+* -- 8097
+:= -- 11563
 add.period$ -- 233
 call.type$ -- 116
 change.case$ -- 114
 chr.to.int$ -- 0
 cite$ -- 232
 duplicate$ -- 9266
-empty$ -- 9759
+empty$ -- 9755
 format.name$ -- 578
-if$ -- 21155
+if$ -- 21145
 int.to.chr$ -- 0
 int.to.str$ -- 116
 missing$ -- 1284
@@ -35,7 +35,7 @@ purify$ -- 0
 quote$ -- 0
 skip$ -- 860
 stack$ -- 0
-substring$ -- 13306
+substring$ -- 13294
 swap$ -- 2554
 text.length$ -- 0
 text.prefix$ -- 0
