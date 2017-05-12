@@ -35,6 +35,12 @@ Nilsson B (1984) Probable in vivo induction of differentiation by retinoic acid
 \newblock Br J Haematol 57: 365-71.
 \bibAnnoteFile{Nilsson:1984aa}
 
+\bibitem{Coombs:2015aa}
+Coombs CC, Tavakkoli M, Tallman MS (2015) Acute promyelocytic leukemia: where
+  did we start, where are we now, and the future.
+\newblock Blood Cancer J 5: e304.
+\bibAnnoteFile{Coombs:2015aa}
+
 \bibitem{Warrell:1993aa}
 Warrell RP Jr (1993) Retinoid resistance in acute promyelocytic leukemia: new
   mechanisms, strategies, and implications.
@@ -46,6 +52,12 @@ Freemantle SJ, Spinella MJ, Dmitrovsky E (2003) Retinoids in cancer therapy and
   chemoprevention: promise meets resistance.
 \newblock Oncogene 22: 7305-15.
 \bibAnnoteFile{Freemantle:2003aa}
+
+\bibitem{Harrison:2016aa}
+Harrison JS, Wang X, Studzinski GP (2016) The role of vdr and bim in
+  potentiation of cytarabine-induced cell death in human aml blasts.
+\newblock Oncotarget 7: 36447-36460.
+\bibAnnoteFile{Harrison:2016aa}
 
 \bibitem{Breitman1980}
 Breitman TR, Selonick SE, Collins SJ (1980) {Induction of differentiation of
@@ -140,6 +152,13 @@ Wang J, Yen A (2008) {A MAPK-positive Feedback Mechanism for BLR1 Signaling
   Propels Retinoic Acid-triggered Differentiation and Cell Cycle Arrest}.
 \newblock J Biol Chem 283: 4375--4386.
 \bibAnnoteFile{Wang2008}
+
+\bibitem{Geil:2014aa}
+Geil WM, Yen A (2014) Nuclear raf-1 kinase regulates the cxcr5 promoter by
+  associating with nfatc3 to drive retinoic acid-induced leukemic cell
+  differentiation.
+\newblock FEBS J 281: 1170-80.
+\bibAnnoteFile{Geil:2014aa}
 
 \bibitem{Tasseff2011}
 Tasseff R, Nayak S, Song S, Yen A, Varner J (2011) {Modeling and analysis of

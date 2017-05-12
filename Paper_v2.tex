@@ -121,14 +121,20 @@
 \section*{Abstract}
 In this study, we present an effective model All-Trans Retinoic Acid (ATRA)-induced differentiation of HL-60 cells.
 The model describes a key architectural feature of ATRA-induced differentiation,
-positive feedback between an ATRA-inducible signalsome complex involving many proteins including Vav1, a guanine nucleotide exchange factor,
+reinforcing feedback between an ATRA-inducible signalsome complex involving many proteins including Vav1, a guanine nucleotide exchange factor,
 and the activation of the mitogen activated protein kinase (MAPK) cascade.
+We decomposed the effective model into three modules;
+a signal initiation module that sensed and transformed an ATRA signal into program activation signals;
+a signal integration module that controlled the expression of upstream transcription factors; and
+a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
 The model, which was developed by integrating logical rules with kinetic modeling, was significantly smaller than previous models.
 However, despite its simplicity, it captured key features of ATRA induced differentiation of HL-60 cells.
 We identified an ensemble of effective model parameters using measurements taken from ATRA-induced HL-60 cells.
 Using these parameters, model analysis predicted that MAPK activation was bistable as a function of ATRA exposure.
 Conformational experiments supported ATRA-induced bistability.
-These findings, combined with other literature evidence, suggest that positive feedback is central to a diversity of cell fate programs.
+Additionally, the model captured intermediate and phenotypic gene expression data.
+Knockout analysis of the model suggested Gfi-1 and PPAR$\gamma$ were critical to the ATRA-induced differentiation program.
+These findings, combined with other literature evidence, suggested that reinforcing feedback is central to a diversity of cell fate programs.
 
 \clearpage
 
@@ -140,35 +146,40 @@ These findings, combined with other literature evidence, suggest that positive f
 Understanding the architecture of differentiation programs is an important therapeutic challenge.
 Differentiation induction chemotherapy (DIC), using agents such as the vitamin A derivative all-trans retinoic acid (ATRA),
 is a promising approach for the treatment of many cancers \cite{Bushue:2010aa,Tang:2011aa,Cheung:2012aa}.
-For example, ATRA treatment induces remission in 80–90\% of promyelocytic leukemia (APL) PML-RAR$\alpha$-positive patients \cite{Nilsson:1984aa}, thereby transforming a fatal diagnosis into a manageable disease.
+For example, ATRA treatment induces remission in 80–90\% of promyelocytic leukemia (APL) PML-RAR$\alpha$-positive patients \cite{Nilsson:1984aa},
+thereby transforming a fatal diagnosis into a manageable disease \cite{Coombs:2015aa}.
 However, remission is sometimes not durable and relapsed cases exhibit emergent ATRA resistance \cite{Warrell:1993aa,Freemantle:2003aa}.
 To understand the basis of this resistance, we must first understand the ATRA-induced differentiation program.
-Toward this challenge, lessons learned in model systems, such as the lineage-uncommitted human myeloblastic cell line HL-60, could inform our analysis of the more
-complex differentiation programs occurring in patients. Patient derived HL-60 leukemia cells have been a durable experimental model since the 1970’s to study differentiation \cite{Breitman1980}.
+Toward this challenge, lessons learned in model systems, such as the lineage-uncommitted human myeloblastic cell line HL-60 reported to closely resemble patient derived cells \cite{Harrison:2016aa},
+could inform our analysis of the differentiation programs occurring in patients.
+Patient derived HL-60 leukemia cells have been a durable experimental model since the 1970’s to study differentiation \cite{Breitman1980}.
 HL-60 undergoes cell cycle arrest and either myeloid or monocytic differentiation following stimulation; ATRA induces G1/G0-arrest and myeloid differentiation in HL-60 cells,
 while 1,25-dihydroxy vitamin D3 (D3) induces arrest and monocytic differentiation.
 Commitment to cell cycle arrest and differentiation requires approximately 48 hr of treatment,
 during which HL-60 cells undergo two division cycles.
 
 Sustained mitogen-activated protein kinase (MAPK) activation is a defining feature of ATRA-induced HL-60 differentiation.
-ATRA drives sustained MEK-dependent activation of the Raf/MEK/ERK pathway, leading to arrest and differentiation \cite{Yen1998}.
-MEK inhibition results in the loss of ERK and Raf phosphorylation, and the failure to arrest and differentiate \cite{Hong2001}.
-ATRA (and its metabolites) are ligands for the hormone activated nuclear transcription factors retinoic acid receptor (RAR) and retinoid X receptor (RXR) \cite{Mangelsdorf1990}.
+ATRA drives sustained activation of the Raf/MEK/ERK pathway, leading to arrest and differentiation \cite{Yen1998}.
+Betraying a feedback loop, MEK inhibition results in the loss of ERK and Raf phosphorylation, and the failure to arrest and differentiate in response to ATRA \cite{Hong2001}.
+Retinoic acid (and its metabolites) are ligands for the hormone activated nuclear transcription factors retinoic acid receptor (RAR) and retinoid X receptor (RXR) \cite{Mangelsdorf1990}.
 RAR/RXR activation is necessary for ATRA-induced Raf phosphorylation  \cite{Hong2001},
-and the formation of an ATRA-inducible signalsome complex at the membrane which drives MAPK activation through a yet to be identified kinase activity.
+and the formation of an ATRA-inducible signalsome complex at the membrane, which drives MAPK activation.
 While the makeup of the signalsome complex is not yet known,
-we do know that it is composed of Src family kinases Fgr and Lyn, PI3K, c-Cbl, Slp76, and KSR, as well as IRF-1 transcription factors \cite{Congleton:2012fk,Shen:2011aa,Shen2009,Yen2006,Marchisio:1998aa}.
-Signalsome formation and activity is driven by ATRA-induced expression of CD38 and the putative heterotrimeric Gq protein-coupled receptor BLR1 \cite{Congleton2011,WANG2004}.
-BLR1, identified as an early ATRA (or D3)-inducible gene using differential display \cite{YEN1990},
-is necessary for MAPK activation and differentiation \cite{WANG2004}, and is also involved with signalsome activity.
-Studies of the BLR1 promoter identified a 5' 17bp GT box approximately 1 kb upstream of the transcriptional start that conferred ATRA responsiveness \cite{WANG2004}.
+we do know that it is composed of Src family kinases Fgr and Lyn, PI3K, c-Cbl, Slp76, and KSR, plus transcription factors
+AhR and IRF1 \cite{Congleton:2012fk,Shen:2011aa,Shen2009,Yen2006,Marchisio:1998aa}.
+Signalsome activity is driven by ATRA-induced expression of CD38 and putatively the heterotrimeric Gq protein-coupled receptor BLR1 \cite{Congleton2011,WANG2004}.
+BLR1 (also known as CXCR5), identified as an early ATRA (or D3)-inducible gene using differential display \cite{YEN1990},
+is necessary for MAPK activation and differentiation \cite{WANG2004}, and drives signalsome activity.
+Studies of the BLR1 promoter identified a non-canonical RARE site consisting of a 17 bp GT box approximately
+1 kb upstream of the transcriptional start that conferred ATRA responsiveness \cite{WANG2004}.
 Members of the BLR1 transcriptional activator complex, e.g. NFATc3 and CREB,
 are phosphorylated by ERK, JNK or p38 MAPK family members suggesting positive feedback between the signalsome and MAPK activation \cite{Yang2002}.
-BLR1 overexpression enhanced Raf phosphorylation and accelerated terminal differentiation, while Raf inhibition reduced BLR1 expression and differentiation \cite{Wang2008}.
+BLR1 overexpression enhanced Raf phosphorylation and accelerated terminal differentiation, while Raf inhibition reduced BLR1 expression and ATRA-induced terminal differentiation \cite{Wang2008}.
+In particular, Raf phosphorylation of the NFATc3 transcription factors at the BLR1 promoter enables transcriptional activation at the RARE by ATRA bound to RAR/RXR \cite{Geil:2014aa}.
 BLR1 knock-out cells failed to activate Raf or differentiate in the presence of ATRA \cite{Wang2008}.
 Interestingly, both the knockdown or inhibition of Raf, also reduced BLR1 expression and functional differentiation \cite{Wang2008}.
 Thus, the expression of signalsome components e.g., BLR1 was Raf dependent, while Raf activation depended upon the signalsome.
-A previous computational study of ATRA-induced differentiation in HL-60 cells suggested that the BLR1-MAPK positive feedback circuit was sufficient
+A previous computational study of ATRA-induced differentiation of HL-60 cells suggested that the BLR1-MAPK positive feedback circuit was sufficient
 to explain ATRA-induced sustained MAPK activation, and the expression of a limited number of functional differentiation markers \cite{Tasseff2011}.
 Model analysis also suggested that Raf was the most distinct of the MAPK proteins.
 However, this previous study developed and analyzed a complex model,
@@ -184,9 +195,11 @@ The effective model, despite its simplicity, captured key features of ATRA induc
 Model analysis predicted the bistability of MAPK activation as a function of ATRA exposure; conformational experiments supported ATRA-induced bistability.
 Model simulations were also consistent with measurements of the influence of MAPK inhibitors, and the failure of BLR1 knockout cells to differentiate when exposed to ATRA.
 In addition, the expression of intermediate and phenotypic differentiation markers as also captured following ATRA exposure.
-Lastly, we showed by through immunoprecipitation studies, that the guanine nucleotide exchange factor Vav1 is potentially a new ATRA-inducible member of the signalsome complex.
+Lastly, we showed through immunoprecipitation and inhibitor studies,
+that the guanine nucleotide exchange factor Vav1 is potentially a new ATRA-inducible member of the signalsome complex functioning as a regulator that contributes to signal amplification in the signalsome.
 Taken together, these findings when combined with other literature evidence,
 suggested that positive feedback architectures are central to differentiation programs generally, and necessary for ATRA-induced differentiation.
+The model answers a biologically important question that is not easily experimentally attacked, namely given the complexity of the signaling machine and the pathways it embodies, is there a critical small suite of molecules that are the action elements seminal to eliciting ATRA-induced cell differentiation and G0 arrest.
 
 % These findings, combined with other literature evidence, suggests that positive feedback architectures are central to
 % many cell fate programs.
@@ -201,22 +214,22 @@ suggested that positive feedback architectures are central to differentiation pr
 We constructed an effective model of ATRA-induced HL-60 differentiation which described signaling and gene expression events following the addition of ATRA (Fig. \ref{fig:network}).
 The model connectivity was developed from literature and the studies presented here (Table \ref{tbl:TF-network-connectivity}).
 We decomposed the ATRA program into three modules;
-a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (Trigger) signals (Fig. \ref{fig:network}A);
+a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (Trigger) signals (Fig. \ref{fig:network}A);
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals (Fig. \ref{fig:network}B); and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors (Fig. \ref{fig:network}C).
 Each component of these modules was described by a mRNA and protein balance equation.
 Additionally, the signal initiation module also described the abundance of activated species e.g., Trigger and cRaf-pS621 whose values were derived from
 unactivated Trigger and cRaf protein levels.
-Lastly, because the population of HL-60 cells was dividing (at least before ATRA-induced cell cycle arrest), we also considered a dilution term in all balance equations.
+Lastly, because the population of HL-60 cells was dividing, we also considered a dilution term in all balance equations.
 The signal initiation module contained nine differential equations, while the signal integration and phenotype modules were collectively encoded by 54 differential equations.
-Model parameters were taken literature (Table \ref{tbl:model-parameters}), or estimated from experimental data using heuristic optimization (see materials and methods).
+Model parameters were taken from literature (Table \ref{tbl:model-parameters}), or estimated from experimental data using heuristic optimization (see materials and methods).
 
 The signal initiation module recapitulated sustained signalsome and MAPK activation following exposure to 1$\mu$M ATRA (Fig. \ref{fig:model-fitting}A-B).
 An ensemble of effective model parameters was estimated by minimizing the difference between simulations and time-series measurements of BLR1 mRNA and
 cRaf-pS621 following the addition of 1$\mu$M ATRA. We focused on the S621 phosphorylation site of cRaf since enhanced phosphorylation at this site is a defining
-characteristic of sustained MAPK activation in HL-60. The effective model captured both ATRA-induced BLR1 expression (Fig. \ref{fig:model-fitting}A)
+characteristic of sustained MAPK signaling activation in HL-60. The effective model captured both ATRA-induced BLR1 expression (Fig. \ref{fig:model-fitting}A)
 and sustained phosphorylation of cRaf-pS621 (Fig. \ref{fig:model-fitting}B) in a growing population of HL-60 cells.
-Together, the reinforcing positive feedback between the signalsome and MAPK led to sustained activation over multiple cellular generations.
+Together, the reinforcing feedback within the signalsome and its embedded MAPK signaling axis led to sustained activation over multiple cellular generations.
 However, the effective model failed to capture the decline of BLR1 message after 48 hr of ATRA exposure.
 This suggested that we captured the logic leading to the onset of differentiation, but failed to describe program shutdown.
 Much of the focus in the literature has been on understanding the initiation of differentiation, with little attention paid to understanding how a program is
@@ -229,14 +242,15 @@ Next, we tested the response of the signal initiation module to different ATRA d
 % This suggested a positive feedback between Raf kinase activity, Raf phosphorylation and ERK action on Raf transcription factors.
 
 The signal initiation model was bistable with respect to ATRA induction (Fig. \ref{fig:model-fitting}C-D).
-Phaseplane analysis predicted two stable steady-states when ATRA was present below a critical threshold, and only a single steady-state above the threshold (Fig. \ref{fig:model-fitting}C).
-In the lower stable state, neither the signalsome nor cRaf-pS621 were present (thus, the differentiation program was deactivated).
-However, at the high stable state, both the signalsome and cRaf-pS621 were present, allowing for sustained activation and differentiation.
+Phaseplane analysis predicted two stable steady-states when ATRA was present below a critical threshold (Fig. \ref{fig:model-fitting}C),
+and only a single steady-state above the threshold (Fig. \ref{fig:model-fitting}D).
+In the lower stable state, neither the signalsome nor cRaf-pS621 were present (thus, the differentiation program was inactive).
+However, at the higher stable state, both the signalsome and cRaf-pS621 were present, allowing for sustained activation and differentiation.
 Interestingly, when ATRA was above a critical threshold, only the activated state was accessible (Fig. \ref{fig:model-fitting}D).
 To test these findings, we first identified the ATRA threshold. We exposed HL-60 cells to different ATRA concentrations for 72 hr (Fig. \ref{fig:model-fitting}E).
 Morphological changes associated with differentiation were visible for ATRA $\geq$ 0.25 $\mu$M, suggesting the critical ATRA
 threshold was near this concentration. Next, we conducted ATRA washout experiments to determine if activated cells remained activated in the absence of ATRA.
-HL-60 cells locked into an activated state remained activated following ATRA withdraw (Fig. \ref{fig:model-predictions}).
+HL-60 cells locked into an activated state remained activated following ATRA withdraw (Fig. \ref{fig:model-predictions}C).
 This sustained activation resulted from reinforcing feedback between the signalsome and the MAPK pathway.
 Thus, following activation, if we inhibited or removed elements from the signal initiation module we expected the signalsome and MAPK signals to decay.
 We simulated ATRA induced activation in the presence of kinase inhibitors, and without key circuit elements.
@@ -256,7 +270,7 @@ In turn, these transcription factors, in combination with cRaf-pS621, regulated 
 We assembled the connectivity of the signal integration and phenotypic programs driven by Trigger and cRaf-pS621 from literature (Table \ref{tbl:TF-network-connectivity}).
 We estimated the parameters for the signal initiation, and phenotype modules
 from steady-state and dynamic measurements of transcription factor and phenotypic marker expression following the addition of ATRA \cite{Jensen:2013aa,Jensen:2014aa,Jensen:2015ab,Jensen:2015aa}.
-However, the bulk of the model parameters were taken from directly from literature \cite{Milo:2010aa} and were not estimated in this study (see materials and methods).
+However, the bulk of the model parameters were taken from literature \cite{Milo:2010aa} and were not estimated in this study (see materials and methods).
 The model simulations captured the time dependent expression of CD38 and CD11b following the addition ATRA (Fig. \ref{fig:model-grn-simulations}A),
 and the steady-state for signal integration and phenotypic markers (Fig. \ref{fig:model-grn-simulations}B).
 Lastly, we used the \textit{predicted} values of the p21 and E2F protein abundance to estimate a blackbox model of ATRA-induced G0 arrest (Fig. \ref{fig:model-cell-cycle-simulations}).
@@ -280,7 +294,7 @@ Next, we explored which nodes and interactions between nodes in the signal integ
 % Taken together, the immunoprecipitation and GW5074 results implicated Vav1 association to be correlated with cRaf activation following ATRA-treatment.
 
 The Gfi-1 and PPAR$\gamma$ proteins were important regulators of ATRA-induced signal integration and phenotypic change (Fig. \ref{fig:model-response-ko}).
-We conducted pairwise gene knockout simulations in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaF-S621 signals.
+We conducted pairwise gene knockout simulations in the signal integration and phenotype modules to estimate which nodes controlled the processing of the Trigger and cRaf-S621 signals.
 The difference between the system state with and without the gene knockouts (encoded as a normalized state displacement matrix) was decomposed using Singular Value Decomposition (SVD).
 A panel of ten parameter sets was sampled, and the average normalized displacement matrix was decomposed.
 The first six modes (approximately 36\% of the total) described $>$95\% of the gene knockout variance,
@@ -295,7 +309,7 @@ Thus, the expression of these species was robust to disturbance in the connectiv
 To better understand the combined influence of the PPAR$\gamma$ and Gfi-1 deletions, we computed the fold change in the protein levels in the
 single (Gfi-1$^{-/-}$ or PPAR$\gamma$$^{-/-}$) and double (Gfi-1$^{-/-}$ and PPAR$\gamma$$^{-/-}$) mutants for the best fit parameter set (Fig. \ref{fig:model-response-ko-simulations}).
 Deletion of Gfi-1 led to a 2-4 fold increase in EGR-1, CD11b and C/EBP$\alpha$ expression, and a $>$8 fold increase in PU.1 abundance (Fig. \ref{fig:model-response-ko-simulations},blue).
-On the other hand, deletion of PPAR$\gamma$ led to $>$8 fold downregulation of CD38, p21, IRF1 and OCT1 (Fig. \ref{fig:model-response-ko-simulations},red).
+On the other hand, deletion of PPAR$\gamma$ led to $>$8 fold downregulation of CD38, p21, IRF1 and Oct1 (Fig. \ref{fig:model-response-ko-simulations},red).
 Both knockouts slightly increased E2F expression, but neither influenced the expression of p47Phox.
 The double mutant was qualitatively similar to the combined behavior of the two single mutant cases.
 Taken together, Gfi-1 and PPAR$\gamma$ controlled the cell-cycle arrest and receptor signaling axes, with PPAR$\gamma$ regulating CD38, IRF1 and p21 expression
@@ -315,11 +329,11 @@ We did not consider the most likely binding partner,
 the small GTPase RAS, as previous studies have ruled it out in MAPK activation in HL-60 cells \cite{Wang2008,Katagiri1994}.
 Total Raf was used as a bait protein for the immunoprecipitation studies.
 Interrogation of the Raf interactome suggested Vav1 was involved with ATRA-induced initiation of MAPK activity (Fig. \ref{fig:ip-data}).
-Western blot analysis using total Raf and pS621 Raf specific antibodies confirmed the
+Western blot analysis using total Raf and Raf-pS621 specific antibodies confirmed the
 presence of the bait protein, total and phosphorylated forms, in the immunoprecipitate (Fig. \ref{fig:ip-data}A).
 Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 precipitated with Raf, suggesting a direct physical interaction was possible.
 However, only the associations between Raf and Vav1, and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
-Furthermore, the Vav1 and Src associations were correlated with pS621 Raf abundance in the precipitate.
+Furthermore, the Vav1 and Src associations were correlated with Raf-pS621 abundance in the precipitate.
 Others proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
 The remaining 14 proteins were expressed in whole cell lysate (Fig. \ref{fig:ip-data}B),
 but were not detectable in the precipitate of Raf IP.
@@ -375,7 +389,7 @@ with MAPK activation (in which case the p47Phox marker might not accurately refl
 
 \section*{Discussion}
 In this study, we presented an effective model of ATRA-inducible differentiation of HL-60 cells.
-The model consisted of three modules: a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (Trigger) signals;
+The model consisted of three modules: a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (Trigger) signals;
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
 The model described the transcription and translation of genes in each module, and signaling events in each module in a growing population of HL-60 cells.
@@ -417,7 +431,7 @@ The relative level of PU.1 and C/EBP$\alpha$ is thought to control macrophage ve
 Simulations suggested that combined Gfi-1 + PPAR$\gamma$ deletion crippled the ability of HL-60 cells to undergo neutrophilic differentiation following ATRA exposure.
 p21 expression decreased significantly, suggesting Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ mutants were less likely to G0-arrest following ATRA exposure.
 The expression of other neutrophilic markers, such as CD38, also decreased in Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ cells.
-On the other hand, the expression of reactive oxygen metabolic markers, or other important transcription factors such as OCT4 did not change.
+On the other hand, the expression of reactive oxygen metabolic markers, or other important transcription factors such as Oct4 did not change.
 For example, model analysis suggested that the C/EBP$\alpha$ dependent interaction of PU.1 with the \textit{NCF1} gene, which encodes the p47Phox protein, was the most sensitive PU.1 connection; deletion of this connection removed the ability of the system to express p47Phox.
 p47Phox, also known as neutrophil cytosol factor 1, is one of four cytosolic subunits of the multi-protein NADPH oxidase complex found in neutrophils \cite{El-Benna:2009aa}. This enzyme is responsible for reactive oxygen species (ROS) production, a key component of the anti-microbial function of neutrophils.
 While p47Phox expression required C/EBP$\alpha$ and PU.1, neither Gfi-1 nor PPAR$\gamma$ deletion increased expression.
@@ -499,7 +513,7 @@ Such molecular mechanisms could underly aspects of cellular memory associated to
 
 \subsubsection*{Effective gene expression model equations.}
 We decomposed the ATRA-induced differentiation program into three modules;
-a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RXR/RAR (activated Trigger) signals;
+a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (activated Trigger) signals;
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
 a phenotype module which encoded the expression of functional differentiation markers from the ATRA-inducible transcription factors.
 The output of the signal initiation module was the input to the gene expression model.
@@ -549,7 +563,7 @@ and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. A
 we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
 
 \subsubsection*{Signaling model equations.}
-The signal initiation, and integration modules required the abundance of cRaf-pS621 and ATRA-RXR/RAR (activated Trigger) as inputs.
+The signal initiation, and integration modules required the abundance of cRaf-pS621 and ATRA-RAR/RXR (activated Trigger) as inputs.
 However, our base model described only the abundance of inactive proteins e.g., cRaf or RXR/RAR but not the activated forms.
 To address this issue, we estimated pseudo steady state approximations for the abundance of cRaf-pS621 and activated Trigger.
 The abundance of activated trigger ($x_{a,1}$) was estimated directly from the RXR/RAR abundance ($x_{u,1}$):
@@ -766,7 +780,7 @@ The authors declare that they have no competing interests.
 J.V and A.Y directed the study. R.T, H.J, R.B and J.C conducted the cell culture measurements.
 J.V, R.B, W.D, K.R and A.S developed the reduced order HL-60 models and the parameter ensemble.
 W.D and J.V analyzed the model ensemble, and generated figures for the manuscript.
-The manuscript was prepared and edited for publication by W.D, A.Y and J.V.
+The manuscript was prepared and edited for publication by W.D, R.B, A.Y and J.V.
 
 \section*{Acknowledgements}
 We gratefully acknowledge the suggestions from the anonymous reviewers to improve this manuscript.
