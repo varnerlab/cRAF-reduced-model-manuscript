@@ -402,7 +402,7 @@ Despite its simplicity, the effective model captured key features of the ATRA in
 sustained MAPK activation, and bistability with respect to ATRA exposure.
 The model also described the expression of upstream transcription factors which regulated the expression of differentiation markers.
 Lastly, analysis of the response of the model to perturbations identified Gfi-1 and PPAR$\gamma$ as master regulators of ATRA-induced differentiation.
-We also reported an ATRA-inducible component of the signalsome, Vav1.
+We also found evidence of a prominent regulatory role for a signaling molecule ATRA-inducible component of the signalsome, Vav1.
 Vav1 is a guanine nucleotide exchange factor for Rho family GTPases that activate pathways leading to actin cytoskeletal rearrangements and transcriptional alterations \cite{Hornstein:2004aa}.
 The Vav1/Raf association correlated with Raf activity, was ATRA-inducible and decreased after treatment with the Raf inhibitor GW5074.
 
@@ -515,6 +515,7 @@ Such molecular mechanisms could underly aspects of cellular memory associated to
 \section*{Materials and Methods}
 
 \subsubsection*{Effective gene expression model equations.}
+The ATRA differentiation model was encoded as a system of differential algebraic equations (DAEs).
 We decomposed the ATRA-induced differentiation program into three modules;
 a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (activated Trigger) signals;
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
@@ -814,7 +815,7 @@ represent the official views of the National Cancer Institute or the National In
 \clearpage
 
 % References -
-\bibliography{Paper_v1}
+\bibliography{Paper_v2}
 
 \clearpage
 
@@ -1056,6 +1057,31 @@ which was enhanced by the addition of GW5074.
 F: Inducible reactive oxygen species (ROS) as determined by DCF flow cytometry. The functional differentiation response of ATRA treated cells
 was mitigated by GW5074.}\label{fig:ip-data}
 \end{figure}
+
+\begin{figure}[!t]
+\includegraphics[width=0.9\textwidth]{./figs/Fig-9-ATRA-Schematic.pdf}
+\caption{Schematic of the hypothetical principal pathways in the ATRA-induced
+signaling that results in cell differentiation in the HL-60 myeloid leukemia model
+\cite{wallace2016rrd,congleton2012src,congleton2014phosphorylation,Shen:2009aa,Bunaciu:2015aa,shen2008c}.
+It is based on modules and feedback loops. There are three main arms (shown top to bottom):
+1. Direct ATRA targeting of RAREs in genes such as CD38 or BLR1;
+2. Formation of a signalsome that has a
+regulatory module that includes Vav (a GEF), CBL and SLP-76 (adaptors), and Lyn (a SFK) that
+regulates a Raf/Mek/Erk axis that incorporates Erk to Raf feedback, where the regulators are
+modulated by AhR and CD38 receptors; and 3. Direct ATRA targeted up regulation of CDKI to
+control RB hypophosphorylation. The Raf/Mek/Erk axis is embedded in the signalsome and
+subject to modulation by the regulators. The output of the signalsome is discharge of the Raf
+from the cytosol to the nucleus where it binds (hyper)phospho-RB and other targets, including
+NFATc3, which enables activation of the RA bound RAR/RXR poised on the BLR1 promoter,
+and also GSK3, phosphorylation of which relieves its inhibitory effect on RAR$\alpha$. CDKI directed
+hypophosphorylation of RB releases Raf sequestered by RB to go to NFATc3, GSK3, and other
+targets. A significant consequence of the nuclear RAF is ergo ultimately to hyperactivate
+transcriptional activation by RAR$\alpha$ to drive differentiation.
+It might be noted that this general proposed model provides a mechanistic rationalization for
+why cell cycle arrest is historically oft times perceived as a feature predisposing phenotypic
+maturation.}
+\end{figure}
+
 
 \clearpage
 

@@ -781,4 +781,39 @@ O'Leary NA, Wright MW, Brister JR, Ciufo S, Haddad D, et~al. (2016) Reference
 \newblock Nucleic Acids Res 44: D733-45.
 \bibAnnoteFile{OLeary:2016aa}
 
+\bibitem{wallace2016rrd}
+Wallace AS, Supnick HT, Bunaciu RP, Yen A (2016) Rrd-251 enhances all-trans
+  retinoic acid (ra)-induced differentiation of hl-60 myeloblastic leukemia
+  cells.
+\newblock Oncotarget 7: 46401.
+\bibAnnoteFile{wallace2016rrd}
+
+\bibitem{congleton2012src}
+Congleton J, MacDonald R, Yen A (2012) Src inhibitors, pp2 and dasatinib,
+  increase retinoic acid-induced association of lyn and c-raf (s259) and
+  enhance mapk-dependent differentiation of myeloid leukemia cells.
+\newblock Leukemia 26: 1180--1188.
+\bibAnnoteFile{congleton2012src}
+
+\bibitem{congleton2014phosphorylation}
+Congleton J, Shen M, MacDonald R, Malavasi F, Yen A (2014) Phosphorylation of
+  c-cbl and p85 pi3k driven by all-trans retinoic acid and cd38 depends on lyn
+  kinase activity.
+\newblock Cellular signalling 26: 1589--1597.
+\bibAnnoteFile{congleton2014phosphorylation}
+
+\bibitem{Bunaciu:2015aa}
+Bunaciu RP, Jensen HA, MacDonald RJ, LaTocha DH, Varner JD, et~al. (2015)
+  6-formylindolo(3,2-b)carbazole (ficz) modulates the signalsome responsible
+  for ra-induced differentiation of hl-60 myeloblastic leukemia cells.
+\newblock PLoS One 10: e0135668.
+\bibAnnoteFile{Bunaciu:2015aa}
+
+\bibitem{shen2008c}
+Shen M, Yen A (2008) c-cbl interacts with cd38 and promotes retinoic
+  acid--induced differentiation and g0 arrest of human myeloblastic leukemia
+  cells.
+\newblock Cancer research 68: 8761--8769.
+\bibAnnoteFile{shen2008c}
+
 \end{thebibliography}
