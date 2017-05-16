@@ -104,7 +104,7 @@
 \vspace{0.1in}
 {\par \centering \textbf{Running Title:}~Effective modeling of HL-60 differentiation}
 \vspace{0.1in}
-{\par \centering \textbf{To be submitted:}~\emph{?}}
+{\par \centering \textbf{To be submitted:}~\emph{Oncotarget}}
 \vspace{0.5in}
 {\par \centering $^{*}$Corresponding author:}
 {\par \centering Jeffrey D. Varner,}
@@ -133,8 +133,8 @@ We identified an ensemble of effective model parameters using measurements taken
 Using these parameters, model analysis predicted that MAPK activation was bistable as a function of ATRA exposure.
 Conformational experiments supported ATRA-induced bistability.
 Additionally, the model captured intermediate and phenotypic gene expression data.
-Knockout analysis of the model suggested Gfi-1 and PPAR$\gamma$ were critical to the ATRA-induced differentiation program.
-These findings, combined with other literature evidence, suggested that reinforcing feedback is central to a diversity of cell fate programs.
+Knockout analysis suggested Gfi-1 and PPAR$\gamma$ were critical to the ATRA-induced differentiation program.
+These findings, combined with other literature evidence, suggested that reinforcing feedback is central to hyperactive signaling in a diversity of cell fate programs.
 
 \clearpage
 
@@ -142,10 +142,11 @@ These findings, combined with other literature evidence, suggested that reinforc
 
 \linenumbers
 
+%Understanding differentiation programs is an important therapeutic challenge.
+
 \section*{Introduction}
-Understanding the architecture of differentiation programs is an important therapeutic challenge.
 Differentiation induction chemotherapy (DIC), using agents such as the vitamin A derivative all-trans retinoic acid (ATRA),
-is a promising approach for the treatment of many cancers \cite{Bushue:2010aa,Tang:2011aa,Cheung:2012aa}.
+is a promising approach for the treatment of many cancers \cite{Bushue:2010aa,Tang:2011aa,Cheung:2012aa,Uray:2016aa,Li:2017aa}.
 For example, ATRA treatment induces remission in 80–90\% of promyelocytic leukemia (APL) PML-RAR$\alpha$-positive patients \cite{Nilsson:1984aa},
 thereby transforming a fatal diagnosis into a manageable disease \cite{Coombs:2015aa}.
 However, remission is sometimes not durable and relapsed cases exhibit emergent ATRA resistance \cite{Warrell:1993aa,Freemantle:2003aa}.
@@ -158,12 +159,12 @@ while 1,25-dihydroxy vitamin D3 (D3) induces arrest and monocytic differentiatio
 Commitment to cell cycle arrest and differentiation requires approximately 48 hr of treatment,
 during which HL-60 cells undergo two division cycles.
 
-Sustained mitogen-activated protein kinase (MAPK) activation is a defining feature of ATRA-induced HL-60 differentiation.
+Sustained mitogen-activated protein kinase (MAPK) pathway activation is a defining feature of ATRA-induced HL-60 differentiation.
 ATRA drives sustained activation of the Raf/MEK/ERK pathway, leading to arrest and differentiation \cite{Yen1998}.
-Betraying a feedback loop, MEK inhibition results in the loss of ERK and Raf phosphorylation, and the failure to arrest and differentiate in response to ATRA \cite{Hong2001}.
+Betraying a feedback loop, MEK inhibition results in the loss of ERK as well as Raf phosphorylation and the failure to arrest and differentiate in response to ATRA \cite{Hong2001}.
 Retinoic acid (and its metabolites) are ligands for the hormone activated nuclear transcription factors retinoic acid receptor (RAR) and retinoid X receptor (RXR) \cite{Mangelsdorf1990}.
-RAR/RXR activation is necessary for ATRA-induced Raf phosphorylation  \cite{Hong2001},
-and the formation of an ATRA-inducible signalsome complex at the membrane, which drives MAPK activation.
+RAR/RXR activation is necessary for ATRA-induced Raf phosphorylation \cite{Hong2001} in concert with
+the formation of an ATRA-induced signalsome complex at the membrane, which drives MAPK activation.
 While the makeup of the signalsome complex is not yet known,
 we do know that it is composed of Src family kinases Fgr and Lyn, PI3K, c-Cbl, Slp76, and KSR, plus transcription factors
 AhR and IRF1 \cite{Congleton:2012fk,Shen:2011aa,Shen:2009aa,Yen2006,Marchisio:1998aa}.
@@ -173,7 +174,7 @@ is necessary for MAPK activation and differentiation \cite{WANG2004}, and drives
 Studies of the BLR1 promoter identified a non-canonical RARE site consisting of a 17 bp GT box approximately
 1 kb upstream of the transcriptional start that conferred ATRA responsiveness \cite{WANG2004}.
 Members of the BLR1 transcriptional activator complex, e.g. NFATc3 and CREB,
-are phosphorylated by ERK, JNK or p38 MAPK family members suggesting positive feedback between the signalsome and MAPK activation \cite{Yang2002}.
+are phosphorylated by ERK, JNK or p38 MAPK family members suggesting positive feedback between the signalsome and MAPK activation \cite{Yang2002,Li:2017ab}.
 BLR1 overexpression enhanced Raf phosphorylation and accelerated terminal differentiation, while Raf inhibition reduced BLR1 expression and ATRA-induced terminal differentiation \cite{Wang2008}.
 In particular, Raf phosphorylation of the NFATc3 transcription factors at the BLR1 promoter enables transcriptional activation at the RARE by ATRA bound to RAR/RXR \cite{Geil:2014aa}.
 BLR1 knock-out cells failed to activate Raf or differentiate in the presence of ATRA \cite{Wang2008}.
@@ -198,7 +199,7 @@ In addition, the expression of intermediate and phenotypic differentiation marke
 Lastly, we showed through immunoprecipitation and inhibitor studies,
 that the guanine nucleotide exchange factor Vav1 is potentially a new ATRA-inducible member of the signalsome complex functioning as a regulator that contributes to signal amplification in the signalsome.
 Taken together, these findings when combined with other literature evidence,
-suggested that positive feedback architectures are central to differentiation programs generally, and necessary for ATRA-induced differentiation.
+suggested that reinforcing feedback was central to differentiation programs generally, and necessary for ATRA-induced differentiation.
 The model answers a biologically important question that is not easily experimentally attacked, namely given the complexity of the signaling machine and the pathways it embodies, is there a critical small suite of molecules that are the action elements seminal to eliciting ATRA-induced cell differentiation and G0 arrest.
 
 % These findings, combined with other literature evidence, suggests that positive feedback architectures are central to
@@ -323,23 +324,25 @@ Toward this question, we explored the composition and regulation of the signalso
 % Taken together, these results suggested that the PU.1 and AP1 proteins acted as important self-reinforcing regulators for both the signal integration and phenotype modules.
 % The analysis suggested that the PU.1 signaling axis promoted the formation of the neutrophil NADPH oxidase (through p47Phox), while AP1 was responsible for cell cycle arrest (through p21).
 
-The full composition of the signalsome, and the kinase therein ultimately responsible for mediating ATRA-induced Raf activation is currently unknown.
-To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify physical interactions between Raf and 19 putative interaction partners.
+The full composition of the signalsome, and the kinase therein ultimately responsible for mediating ATRA-induced Raf activation is still not known.
+To explore this question, we conducted immunoprecipitation and subsequent Western blotting to identify interactions between Raf and 19 putative interaction partners.
 A panel of 19 possible Raf interaction partners (kinases, GTPases, scaffolding proteins etc)
 was constructed based upon known signaling pathways.
 We did not consider the most likely binding partner,
 the small GTPase RAS, as previous studies have ruled it out in MAPK activation in HL-60 cells \cite{Wang2008,Katagiri1994}.
 Total Raf was used as a bait protein for the immunoprecipitation studies.
-Interrogation of the Raf interactome suggested Vav1 was involved with ATRA-induced initiation of MAPK activity (Fig. \ref{fig:ip-data}).
+Interrogation of the Raf interactome thus suggested Vav1 was involved with ATRA-induced initiation of MAPK activity (Fig. \ref{fig:ip-data}).
+
 Western blot analysis using total Raf and Raf-pS621 specific antibodies confirmed the
 presence of the bait protein, total and phosphorylated forms, in the immunoprecipitate (Fig. \ref{fig:ip-data}A).
 Of the 19 proteins sampled, Vav1, Src, CK2, Akt, and 14-3-3 co-precipitated with Raf, suggesting their co-existence in a complex was possible.
 However, only the associations between Raf and Vav1, and Raf and Src were ATRA-inducible (Fig. \ref{fig:ip-data}).
+The interaction between Vav1 and Raf was one of the most prominent interactions in the panel, and it was crippled by inhibiting Raf.
 Furthermore, the Vav1 and Src associations were correlated with Raf-pS621 abundance in the precipitate.
 Other proteins e.g., CK2, Akt and 14-3-3, generally bound Raf regardless of phosphorylation status or ATRA treatment.
 The remaining 14 proteins were expressed in whole cell lysate (Fig. \ref{fig:ip-data}B),
 but were not detectable in the immuno-precipitate with Raf IP; consistent with the potential importance of the Raf-Vav interaction for signaling, it paralleled Raf phosphorylation at S621, a putative telltale of the activated kinase.
-Treatment with the Raf kinase inhibitor GW5074 following ATRA exposure reduced the association of both Vav1 with Raf and Src with Raf (Fig. \ref{fig:ip-data}),
+Furthermore, treatment with the Raf kinase inhibitor GW5074 following ATRA exposure reduced the association of both Vav1 with Raf and Src with Raf (Fig. \ref{fig:ip-data}),
 although the signal intensity for Src was notably weak.
 However, GW5074 did not influence the association of CK2 or 14-3-3 with Raf, further demonstrating their independence from Raf phosphorylation.
 Interestingly, the Raf-Akt interaction qualitatively increased following treatment with GW5074;
@@ -443,7 +446,7 @@ Taken together, Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ cells were predicted to exh
 some aspects of the ATRA response, but not other critical features such as cell cycle arrest.
 Hock et al showed that Gfi-1$^{-/-}$ mice lacked normal neutrophils, and were highly sensitive to bacterial infection \cite{Hock:2003aa}.
 Thus, the model analysis was consistent with this study.
-However, other predictions concerning the behavior of the Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ mutants have yet to be verified experimentally.
+However, other predictions concerning the behavior of the Gfi-1$^{-/-}$ + PPAR$\gamma$$^{-/-}$ mutants remain to be tested.
 
 Immunoprecipitation studies identified a limited number of ATRA-dependent and -independent Raf interaction partners.
 While we were unable to detect the association of Raf with common kinases and GTPases such as PKC, PKA, p38, Rac and Rho,
@@ -482,16 +485,17 @@ e.g., Sp1 and/or STAT1 \cite{Kim2009,Milanini-Mongiat2002,Zhang2004,Li2006}.
 We tested this working hypothesis using mathematical modeling.
 The model recapitulated both ATRA time-course data as well as the GW5074 inhibitor effects.
 This suggested the proposed Raf-Vav1 architecture was at least consistent with the experimental studies.
-Further, analysis of the Raf-Vav1 model identified bistability in ppERK levels.
-Thus, two possible MAPK activation branches were possible for experimentally testable ATRA values. The analysis also suggested the ATRA-induced Raf-Vav1 architecture could be locked into a
-sustained signaling mode (high ppERK) even in the absence of a ATRA signal.
+Further, analysis of the Raf-Vav1 model identified bistability in phosphorylated ERK levels.
+Thus, two possible MAPK activation branches were possible for experimentally testable ATRA values.
+The analysis also suggested the ATRA-induced Raf-Vav1 architecture could be locked into a
+sustained signaling mode (high phosphorylated ERK) even in the absence of a ATRA signal.
 This locked-in property could give rise to an ATRA-induction memory.
 We validated the treatment memory property predicted by the Raf-Vav1 circuit experimentally using ATRA-washout experiments.
 ERK phosphorylation levels remained high for more then 96 hr after ATRA was removed.
 Previous studies demonstrated that HL-60 cells possessed an inheritable memory of ATRA stimulus \cite{YEN1984}.
 Although the active state was self-sustaining, the inactive state demonstrated considerable robustness to perturbation.
-For example, we found that 50x overexpression of Raf was required to reliably lock MAPK into the activated state, while small perturbations had almost no effect on ppERK levels over the entire ensemble.
-CD38 expression correlated with the ppERK, suggesting its involvement in the signaling complex.
+For example, we found that 50x overexpression of Raf was required to reliably lock MAPK into the activated state, while small perturbations had almost no effect on phosphorylated ERK levels over the entire ensemble.
+CD38 expression correlated with the phosphorylated ERK, suggesting its involvement in the signaling complex.
 Our computational and experimental results showed that positive feedback,
 through ERK-dependent Raf expression, could sustain MAPK signaling through many division cycles.
 Such molecular mechanisms could underly aspects of cellular memory associated to consecutive ATRA treatments.
@@ -515,7 +519,9 @@ Such molecular mechanisms could underly aspects of cellular memory associated to
 \section*{Materials and Methods}
 
 \subsubsection*{Effective gene expression model equations.}
-The ATRA differentiation model was encoded as a system of differential algebraic equations (DAEs).
+The ATRA differentiation model was encoded as a system of differential algebraic equations (DAEs) which described signaling and gene expression processes.
+We modeled transcription and translation as Ordinary Differential Equations (ODEs), while signaling processes were assumed to quickly equilibrate and were
+treated as a pseudo steady state system of algebraic equations.  
 We decomposed the ATRA-induced differentiation program into three modules;
 a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (activated Trigger) signals;
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
@@ -602,6 +608,9 @@ The kinetic rate of cRaf-pS621 generation $\bar{r}_{+,cRaf}$ was modeled as:
 \begin{equation}
 	\bar{r}_{+,cRaf} = k_{+,cRaf}x_{s}\left(\frac{x_{cRaf}}{K_{+,cRaf}+x_{cRaf}}\right)
 \end{equation}where $x_{s}$ denotes the signalsome abundance, and $K_{+,cRaf}$ denotes a saturation constant governing cRaf-pS621 formation.
+In thus study, signalsome abundance was approximated by the abundance of the BLR1 protein;
+BLR1 expression is directly related to Raf nuclear translocation which in turn is related to activated signalsome.
+Thus, BLR1 is an indirect measure of the signalsome.
 The formation of cRaf-pS621 was regulated by only a single factor, the abundance of MAPK inhibitor, thus $v_{+,cRaf}$ took the form:
 \begin{equation}
 	v_{+,cRaf} = \left(1-\frac{\mathrm{I}}{K_{D}+\mathrm{I}}\right)
@@ -649,13 +658,13 @@ We formulated an effective N-order polynomial model of the fraction of cells und
 \begin{equation}\label{eq:a-eqn}
 	\hat{\mathcal{A}}\left(t\right)\simeq a_{0}+\sum_{i=1}^{N-1}a_{i}\phi_{i}\left(\mathbf{p}(t),t\right)
 \end{equation}where $a_{i}$ were unknown parameters, and $\phi_{i}\left(\mathbf{p}(t),t\right)$ denotes a basis function.
-The basis functions were dependent upon the system state; in this study, we assumed $N = 4$ and basis functions of the form:
+The basis functions were dependent upon the system state; in this study, we used N = 4 and basis functions of the form:
 \begin{equation}
 	\phi_{i}\left(\mathbf{p}(t),t\right) = \left(\frac{t}{T}+\frac{p21}{E2F}\Bigr|_{t}\right)^{(i-1)}
 \end{equation}
 The parameters $a_{0},\hdots,a_{3}$ were estimated directly from cell-cycle measurements (biological replicates) using least-squares.
-The form of the basis function assumed p21 was directly proportional, and E2F inversely proportional to G0-arrest.
-However, this was only one form for the basis functions, many others are possible.
+The form of the basis function assumed p21 was directly proportional, and E2F inversely proportional, to G0-arrest.
+However, this was one of many possible forms for the basis functions.
 
 % The abundances of the $p21$ and $E2F$ proteins were taken from the gene expression model solution. The least squares solution for the polynomial
 % coefficients was given by:
@@ -759,7 +768,7 @@ HL-60 cells were treated with 2$\mu$M GW5074 with or without ATRA (1$\mu$M) at 0
 This GW5074 dosage had a negligible effect on the cell cycle distribution, compared to ATRA treatment alone.
 
 \subsubsection*{Immunoprecipitation and western blotting}
-For immunoprecipitation experiments, approximately $1.2 \times 10^7$ cells were lysed as previously described.
+For immunoprecipitation experiments, cells were lysed as previously described.
 300$\mu$g protein (in 300 $\mu$L total volume) per sample was pre-cleared with Protein A/G beads.
 The beads were pelleted and supernatant was incubated with Raf antibody (3$\mu$L/sample) and beads overnight.
 All incubations included protease and phosphatase inhibitors in M-PER used for lysis with constant rotation at 4$^{o}$C.
@@ -888,7 +897,7 @@ Egr-1 &  + & PPAR$\gamma$ & \cite{Fu2002}\\
 AhR &  + & AP-1 & \cite{Suh2002}\\
 &  + & IRF-1 & \cite{Shen2011}\\
 & - & Oct4 & \cite{Bunaciu2011}\\
-& - & PU.1 & \\
+& - & PU.1 & \cite{Bock:2017aa} \\
 
 \hline
 \end{supertabular}
@@ -924,8 +933,8 @@ AhR &  + & AP-1 & \cite{Suh2002}\\
 	& & & & \\
 	$e_{T}$ & elongation rate RNA polymerase & 50-100 & nt/s & \cite{Sehgal:1976aa,Darzacq:2007aa,Kos:2010aa,Darnell:2013aa} \\
 	$e_{X}$ & elongation rate Ribosome & 5 & aa/s & \cite{Bostrom:1986aa} \\
-	$L_{T,o}$ & characteristic gene length & 15,000 & nt & \cite{Meyers2004} \\
-	$L_{X,o}$ & characteristic transcript length & 5,000 & nt & derived \\
+	$L_{T,o}$ & characteristic gene length & 44,192 & nt & \cite{Meyers2004} \\
+	$L_{X,o}$ & characteristic transcript length & 1,374 & nt & derived \\
 	$k_{T}$ & characteristic transcription rate & 1.44 & hr$^{-1}$ & derived \\
 	$k_{X}$ & characteristic translation rate & 3.60 & hr$^{-1}$ & derived \\
 	& & & & \\
@@ -945,8 +954,8 @@ AhR &  + & AP-1 & \cite{Suh2002}\\
 % \renewcommand{\arraystretch}{0.8}
 \tablefirsthead{
 \hline
-\rowcolor[gray]{0.9} Gene Name & Gene (bp) & RNA (bp) & Protein (AA) & Gene ID & Protein ID \\}
-\topcaption{Sequence lengths from NCBI RefSeq database was used in the signal integration and phenotype modules \cite{OLeary:2016aa}.
+\rowcolor[gray]{0.9} Gene Name & Gene (bp) & RNA (bp) & Protein (aa) & Gene ID & Protein ID \\}
+\topcaption{Sequence lengths from NCBI RefSeq database were used in the signal integration and phenotype modules \cite{OLeary:2016aa}.
 The RNA sequence length used represents the total distance of transcription, and assume to be equal to the gene length. }\label{tbl:TF-sequences}
 \begin{scriptsize}
 \begin{supertabular}{r|l|l|l|l|l}

@@ -29,6 +29,19 @@ Cheung FSG, Lovicu FJ, Reichardt JKV (2012) Current progress in using vitamin d
 \newblock Expert Rev Anticancer Ther 12: 811-37.
 \bibAnnoteFile{Cheung:2012aa}
 
+\bibitem{Uray:2016aa}
+Uray IP, Dmitrovsky E, Brown PH (2016) Retinoids and rexinoids in cancer
+  prevention: from laboratory to clinic.
+\newblock Semin Oncol 43: 49-64.
+\bibAnnoteFile{Uray:2016aa}
+
+\bibitem{Li:2017aa}
+Li C, Imai M, Hasegawa S, Yamasaki M, Takahashi N (2017) Growth inhibition of
+  refractory human gallbladder cancer cells by retinol, and its mechanism of
+  action.
+\newblock Biol Pharm Bull 40: 495-503.
+\bibAnnoteFile{Li:2017aa}
+
 \bibitem{Nilsson:1984aa}
 Nilsson B (1984) Probable in vivo induction of differentiation by retinoic acid
   of promyelocytes in acute promyelocytic leukaemia.
@@ -146,6 +159,12 @@ Yang T, Xiong Q, Enslen H, Davis R, Chow CW (2002) {Phosphorylation of NFATc4
   by p38 mitogen-activated protein kinases}.
 \newblock Mol Cell Biol 22: 3892--3904.
 \bibAnnoteFile{Yang2002}
+
+\bibitem{Li:2017ab}
+Li X, Guo C, Li Y, Li L, Wang Y, et~al. (2017) Ketamine administered pregnant
+  rats impair learning and memory in offspring via the creb pathway.
+\newblock Oncotarget .
+\bibAnnoteFile{Li:2017ab}
 
 \bibitem{Wang2008}
 Wang J, Yen A (2008) {A MAPK-positive Feedback Mechanism for BLR1 Signaling
@@ -697,6 +716,12 @@ Bunaciu RP, Yen A (2011) Activation of the aryl hydrocarbon receptor ahr
   by restricting expression of the stem cell transcription factor oct4.
 \newblock Cancer Res 71: 2371-80.
 \bibAnnoteFile{Bunaciu2011}
+
+\bibitem{Bock:2017aa}
+Bock KW (2017) 2,3,7,8-tetrachlorodibenzo-p-dioxin (tcdd)-mediated deregulation
+  of myeloid and sebaceous gland stem/progenitor cell homeostasis.
+\newblock Arch Toxicol 91: 2295-2301.
+\bibAnnoteFile{Bock:2017aa}
 
 \bibitem{Jackson:2000aa}
 Jackson DA, Pombo A, Iborra F (2000) The balance sheet for transcription: an
