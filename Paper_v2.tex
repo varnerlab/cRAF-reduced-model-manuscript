@@ -476,7 +476,7 @@ ATRA-induced MAPK activation \cite{Shen:2009aa}.
 The literature suggest a variety of possible receptor-signaling pathways, which involve Vav1, for MAPK activation; moreover,
 given the ATRA-inducible association Vav1 may play a direct role in Raf activation.
 
-We hypothesized that Vav1 is a member of an ATRA-inducible complex which propels sustained MAPK activation, arrest and differentiation.
+We hypothesized that Vav1 is a member of an ATRA-inducible signalsome complex which propels sustained MAPK activation, arrest and differentiation (shown schematically in Fig. \ref{fig:signalsome-schematic}).
 Initially, ATRA-induced Vav1 expression drives increased association between Vav1 and Raf.
 This increased interaction facilitates phosphorylation and activation of Raf by pre-bound Akt and/or CK2 at S621 or perhaps S259.
 Constitutively bound 14-3-3 may also stabilize the S621 phosphorylation, modulate the activity and/or up-regulate autophosphorylation.
@@ -519,9 +519,9 @@ Such molecular mechanisms could underly aspects of cellular memory associated to
 \section*{Materials and Methods}
 
 \subsubsection*{Effective gene expression model equations.}
-The ATRA differentiation model was encoded as a system of differential algebraic equations (DAEs) which described signaling and gene expression processes.
+The ATRA differentiation model was encoded as a system of differential algebraic equations (DAEs) which described both signaling and gene expression processes.
 We modeled transcription and translation as Ordinary Differential Equations (ODEs), while signaling processes were assumed to quickly equilibrate and were
-treated as a pseudo steady state system of algebraic equations.  
+treated as a pseudo steady state system of algebraic equations.
 We decomposed the ATRA-induced differentiation program into three modules;
 a signal initiation module that sensed and transformed the ATRA signal into activated cRaf-pS621 and the ATRA-RAR/RXR (activated Trigger) signals;
 a signal integration module that controlled the expression of upstream transcription factors given cRaf-pS621 and activated Trigger signals; and
@@ -539,14 +539,6 @@ The terms $r_{T,j}$ and $r_{X,j}$ denote the specific rates of transcription, an
 the terms $\theta_{m,j}$ and $\theta_{p,j}$ denote first-order degradation constants for mRNA and protein, respectively.
 The specific transcription rate $r_{T,j}$ was modeled as the product of a kinetic term $\bar{r}_{T,j}$ and a control term $u_{j}$ which described how the
 abundance of transcription factors, or other regulators influenced the expression of gene $j$.
-The kinetic transcription term $\bar{r}_{T,j}$ was modeled as:
-\begin{equation}
-	\bar{r}_{T,j} = V^{max}_{T}\left(\frac{L_{T,o}}{L_{T,j}}\right)\left(\frac{G_{j}}{K_{T}+G_{j}}\right)
-\end{equation}where the maximum gene expression rate $V^{max}_{T}$ was defined as the product of a characteristic transcription rate constant ($k_{T}$)
-and the abundance of RNA polymerase ($R_{1}$), $V^{max}_{T} = k_{T}\left(R_{1}\right)$.
-The $\left(L_{T,o}/L_{T,j}\right)$ term denotes the ratio of transcription read lengths; $L_{T,o}$ represents a characteristic gene length, while $L_{T,j}$ denotes the length of gene $j$.
-Thus, the ratio $\left(L_{T,o}/L_{T,j}\right)$ is a gene specific correction to the characteristic transcription rate $V^{max}_{T}$.
-Lastly, the $\lambda_{j}$ term denotes the constitutive rate of expression of gene $j$.
 
 The gene expression control term $0\leq u_{j}\leq 1$ depended upon the combination of factors which influenced the expression of gene $j$.
 If the expression of gene $j$ was influenced by $1,\dots,m$ factors, we modeled this relationship as
@@ -557,13 +549,22 @@ In this study, the integration rule governing gene expression was the weighted f
 \begin{equation}
 	{u}_{j} = \frac{W_{R_{1},j}+\displaystyle\sum_{n}W_{nj}f_{nj}}{1+W_{R_{1},j}+\displaystyle\sum_{d}W_{dj}f_{dj}}
 \end{equation}
-The numerator, the weighted sum (with weights $W_{nj}$) of promoter configurations leading to gene expression, was normalized by all possible promoter configurations.
-The likelihood of each configuration was quantified by the transfer function $f_{nj}$ (which we modeled using Hill like functions), while
+The numerator, the weighted sum (with weights $W_{nj}$) of promoter configurations leading to gene expression,
+was normalized by all possible promoter configurations (denominator).
+The likelihood of each configuration was quantified by the transfer function $f_{nj}$ (which we modeled using Hill functions), while
 the lead term in the numerator $W_{R_{1},j}$ denotes the weight of constitutive expression for gene $j$.
-Given this formulation, the rate of constitutive expression was then given by:
+Given the formulation of the control law, the $\lambda_{j}$ term (which denotes the constitutive rate of expression of gene $j$) was given by:
 \begin{equation}
 	\lambda_{j} = \bar{r}_{T,j}\left(\frac{W_{R_{1},j}}{1+W_{R_{1},j}}\right)
 \end{equation}
+
+The kinetic transcription term $\bar{r}_{T,j}$ was modeled as:
+\begin{equation}
+	\bar{r}_{T,j} = V^{max}_{T}\left(\frac{L_{T,o}}{L_{T,j}}\right)\left(\frac{G_{j}}{K_{T}+G_{j}}\right)
+\end{equation}where the maximum gene expression rate $V^{max}_{T}$ was defined as the product of a characteristic transcription rate constant ($k_{T}$)
+and the abundance of RNA polymerase ($R_{1}$), $V^{max}_{T} = k_{T}\left(R_{1}\right)$.
+The $\left(L_{T,o}/L_{T,j}\right)$ term denotes the ratio of transcription read lengths; $L_{T,o}$ represents a characteristic gene length, while $L_{T,j}$ denotes the length of gene $j$.
+Thus, the ratio $\left(L_{T,o}/L_{T,j}\right)$ is a gene specific correction to the characteristic transcription rate $V^{max}_{T}$.
 If a gene expression process had no modifying factors, $u_{j}=1$.
 Lastly, the specific translation rate was modeled as:
 \begin{equation}
@@ -573,6 +574,7 @@ where $V^{max}_{X}$ denotes a characteristic maximum translation rate estimated 
 The characteristic maximum translation rate was defined as the product of a characteristic translation rate constant ($k_{X}$)
 and the Ribosome abundance ($R_{2}$), $V^{max}_{X} = k_{X}\left(R_{2}\right)$. As was the case for transcription,
 we corrected the characteristic translation rate by the ratio of the length of a characteristic transcription normalized by the length of transcript $j$.
+The sequence lengths used in this study are given in Table \ref{tbl:TF-sequences}.
 
 \subsubsection*{Signaling model equations.}
 The signal initiation, and integration modules required the abundance of cRaf-pS621 and ATRA-RAR/RXR (activated Trigger) as inputs.
@@ -1018,11 +1020,15 @@ Experimental data in panels A and B were reproduced from Wang and Yen \cite{Wang
 \end{figure}
 
 \begin{figure}[!t]\centering
-\includegraphics[width=0.85\textwidth]{./figs/Fig-4-GRN-Simulations.pdf}
+\includegraphics[width=0.70\textwidth]{./figs/Fig-4-GRN-Simulations.pdf}
 \caption{Model simulation of the HL-60 gene expression program following exposure to 1$\mu$M ATRA at t = 0 hr.
-A: CD38 and CD11b expression versus time following ATRA exposure at time t = 0 hr.
-B: Gene expression at t = 48 hr following ATRA exposure.
-Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-grn-simulations}
+A: Scaled CD38 and CD11b expression versus time following ATRA exposure at time t = 0 hr.
+B: Scaled Gene expression at t = 48 hr following ATRA exposure.
+Gene expression was normalized to expression in the absence of ATRA.
+Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jensen:2015aa}.
+Model simulations were conducted using the ten best parameter sets collected during model identification.
+Solid lines (or bars) denote the mean model performance, while the shaded region (or error bars) denote the 95\% confidence
+interval calculated over the parameter ensemble.}\label{fig:model-grn-simulations}
 \end{figure}
 
 \begin{figure}[!t]\centering
@@ -1030,7 +1036,7 @@ Experimental data in panels A and B were reproduced from Jensen et al. \cite{Jen
 \caption{Model simulation of HL-60 cell-cycle arrest following exposure to 1$\mu$M ATRA at t = 0 hr.
 A: Predicted p21 and E2F expression levels for the best parameter set following ATRA exposure at time t = 0 hr.
 B: Estimated fraction of HL-60 cells in G0 arrest following ATRA exposure at time t = 0 hr.
-The gray region denotes the 95\% confidence estimate of the polynomial model.
+Solid lines (or bars) denote the mean model performance, while the shaded region (or error bars) denotes the 95\% confidence estimate of the polynomial model.
 Experimental data in panel B was reproduced from Jensen et al. \cite{Jensen:2015aa}.}\label{fig:model-cell-cycle-simulations}
 \end{figure}
 
@@ -1069,26 +1075,25 @@ was mitigated by GW5074.}\label{fig:ip-data}
 
 \begin{figure}[!t]
 \includegraphics[width=0.9\textwidth]{./figs/Fig-9-ATRA-Schematic.pdf}
-\caption{Schematic of the hypothetical principal pathways in the ATRA-induced
-signaling that results in cell differentiation in the HL-60 myeloid leukemia model
+\caption{Schematic of the hypothetical principal pathways implicated in ATRA-induced differentiation of HL-60 myeloid leukemia cells
 \cite{wallace2016rrd,congleton2012src,congleton2014phosphorylation,Shen:2009aa,Bunaciu:2015aa,shen2008c}.
-It is based on modules and feedback loops. There are three main arms (shown top to bottom):
-1. Direct ATRA targeting of RAREs in genes such as CD38 or BLR1;
-2. Formation of a signalsome that has a
-regulatory module that includes Vav (a GEF), CBL and SLP-76 (adaptors), and Lyn (a SFK) that
-regulates a Raf/Mek/Erk axis that incorporates Erk to Raf feedback, where the regulators are
-modulated by AhR and CD38 receptors; and 3. Direct ATRA targeted up regulation of CDKI to
-control RB hypophosphorylation. The Raf/Mek/Erk axis is embedded in the signalsome and
-subject to modulation by the regulators. The output of the signalsome is discharge of the Raf
+There are three main arms (shown top to bottom):
+(a) Direct ATRA targeting of RAREs in genes such as CD38 or BLR1;
+(b) Formation of a signalsome that has a regulatory module that includes Vav (a guanine nucleotide exchange factor),
+CBL and SLP-76 (adaptors), and Lyn (a Src family kinase) that
+regulates a Raf/Mek/Erk axis that incorporates Erk to Raf feedback, where the regulators are modulated by AhR and CD38 receptors; and
+(c) Direct ATRA upregulation of CDKIs to control RB hypophosphorylation.
+The Raf/Mek/Erk axis is embedded in the signalsome and
+subject to modulation by the regulators. The signalsome discharges Raf
 from the cytosol to the nucleus where it binds (hyper)phospho-RB and other targets, including
-NFATc3, which enables activation of the RA bound RAR/RXR poised on the BLR1 promoter,
-and also GSK3, phosphorylation of which relieves its inhibitory effect on RAR$\alpha$. CDKI directed
-hypophosphorylation of RB releases Raf sequestered by RB to go to NFATc3, GSK3, and other
-targets. A significant consequence of the nuclear RAF is ergo ultimately to hyperactivate
+NFATc3, which enables activation of the ATRA bound RAR/RXR poised on the BLR1 promoter,
+and GSK3, phosphorylation of which relieves the inhibitory effect on RAR$\alpha$.
+CDKI directed hypophosphorylation of RB releases Raf sequestered by RB to go to NFATc3, GSK3, and other targets.
+A significant consequence of the nuclear Raf is ergo ultimately to hyperactivate
 transcriptional activation by RAR$\alpha$ to drive differentiation.
 It might be noted that this general proposed model provides a mechanistic rationalization for
 why cell cycle arrest is historically oft times perceived as a feature predisposing phenotypic
-maturation.}
+maturation.}\label{fig:signalsome-schematic}
 \end{figure}
 
 
